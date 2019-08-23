@@ -1,0 +1,235 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>IEEE Chapter</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Production Line Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+
+<body>
+
+    <!-- mian-content -->
+    <div class="main-banner inner" id="home">
+        <!-- header -->
+        <header class="header">
+            <div class="container-fluid px-lg-5">
+                <!-- nav -->
+                <nav class="py-4">
+                    <div id="logo">
+                       <h1> <a href="index.html"><img id="ielogo" src="images/ieeesiesblack.png"></a></h1>
+                    </div>
+
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Explore <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="services.html">Achievements</a></li>
+                                <li><a href="team.html">Our Team</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </header>
+        <!-- //header -->
+
+    </div>
+    <!--//main-content-->
+    <!---->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Contact Us</li>
+    </ol>
+    <!---->
+    <!--// mian-content -->
+    <!-- banner -->
+    <section class="ab-info-main py-md-5 py-4">
+        <div class="container py-md-5 py-4">
+            <h3 class="tittle text-center mb-lg-5 mb-3"> Contact Us</h3>
+            <div class="row contact-main-info mt-5">
+                <div class="col-md-7 contact-right">
+                    <form action="#" method="post">
+                        <div class="form-grp-w3layouts">
+                            <input type="text" name="Name" placeholder="Name" required="">
+                        </div>
+                        <div class="form-grp-w3layouts">
+                            <input type="email" class="email" name="Email" placeholder="Email" required="">
+                        </div>
+                        <div class="form-grp-w3layouts">
+                            <input type="text" name="Phone no" placeholder="Phone" required="">
+                        </div>
+                        <div class="form-grp-w3layouts">
+                            <textarea name="Message" placeholder="Message" required=""></textarea>
+                        </div>
+                        <div class="read mt-3">
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 contact-left">
+                    <div class="address">
+                        <h5>Address:</h5>
+                        <p><span class="fa fa-home"></span> SIES Graduate School of Technology,Sector 5, Nerul Near D. D Y Patil 
+                                         Vidyanagar, Navi Mumbai, 
+                                         Maharashtra 400706
+                            <br> India.</p>
+                    </div>
+                    <div class="address address-mdl">
+                        <h5>Phones:</h5>
+                        <p><span class="fa fa-phone"></span> +91 8451039939</p>
+                        <p><span class="fa fa-mobile"></span>+91 8451039939</p>
+                    </div>
+                    <div class="address">
+                        <h5>Email:</h5>
+                        <p><span class="fa fa-envelope"></span> <a href="mailto:mail@example.com">cibin.cool20@gmail.com</a></p>
+                        <p><span class="fa fa-globe"></span> <a href="mailto:website@example.com">https://www.ieee.org</a></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    
+    <!-- Map is Here -->
+    <section class="map">
+        <div id="map"></div>
+
+    <script>
+        var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 19.042813, lng: 73.023078},
+          zoom: 8
+        });
+        var marker = new google.maps.Marker({
+    position: {lat: 19.042813, lng: 73.023078},
+    map: map,
+  });
+      }
+    </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwPRVkrHS9x2PUpKC3vJC0LkC3MaIfJc&callback=initMap" async defer>
+                        
+        </script>
+    </section>
+    
+    <!-- Maps Ends Here -->
+
+    <!-- //contact -->
+
+    <!--footer -->
+    <footer>
+        <section class="footer footer_1its py-5">
+            <div class="container py-md-4">
+                <div class="row footer-top mb-md-5 mb-4">
+                    <div class="col-lg-4 col-md-6 footer-grid_section_1its">
+                        <div class="footer-title-w3ls">
+                            <h3>Address</h3>
+                        </div>
+                        <div class="footer-text">
+                             <p>Address : SIES Graduate School of Technology,Sector 5, Nerul Near D. D Y Patil 
+                                         Vidyanagar, Navi Mumbai, 
+                                         Maharashtra 400706 </p>
+                            <p>Phone : +91 8451039939</p>
+                            <p>Email : <a href="mailto:info@example.com"></a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its">
+                        <div class="footer-title-w3ls">
+                            <h3>Catch On</h3>
+                        </div>
+                        <p>Always Open on following Social sites, feel free to check out.</p>
+                        <ul class="social_section_1info">
+                        <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook mr-1"></span>facebook</a></li>
+                        <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter mr-1"></span>twitter</a></li>
+                        <li class="google"><a href="#"><span class="fa fa-google-plus mr-1"></span>google</a></li>
+                        <li class="linkedin"><a href="#"><span class="fa fa-linkedin mr-1"></span>linkedin</a></li>
+                        <li class="mb-2 instagram"><a href="https://www.instagram.com/ieeesiesgst/"><span class="fa fa-instagram mr-1"></span>instagram</a></li>
+                    </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its">
+                        <div class="footer-title-w3ls">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text">
+                            <p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+                            <form action="#" method="post">
+                                <input type="email" name="Email" placeholder="Enter your email..." required="">
+                                <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
+                                <div class="clearfix"> </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="move-top-w3layouts text-center mt-3">
+                    <a href="#home" class="move-top"> <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span></a>
+                </div>
+
+            </div>
+        </section>
+        
+        
+        
+    </footer>
+    <!-- //footer -->
+
+    <!-- copyright -->
+    <div class="cpy-right text-center py-3">
+        <p class="">
+            <a href="https://www.ieee.org"></a>
+        </p>
+    </div>
+    <!-- //copyright -->
+
+</body>
+
+</html>
