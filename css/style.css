@@ -1194,6 +1194,11 @@ li.linkedin a {
     background: #0077b5;
 }
 
+li.instagram a {
+    color: #fff;
+    background: #e4405f;
+}
+
 ul.social_section_1info a:hover {
     opacity: 0.8;
 }
@@ -1549,7 +1554,7 @@ a.move-top span {
 
 @media(max-width:480px) {
     .main-banner {
-        min-height: 45em;
+        min-height: 25em;
     }
 
     .ban-buttons a {
@@ -1792,6 +1797,18 @@ h3.tittle {
 #map {
         height: 500px;
       }
+.marque {
+     font-weight: 1600;
+     font-size: 14.2px !important;
+     color: #fff;
+     margin-top: 2px;
+}
+
+.marque-main {
+     font-weight: 1600;
+     color: #fff;
+     
+}
 
 
 
