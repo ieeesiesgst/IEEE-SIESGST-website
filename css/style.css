@@ -2229,7 +2229,7 @@ h3.tittle {
 }
 
 .card1 .names{
-    font-size: 30px;
+    font-size: 32px;
     font-family: "Raleway",sans-serif;
     color: #f44336;
     position: absolute;
@@ -2253,7 +2253,7 @@ h3.tittle {
 }
 
 .card3 .names{
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Raleway",sans-serif;
     color: #f44336;
     position: absolute;
@@ -2392,7 +2392,7 @@ h3.tittle {
     }
 }
 
-/* WIE Media*/
+/* WIE Media for Opportunity paragraph*/
 @media(max-width: 767px)
 {
     .wie-resp-img{
@@ -2428,3 +2428,56 @@ h3.tittle {
         bottom: 200px;
     }
 }
+/* END     WIE Media for Opportunity paragraph*/
+
+/*WIE Media for Women's Day 2020*/
+
+@media(max-width: 767px)
+{
+    .wie-resp-img-panel{
+        position: relative;
+        top: 450px;
+    }
+    .wie-resp-txt-panel{
+        position: relative;
+        bottom: 325px;
+    }
+}
+
+@media(max-width: 464px)
+{
+    .wie-resp-img-panel{
+        position: relative;
+        top: 490px;
+    }
+    .wie-resp-txt-panel{
+        position: relative;
+        bottom: 290px;
+    }
+}
+
+@media(max-width: 402px)
+{
+    .wie-resp-img-panel{
+        position: relative;
+        top: 570px;
+    }
+    .wie-resp-txt-panel{
+        position: relative;
+        bottom: 250px;
+    }
+}
+
+@media(max-width: 350px)
+{
+    .wie-resp-img-panel{
+        position: relative;
+        top: 630px;
+    }
+    .wie-resp-txt-panel{
+        position: relative;
+        bottom: 220px;
+    }
+}
+
+/*END         WIE Media for Women's Day 2020*/
