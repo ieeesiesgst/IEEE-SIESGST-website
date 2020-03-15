@@ -60,7 +60,7 @@ h6 {
 
 p {
     font-size: 1em;
-    color: #5a5c5e;
+    color: #346;
     line-height: 2em;
     letter-spacing: 1px;
 }
@@ -807,7 +807,6 @@ span.decription {
 
 .popup p {
     font-size: 15px;
-    color: #666;
     letter-spacing: .5px;
     line-height: 30px;
 }
@@ -2151,7 +2150,7 @@ h3.tittle {
     min-height: 50em;
 }
 
-/*mtts page responsiveness*/
+/*mtts page imarc responsiveness*/
 @media(max-width: 767px) {
     .ac-resp-img {
         position: relative;
@@ -2481,3 +2480,56 @@ h3.tittle {
 }
 
 /*END         WIE Media for Women's Day 2020*/
+
+/*mtts page SAMEER responsiveness*/
+@media(max-width: 767px) {
+    .ac-resp-img-sam {
+        position: relative;
+        top: 360px; 
+    }
+   
+    
+
+    .ac-resp-txt-sam {
+        position: relative;
+        top: -390px;
+    }
+}
+
+@media(max-width: 488px) {
+    .ac-resp-img-sam {
+        position: relative;
+        top: 390px;
+    }
+
+    .ac-resp-txt-sam {
+        position: relative;
+        top: -320px;
+    }
+}
+
+@media(max-width: 412px) {
+    .ac-resp-img-sam {
+        position: relative;
+        top: 450px;
+    }
+
+    .ac-resp-txt-sam {
+        position: relative;
+        top: -270px;
+    }
+}
+
+@media(max-width: 335px) {
+    .ac-resp-img-sam {
+        position: relative;
+        top: 500px;
+    }
+
+    .ac-resp-txt-sam {
+        position: relative;
+        top: -250px;
+    }
+}
+
+/*END      mtts page sameer2020*/
