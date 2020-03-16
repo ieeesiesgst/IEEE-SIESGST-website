@@ -111,13 +111,22 @@ function googleTranslateElementInit() {
     </ol> -->
     <!---->
 	 <!-- portfolio -->
+     <script type="text/javascript">
+         $(function()
+         {
+            $(window).load(function()
+            {
+                $('#pageload').fadeOut(2000);
+            })
+         })
+     </script>
     <section class="portfolio py-5" id="gallery" style="padding-top: 0px !important;">
         <div class="container py-lg-5">
             <h3 class="tittle text-center my-lg-5 my-3">Few Captures from our Journey</h3>
 
             <div class="row news-grids mt-md-5 mt-4 text-center">
                 
-                <div class="col-md-4 gal-img">
+                <div class="col-md-4 gal-img" id="pageload">
                     <a href="#gal18"><img src="images/sameer.jpg" alt="Presell" class="img-fluid">Visit to SAMEER in 2020</a>
                    
                 </div>
