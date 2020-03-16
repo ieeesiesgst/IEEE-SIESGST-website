@@ -42,9 +42,39 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link rel="icon" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
+
+
+
+    <style media="screen" type="text/css">
+      .layer1_class { position: absolute; z-index: 2; left: 0; right: 0; margin-right: auto; margin-left: auto; visibility: visible; }
+      .layer2_class { z-index: 1; visibility: hidden }
+    </style>
+    <script>
+      function downLoad(){
+        if (document.all){
+            document.all["layer1"].style.visibility="hidden";
+            document.all["layer2"].style.visibility="visible";
+        } else if (document.getElementById){
+            node = document.getElementById("layer1").style.visibility='hidden';
+            node = document.getElementById("layer2").style.visibility='visible';
+        }
+      }
+    </script>
+
+
 </head>
 
-<body>
+<body onload="downLoad()">
+
+    <div id="layer1" class="layer1_class">
+      <table width="100%">
+        <tr>
+          <td align="center"><img src="images/giphy.gif"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="layer2" class="layer2_class">
+        
 
     <!-- mian-content -->
     <div class="main-banner inner" id="home">
@@ -117,78 +147,78 @@ function googleTranslateElementInit() {
 
             <div class="row news-grids mt-md-5 mt-4 text-center">
                 
-                <div class="col-md-4 gal-img">
+                <div class="col-md-4 gal-img" id="g18">
                     <a href="#gal18"><img src="images/sameer.jpg" alt="Presell" class="img-fluid">Visit to SAMEER in 2020</a>
                    
                 </div>
 
-                <div class="col-md-4 gal-img">
+                <div class="col-md-4 gal-img" id="g17">
                     <a href="#gal17"><img src="images/panel.jpg" alt="Presell" class="img-fluid">Panel Discussion on International Women's Day</a>
                    
                 </div>
 
-                <div class="col-md-4 gal-img">
+                <div class="col-md-4 gal-img" id="g16">
                     <a href="#gal16"><img src="images/stem_lec.jpg" alt="Presell" class="img-fluid">STEM lectures</a>
                    
                 </div>
                 
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g1">
                     <a href="#gal1"><img src="images/aisywc.jpg" alt="Presell" class="img-fluid">AISYWC'19</a>
                     
                 </div>
-				<div class="col-md-4 gal-img mt-md-5">
+				<div class="col-md-4 gal-img mt-md-5" id="g2">
                     <a href="#gal2"><img src="images/bsc.jpg" alt="Presell" class="img-fluid">Bombay Section Congress</a>
                    
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g3">
                     <a href="#gal3"><img src="images/imarc1.jpg" alt="Presell" class="img-fluid">MTT-S IMaRC’19</a>
                     
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g4">
                     <a href="#gal4"><img src="images/magazine.jpg" alt="Presell" class="img-fluid">Technozine Magzine Launch</a>
                    
                 </div>
-				<div class="col-md-4 gal-img mt-md-5">
+				<div class="col-md-4 gal-img mt-md-5" id="g5">
                     <a href="#gal5"><img src="images/jio_iv.jpg" alt="Presell" class="img-fluid">Iv at JIO</a>
                     
                 </div>
-				<div class="col-md-4 gal-img mt-md-5">
+				<div class="col-md-4 gal-img mt-md-5" id="g6">
                     <a href="#gal6"><img src="images/rf.jpg" alt="Presell" class="img-fluid">RF Kit</a>
                     
                 </div>
-				<div class="col-md-4 gal-img mt-md-5">
+				<div class="col-md-4 gal-img mt-md-5" id="g7">
                     <a href="#gal7"><img src="images/phoenix.jpg" alt="Presell" class="img-fluid">Phoenix 1.0</a>
                    
                 </div>
-				<div class="col-md-4 gal-img mt-md-5">
+				<div class="col-md-4 gal-img mt-md-5" id="g8">
                     <a href="#gal8"><img src="images/robotics.jpg" alt="Presell" class="img-fluid">Robotics Workshop</a>
                     
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g9">
                     <a href="#gal9"><img src="images/sttp.jpg" alt="Presell" class="img-fluid">STTP</a>
                    
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g10">
                     <a href="#gal10"><img src="images/tech_lec.jpg" alt="Presell" class="img-fluid">Technical Lectures</a>
                    
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g11">
                     <a href="#gal11"><img src="images/techopedia.jpg" alt="Presell" class="img-fluid">Techopedia 2k19</a>
                    
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5"  id="g12">
                     <a href="#gal12"><img src="images/wie_inaug.jpg" alt="Presell" class="img-fluid">WIE Inauguration</a>
                    
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g13">
                     <a href="#gal13"><img src="images/wie1.jpg" alt="Presell" class="img-fluid">WIE Seminar</a>
                    
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g14">
                     <a href="#gal14"><img src="images/wie2.jpg" alt="Presell" class="img-fluid">WIE Council</a>
                    
                 </div>
-                <div class="col-md-4 gal-img mt-md-5">
+                <div class="col-md-4 gal-img mt-md-5" id="g15">
                     <a href="#gal15"><img src="images/xtreme.jpg" alt="Presell" class="img-fluid">IEEE Xtreme</a>
                    
                 </div>
@@ -201,7 +231,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/sameer.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">MTT-S members of IEEE SIES GST got the opportunity to visit the Society of Applied Microwave and Electronic Engineering Research (SAMEER) in Kharghar, Navi Mumbai. More on <a href="mtts.html"><b>MTT-S</b></a> page.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g18">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -210,7 +240,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/stem_lec.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">WIE Chapter of IEEE SIES GST conducted STEM ( Science Technology Engineering Mathematics ) lectures in a school for 6<sup>th</sup>,7<sup>th</sup> and 8<sup>th</sup> grade students. More on <a href="wie.html"><b>WIE</b></a> page.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g16">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -219,7 +249,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/panel.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">WIE branch of IEEE SIES GST celebrated International Women's Day by conducting a panel discussion on the topic '<b>Challenges Faced by Women in today's Social and Cultural work setting</b>'. More on <a href="wie.html"><b>WIE</b></a> page.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g17">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -228,7 +258,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/aisywc.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Students of IEEE SIES GST at AISYWC’19 held in Hyderabad.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g1">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -237,7 +267,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/bsc.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Students of IEEE SIES GST at Bombay Section Congress, Nashik 2019.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g2">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -246,7 +276,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/imarc1.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Students of IEEE SIES GST at MTT-S IMaRC’19 held in IIT Bombay.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g3">&times;</a>
         </div>
     </div>
     <!-- //popup3 -->
@@ -255,7 +285,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/magazine.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">The Student Branch of SIES GST launched their Magazine i.e. Technozine in February 2020.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g4">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -263,7 +293,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/jio_iv.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Industrial Visit to Jio at Reliance Corporate Park, Ghansoli.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g5">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -272,7 +302,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/rf.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">MTT-S chapter of IEEE SIES GST received a gift worth of Rs. 50000 from IEEE.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g6">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -281,7 +311,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/phoenix.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Students of IEEE SIES GST at Phoenix 1.0</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g7">&times;</a>
         </div>
     </div>
     <!-- //popup3 -->
@@ -290,7 +320,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/robotics.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Glimpse of Robotics Workshop conducted under IEEE SIES GST.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g8">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -299,7 +329,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/sttp.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">A Short Term Training Program (STTP) on “Antennas and RF Component Design” conducted by IEEE SIES GST.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g9">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -308,7 +338,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/tech_lec.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Technical Heads of IEEE SIES GST conducting a technical session for 2nd year students.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g10">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -317,7 +347,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/techopedia.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Team behind Techopedia’19.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g11">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -326,7 +356,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/wie_inaug.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Inauguration of WIE Chapter at SIES GST.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g12">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -335,7 +365,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/wie1.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Seminar on WIE conducted by Prof. Seema Kawale, WIE Chair, Bombay Section.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g13">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -344,7 +374,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/wie2.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">WIE Council</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g14">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -353,7 +383,7 @@ function googleTranslateElementInit() {
         <div class="popup">
             <img src="images/xtreme.jpg" alt="Popup Image" class="img-fluid" />
             <p class="mt-4">Students of IEEE SIES GST participated in a 24hr coding competition ‘XTREME’ conducted by IEEE.</p>
-            <a class="close" href="#gallery">&times;</a>
+            <a class="close" href="#g15">&times;</a>
         </div>
     </div>
     <!-- //popup -->
@@ -416,7 +446,7 @@ function googleTranslateElementInit() {
     </footer>
     <!-- //footer -->
 
-
+</div>
 
 </body>
 
