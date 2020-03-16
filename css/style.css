@@ -1248,8 +1248,8 @@ a.move-top span {
     }
 
     .banner-info {
-        padding: 15em 0 0em 3em;
-        width: 32%;
+        padding: 15em 3em 0em 3em;
+        width: 100%;
     }
 }
 
@@ -1277,8 +1277,8 @@ a.move-top span {
 
 @media(max-width:1080px) {
     .banner-info {
-        padding: 13em 0 0em 3em;
-        width: 45%;
+        padding: 13em 3em 0em 3em;
+        width: 100%;
     }
 
     .banner-info h3 {
@@ -1318,8 +1318,8 @@ a.move-top span {
 
 @media(max-width:1024px) {
     .banner-info {
-        padding: 11em 0 0em 3em;
-        width: 45%;
+        padding: 11em 3em 0em 3em;
+        width: 100%;
     }
 
     .main-banner {
@@ -1367,6 +1367,7 @@ a.move-top span {
     margin-top: 1.5em;
 }
 .banner-info {
+    padding: 11em 1em 0em 1em;
     width: 100%;
 }
 }
@@ -1421,7 +1422,8 @@ a.move-top span {
     }
 
     .banner-info {
-        padding: 10em 0 0em 1em;
+        padding: 10em 1em 0em 1em;
+        width: 100%;
     }
 
     .main-banner {
@@ -1523,8 +1525,8 @@ a.move-top span {
     }
 
     .banner-info {
-        padding: 9em 0 0em 1em;
-        width: 70%;
+        padding: 9em 1em 0em 1em;
+        width: 100%;
     }
 
     .main-banner {
@@ -1546,8 +1548,8 @@ a.move-top span {
     }
 
     .banner-info {
-        padding: 8em 0 0em 1em;
-        width: 90%;
+        padding: 8em 1em 0em 1em;
+        width: 100%;
     }
 
     .main-banner {
@@ -1579,8 +1581,8 @@ a.move-top span {
     }
 
     .banner-info {
-        padding: 7em 0 0em 1em;
-        width: 90%;
+        padding: 7em 1em 0em 1em;
+        width: 100%;
     }
 	.blog-txt-info h4 a {
     font-size: 18px;
@@ -1625,8 +1627,8 @@ h3.tittle {
 
 @media(max-width:375px) {
     .banner-info {
-        padding: 7em 0 0em 1em;
-        width: 95%;
+        padding: 7em 1em 0em 1em;
+        width: 100%;
     }
 	.team-left h4, .team-middle h4, .team-right h4 {
     font-size: 20px;
