@@ -46,17 +46,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
     <style media="screen" type="text/css">
-      .layer1_class { position: fixed; z-index: 2; visibility: visible; background-color: #000 !important; height: 120%; width: 100%; }
+      .layer1_class { position: fixed; z-index: 2; visibility: visible; background-color: #000 !important; height: 120%; width: 100%; transition: 1s; opacity: 1.0; }
       .layer2_class { z-index: 1; visibility: hidden }
     </style>
     <script>
       function downLoad(){
         if (document.all){
-            document.all["layer1"].style.visibility="hidden";
             document.all["layer2"].style.visibility="visible";
+            document.all["layer1"].style.opacity="0";
+            document.all["layer1"].style.visibility="hidden";
         } else if (document.getElementById){
-            node = document.getElementById("layer1").style.visibility='hidden';
             node = document.getElementById("layer2").style.visibility='visible';
+            node = document.getElementById("layer1").style.opacity='0';
+            node = document.getElementById("layer1").style.visibility='hidden';
         }
       }
     </script>
