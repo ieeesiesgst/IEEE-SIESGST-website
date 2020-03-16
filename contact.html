@@ -42,9 +42,55 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link rel="icon" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
+
+
+
+    <style media="screen" type="text/css">
+      .layer1_class { position: fixed; z-index: 2000; visibility: visible; background-color: #000 !important; height: 120%; width: 100%; transition: 1s; opacity: 1.0; }
+      .layer2_class { z-index: 1; visibility: hidden }
+
+      .loadimg{ position: fixed; top: 50%; left: 50%; width: 512px; height: 312px; margin-top: -156px; margin-left: -256px; }
+      @media(max-width: 668px)
+      {
+        .loadimg{ position: fixed; top: 50%; left: 50%; width: 350px; height: 212px; margin-top: -106px; margin-left: -175px; }
+      }
+      @media(max-width: 425px)
+      {
+        .loadimg{ position: fixed; top: 50%; left: 50%; width: 250px; height: 152px; margin-top: -76px; margin-left: -125px; }
+      }
+
+    </style>
+    <script>
+      function downLoad(){
+        if (document.all){
+            document.all["layer2"].style.visibility="visible";
+            document.all["layer1"].style.opacity="0";
+            document.all["layer1"].style.visibility="hidden";
+        } else if (document.getElementById){
+            node = document.getElementById("layer2").style.visibility='visible';
+            node = document.getElementById("layer1").style.opacity='0';
+            node = document.getElementById("layer1").style.visibility='hidden';
+        }
+      }
+    </script>
+
+
+
 </head>
 
-<body>
+<body onload="downLoad()">
+
+    <div id="layer1" class="layer1_class">
+      <table width="100%">
+        <tr>
+          <td align="center"><img src="images/ieeesiesblack.png" class="loadimg"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="layer2" class="layer2_class">
+        
+
+
     
     <!-- mian-content -->
     <div class="main-banner inner" id="home">
@@ -244,7 +290,7 @@ function googleTranslateElementInit() {
     </footer>
     <!-- //footer -->
 
-
+</div>
 </body>
 
 </html>
