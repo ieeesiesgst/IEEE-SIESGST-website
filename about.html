@@ -185,21 +185,27 @@ function googleTranslateElementInit() {
                 <div class="col-lg-6 last-img pl-lg-5 p-3">
                     <h3 class="tittle mb-4">IEEE Student Chapter of SIES GST</h3>
                     <p class="mb-4">IEEE is the oldest student body of SIES GST. It is an active body in organising all extra-curricular activities in the college. This academic year, IEEE SIES GST saw a growth like never before within participation for most of its events having increased by leaps and bounds.</p>
+                    <div id="testi1"></div>
                     <div class="ban-buttons">
                         <a href="services.html" class="btn">Read More</a>
 
                     </div>
+                    
                 </div>
+                <div id="alumni1"></div>
             </div>
+
         </div>
+
     </section>
+
     <!-- //hand-crafted -->
     <!-- testimonials -->
-    <section class="testimonials py-5" id="testi">
+    <section class="testimonials py-5 addtop" id="testi">
         <div class="container py-xl-5 py-lg-3">
             <h3 class="title-w3 text-center text-wh mb-5 let font-weight-bold">From Alumni's Desk</h3>
             <div class="row pt-xl-4">
-                <div class="col-md-4 test-grid px-lg-5">
+                <div class="col-md-4 test-grid px-lg-5 addtop" id="alumnia">
                     <div class="test-info text-center">
                         <p class="text-li">"We dont see things as they are,we see them as we are.</p>
                         <div class="test-img text-center mt-4">
@@ -208,7 +214,7 @@ function googleTranslateElementInit() {
                         <h3 class="mt-md-4 mt-3">Vikram Parmar</h3>
                     </div>
                 </div>
-                <div class="col-md-4 test-grid px-lg-5 my-md-0 my-5">
+                <div class="col-md-4 test-grid px-lg-5 my-md-0 my-5 addtop" id="alumnib">
                     <div class="test-info text-center">
                         <p class="text-li">"We thrive to imbibe technical knowledge with innovative workshops and events.</p>
                         <div class="test-img text-center mt-4">
@@ -217,7 +223,7 @@ function googleTranslateElementInit() {
                         <h3 class="mt-md-4 mt-3">Aman Rajput</h3>
                     </div>
                 </div>
-                <div class="col-md-4 test-grid px-lg-5">
+                <div class="col-md-4 test-grid px-lg-5 addtop" id="alumnic">
                     <div class="test-info text-center">
                         <p class="text-li">"Its a great platform to build technical skills..</p>
                         <div class="test-img text-center mt-4">
@@ -227,6 +233,7 @@ function googleTranslateElementInit() {
                     </div>
                 </div>
             </div>
+            <div id="faculty1"></div>
         </div>
     </section>
     <!-- //testimonials --> 
@@ -242,7 +249,7 @@ function googleTranslateElementInit() {
 
 
 
-<div class="container-fluid" style="position: relative !important; height: auto !important; padding-bottom: 70px !important;">
+<div class="container-fluid addtop" id="faculty" style="position: relative !important; height: auto !important; padding-bottom: 70px !important;">
     <h3 class="tittle text-center mb-lg-5 pb-3" style="margin-bottom: 0px !important; padding-top: 30px;"> Our Faculty</h3>
     <div class="row">
         <div class="col-lg-4" style="display: flex; justify-content: center; padding: 40px 0px;">
@@ -419,6 +426,32 @@ function googleTranslateElementInit() {
 </section>
 </footer>
 <!-- //footer -->
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var testimonial1 = document.getElementById("testi");
+var alumniinfo1 = document.getElementById("alumnia");
+var facultyscroll = document.getElementById("faculty");
+var testi1 = testimonial1.offsetTop;
+var alumni1 = alumniinfo1.offsetTop;
+var faculty1 = facultyscroll.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > testi1-800) {
+    document.all["testi"].style.top="-40px";
+  }
+  if (window.pageYOffset > alumni1+110) {
+    document.all["alumnia"].style.top="0px";
+    document.all["alumnib"].style.top="0px";
+    document.all["alumnic"].style.top="0px";
+  }
+  if (window.pageYOffset > faculty1-800) {
+    document.all["faculty"].style.top="0px";
+  }
+}
+</script>
 
 </div>
 </body>

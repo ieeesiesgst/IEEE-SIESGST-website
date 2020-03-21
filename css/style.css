@@ -2535,3 +2535,36 @@ h3.tittle {
 }
 
 /*END      mtts page sameer2020*/
+
+/*scroll animation*/
+.addtop{
+    top: 200px;
+    transition: 0.5s;
+}
+
+.addtop1{
+    top: 200px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.addtop2{
+    top: 200px;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    opacity: 0;
+}
+
+.addtop3{
+    top: 200px;
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: 0.4s;
+}
+
+.addtop4{
+    top: 200px;
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: 0.6s;
+}
