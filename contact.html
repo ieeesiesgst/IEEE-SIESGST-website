@@ -223,24 +223,7 @@ function googleTranslateElementInit() {
     <!-- Map is Here -->
     <section class="map">
         <h3 class="tittle text-center mb-lg-5 mb-3">Find us here <span class="fa fa-map-marker" style="color: #f44336;"></span></h3>
-        <div id="map"></div>
-
-    <script>
-        var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 19.042813, lng: 73.023078},
-          zoom: 8
-        });
-        var marker = new google.maps.Marker({
-    position: {lat: 19.042813, lng: 73.023078},
-    map: map,
-  });
-      }
-    </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGwPRVkrHS9x2PUpKC3vJC0LkC3MaIfJc&callback=initMap" async defer>
-                        
-        </script>
+        <div style="overflow:hidden;width: 100%;position: relative; height: 500px;"><iframe width="100" height="500" src="https://maps.google.com/maps?width=100&amp;height=500&amp;hl=en&amp;q=sies%20gst+(siesgst)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
     </section>
     
     <!-- Maps Ends Here -->
