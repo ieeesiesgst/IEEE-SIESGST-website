@@ -441,14 +441,19 @@ var faculty1 = facultyscroll.offsetTop;
 function myFunction() {
   if (window.pageYOffset > testi1-800) {
     document.all["testi"].style.top="-40px";
+    document.all["testi"].style.opacity="1";
   }
   if (window.pageYOffset > alumni1+110) {
     document.all["alumnia"].style.top="0px";
+    document.all["alumnia"].style.opacity="1";
     document.all["alumnib"].style.top="0px";
+    document.all["alumnib"].style.opacity="1";
     document.all["alumnic"].style.top="0px";
+    document.all["alumnic"].style.opacity="1";
   }
   if (window.pageYOffset > faculty1-800) {
     document.all["faculty"].style.top="0px";
+    document.all["faculty"].style.opacity="1";
   }
 }
 </script>

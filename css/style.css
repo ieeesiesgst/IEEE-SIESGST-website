@@ -2540,6 +2540,7 @@ h3.tittle {
 .addtop{
     top: 200px;
     transition: 0.5s;
+    opacity: 0;
 }
 
 .addtop1{
