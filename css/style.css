@@ -2559,12 +2559,6 @@ h3.tittle {
 /*END      mtts page sameer2020*/
 
 /*scroll animation*/
-.addtop{
-    top: 200px;
-    transition: 0.5s;
-    opacity: 0;
-}
-
 .addtop1{
     top: 200px;
     transition: 0.5s;
@@ -2596,6 +2590,12 @@ h3.tittle {
 
 /* Responsivness of phoenix */
 
+@media(min-width: 768px) {
+    .ac-res-img-phoenix {
+        position: relative;
+        top: 20px;
+    }
+}
 
 @media(max-width: 767px) {
     .ac-res-img-phoenix {
