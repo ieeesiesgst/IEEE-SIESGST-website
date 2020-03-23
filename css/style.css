@@ -2569,3 +2569,59 @@ h3.tittle {
     opacity: 0;
     transition-delay: 0.6s;
 }
+
+
+
+/* Responsivness of phoenix */
+
+
+@media(max-width: 767px) {
+    .ac-res-img-phoenix {
+        position: relative;
+        top: 300px;
+    }
+
+    .ac-res-txt-phoenix {
+        position: relative;
+        top: -370px;
+    }
+}
+
+@media(max-width: 459px) {
+    .ac-res-img-phoenix {
+        position: relative;
+        top: 380px;
+    }
+
+    .ac-res-txt-phoenix {
+        position: relative;
+        top: -320px;
+    }
+}
+
+@media(max-width: 400px) {
+    .ac-res-img-phoenix {
+        position: relative;
+        top: 400px;
+    }
+
+    .ac-res-txt-phoenix {
+        position: relative;
+        top: -275px;
+    }
+}
+
+
+
+
+@media(max-width: 322px) {
+    .ac-res-img-phoenix {
+        position: relative;
+        top: 420px;
+    }
+
+    .ac-res-txt-phoenix {
+        position: relative;
+        top: -250px;
+    }
+}
