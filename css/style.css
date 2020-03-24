@@ -182,10 +182,12 @@ nav ul li {
 
 nav .menu li a:hover {
     color:#F44336;
+    text-shadow: 0px 0px 4px #000;
 }
 
 .menu li.active a {
     color: #F44336;
+    text-shadow: 0px 0px 4px #000;
 }
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
