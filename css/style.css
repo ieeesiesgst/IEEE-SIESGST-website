@@ -205,6 +205,17 @@ nav ul li:hover > ul {
     display: inherit;
 }
 
+nav ul li:hover > a span {
+    transform: rotate(180deg);
+    transition: 0.2s;
+    color: #F44336;
+}
+
+nav ul li a span {
+    transition: 0.2s;
+    transform: none;
+}
+
 /* Fisrt Tier Dropdown */
 
 nav ul ul li {
@@ -303,12 +314,14 @@ li > a:only-child:after {
     /* Display Dropdown when clicked on Parent Lable */
     [id^=drop]:checked + ul {
         display: block;
-        background: rgba(25, 25, 25, 0.85);
+        background: rgba(25, 25, 25, 0.89);
         padding: 15px 0;
         text-align: center;
         width: 100%;
         margin: 0 auto;
     }
+
+    
 
     /* Change menu item's width to 100% */
     nav ul li {
@@ -387,7 +400,7 @@ li > a:only-child:after {
     }
 
     nav ul ul {
-        background: rgba(25, 25, 25, 0.85) !important;
+        background: rgba(25, 25, 25, 0.89) !important;
 
     }
 
