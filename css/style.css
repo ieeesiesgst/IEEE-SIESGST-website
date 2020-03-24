@@ -413,7 +413,7 @@ li > a:only-child:after {
 
     nav ul li {
         display: block;
-        width: 94%;
+        width: 100%;
     }
 
     .menu .toggle {
