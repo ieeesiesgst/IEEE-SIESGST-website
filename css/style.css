@@ -1881,23 +1881,13 @@ h3.tittle {
 
     .ac-res-txt {
         position: relative;
-        top: -440px;
+        top: -400px;
     }
 }
 
-@media(max-width: 375px) {
-    .ac-res-img {
-        position: relative;
-        top: 200px;
-    }
 
-    .ac-res-txt {
-        position: relative;
-        top: -280px;
-    }
-}
 
-@media(max-width: 414px) {
+@media(max-width: 500px) {
     .ac-res-img {
         position: relative;
         top: 200px;
@@ -1917,7 +1907,19 @@ h3.tittle {
 
     .ac-res-txt {
         position: relative;
-        top: -300px;
+        top: -280px;
+    }
+}
+
+@media(max-width: 350px) {
+    .ac-res-img {
+        position: relative;
+        top: 200px;
+    }
+
+    .ac-res-txt {
+        position: relative;
+        top: -270px;
     }
 }
 
