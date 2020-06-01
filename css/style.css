@@ -2714,3 +2714,26 @@ h3.tittle {
     transition: 0.4s;
     user-select: none;
 }
+
+/* Form Css */
+.ev_form
+{
+    border: 1px solid red;
+    padding: 2%;
+}
+
+.ev_btn
+{
+    width: 25%;
+}
+
+.form-required-show
+{
+    text-align: right;
+    font-size: 13px;
+}
+
+.form-required
+{
+    color: red;
+}

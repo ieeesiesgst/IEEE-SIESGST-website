@@ -41,80 +41,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
-    <style media="screen" type="text/css">
-      .layer1_class { position: fixed; z-index: 2000; visibility: visible; background-color: #000 !important; height: 120%; width: 100%; transition: 1s; opacity: 1.0; }
-      .layer2_class { z-index: 1; visibility: hidden; }
-
-      .loadimg{ position: fixed; top: 50%; left: 50%; width: 512px; height: 312px; margin-top: -206px; margin-left: -256px; filter: drop-shadow(0px 0px 6px rgb(187,21,30)); }
-      .loading {position: fixed; text-align: center; width: 100%; font-size: 30px; top: 50%; margin-top: 150px; color: white; }
-      .load1 {visibility: hidden; animation-name: one; animation-iteration-count: infinite; animation-duration: 1.2s; animation-timing-function: step-end;}
-      .load2 {visibility: hidden; animation-name: two; animation-iteration-count: infinite; animation-duration: 1.2s; animation-timing-function: step-end;}
-      .load3 {visibility: hidden; animation-name: three; animation-iteration-count: infinite; animation-duration: 1.2s; animation-timing-function: step-end;}
-
-
-      @keyframes one {
-        0%{visibility: hidden;}
-        25%{visibility: visible;}
-        100%{visibility: hidden;}
-      }
-      @keyframes two {
-        0%{visibility: hidden;}
-        50%{visibility: visible;}
-        100%{visibility: hidden;}
-      }
-      @keyframes three {
-        0%{visibility: hidden;}
-        75%{visibility: visible;}
-        100%{visibility: hidden;}
-      }
-      
-      @media(max-width: 668px)
-      {
-        .loadimg{ position: fixed; top: 50%; left: 50%; width: 350px; height: 212px; margin-top: -106px; margin-left: -175px; }
-      }
-      @media(max-width: 425px)
-      {
-        .loadimg{ position: fixed; top: 50%; left: 50%; width: 250px; height: 152px; margin-top: -76px; margin-left: -125px; }
-      }
-      
-
-    </style>
-    <script>
-      function downLoad(){
-        if (document.all){
-            document.all["layer2"].style.visibility="visible";
-            document.all["layer1"].style.opacity="0";
-            document.all["layer1"].style.visibility="hidden";
-        } else if (document.getElementById){
-            node = document.getElementById("layer2").style.visibility='visible';
-            node = document.getElementById("layer1").style.opacity='0';
-            node = document.getElementById("layer1").style.visibility='hidden';
-        }
-      }
-      setTimeout(function(){
-        document.all["layer2"].style.visibility="visible";
-        document.all["layer1"].style.opacity="0";
-        document.all["layer1"].style.visibility="hidden";
-      },3000);
-    </script>
+    
 
 
 
 </head>
 
-<body onload="downLoad()">
+<body>
 
-    <div id="layer1" class="layer1_class">
-      <table width="100%">
-        <tr>
-          <td align="center"><img src="images/ieeesiesblack.png" class="loadimg"></td>
-        </tr>
-        <tr>
-            <td class="loading">Loading<load class="load1">.</load><load class="load2">.</load><load class="load3">.</load></td>
-        </tr>
-      </table>
-    </div>
-    <div id="layer2" class="layer2_class">
+
         
 
 
@@ -135,7 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <ul class="menu mt-2">
                         <li><a href="index.html">Home</a></li>
                         <li id="adapt"><a href="about.html">About</a></li>
-                        <li><a href="wie.html">WIE</a></li>
+                        <li><a href="events.html">Events</a></li>
                         
                         
                         <li>
@@ -147,6 +82,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                 <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="services.html">Achievements</a></li>
+                                <li><a href="wie.html">WIE</a></li>
                                 <li><a href="mtts.html">MTT-S</a></li>
                                 <li><a href="techopedia/index.html">Techopedia 2K19</a></li>
                                 
@@ -880,7 +816,6 @@ function googleTranslateElementInit() {
     <!-- //footer -->
 
 
-</div>
 </body>
 
 </html>
