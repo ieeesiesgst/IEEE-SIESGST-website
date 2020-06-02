@@ -2737,3 +2737,78 @@ h3.tittle {
 {
     color: red;
 }
+
+/*team tabs*/
+
+.tab
+{
+    display: none;
+}
+
+.label-container
+{
+    background-image: linear-gradient(#bbb,#f7f7f7);
+}
+
+.tablabel
+{
+    cursor: pointer;
+    display: block;
+    padding: 20px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #000;
+    background-color: #bbb;
+    margin: 0px !important;
+    transition: 0.3s;
+}
+
+@media(max-width: 600px)
+{
+    .tablabel
+    {
+        font-size: 20px;
+    }
+}
+
+.tab2020:checked ~ .row .tablabel1
+{
+    background-color: #f7f7f7;
+    border-top-right-radius: 10px;
+}
+
+.tab2020:checked ~ .row .tablabel2
+{
+    border-bottom-left-radius: 10px;
+}
+
+.tab2019:checked ~ .row .tablabel2
+{
+    background-color: #f7f7f7;
+    border-top-left-radius: 10px;
+}
+
+.tab2019:checked ~ .row .tablabel1
+{
+    border-bottom-right-radius: 10px;
+}
+
+.team2020
+{
+    display: none;
+}
+
+.team2019
+{
+    display: none;
+}
+
+.tab2020:checked ~ .team2020
+{
+    display: block;
+}
+
+.tab2019:checked ~ .team2019
+{
+    display: block;
+}
