@@ -255,7 +255,7 @@ li > a:only-child:after {
 /* Media Queries
 --------------------------------------------- */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 941px) {
     #logo {
         display: block;
         padding: 0;
