@@ -2775,6 +2775,7 @@ h3.tittle {
 {
     background-color: #f7f7f7;
     border-top-right-radius: 10px;
+    cursor: default;
 }
 
 .tab2020:checked ~ .row .tablabel2
@@ -2786,6 +2787,7 @@ h3.tittle {
 {
     background-color: #f7f7f7;
     border-top-left-radius: 10px;
+    cursor: default;
 }
 
 .tab2019:checked ~ .row .tablabel1
