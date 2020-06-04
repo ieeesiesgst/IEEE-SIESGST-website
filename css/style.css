@@ -2814,3 +2814,239 @@ h3.tittle {
 {
     display: block;
 }
+
+.event1:checked ~ .row .eventlabel1
+{
+    background-color: #f7f7f7;
+    border-top-right-radius: 10px;
+    cursor: default;
+}
+
+.event1:checked ~ .row .eventlabel2
+{
+    border-bottom-left-radius: 10px;
+}
+
+.event1:checked ~ .event-no-1
+{
+    display: block;
+}
+
+.event2:checked ~ .row .eventlabel2
+{
+    background-color: #f7f7f7;
+    border-top-left-radius: 10px;
+    cursor: default;
+}
+
+.event2:checked ~ .row .eventlabel1
+{
+    border-bottom-right-radius: 10px;
+}
+
+.event2:checked ~ .event-no-2
+{
+    display: block;
+}
+
+.event-no-1
+{
+    display: none;
+}
+
+.event-no-2
+{
+    display: none;
+}
+
+/*timeline*/
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: -15px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+  font-size: 22px;
+}
+@media(max-width: 410px)
+{
+    .timeline-title
+    {
+        font-size: 20px;
+    }
+}
+@media(max-width: 390px)
+{
+    .timeline-title
+    {
+        font-size: 18px;
+    }
+}
+@media(max-width: 350px)
+{
+    .timeline-title
+    {
+        font-size: 15px;
+    }
+}
+.timeline-muted
+{
+    font-size: 19px;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+@media(max-width: 390px)
+{
+    .timeline-muted
+    {
+        font-size: 17px;
+    }
+}
+@media(max-width: 350px)
+{
+    .timeline-muted
+    {
+        font-size: 15px;
+    }
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+.timeline-body
+{
+    font-size: 14px;
+}
+
+@media(max-width: 410px)
+{
+    .timeline-body
+    {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 342px)
+{
+    .timeline-body
+    {
+        font-size: 11px;
+    }
+}
