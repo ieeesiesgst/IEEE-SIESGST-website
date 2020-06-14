@@ -3077,3 +3077,55 @@ h3.tittle {
 {
     font-size: 25px;
 }
+
+.guidelines-steps
+{
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+/*Vertical Steps*/
+.steps
+{
+  padding-left:20px;
+  list-style: none;
+}
+
+.steps .step {
+  border: 0;
+  border-left: 1px solid #9baec9;
+  box-sizing: border-box;
+  counter-increment: step-counter;
+  padding: 0 0 25px 35px;
+}
+
+.steps .step:last-child
+{
+  border-left: 1px solid transparent;
+  padding-bottom: 0;
+}
+
+.steps .step::before
+{
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color:#3264a8;
+  color:#fff;
+  content: counter(step-counter);
+  font-size: 15px;
+  display:inline-block;
+  float:left;
+  height: 34px;
+  line-height: 30px;
+  margin-left:-53px;
+  text-align:center;  
+  width:34px;  
+}
+
+.steps .step span
+{
+  display: block;
+  padding-top: 7px;
+  font-size: 17px;
+}
