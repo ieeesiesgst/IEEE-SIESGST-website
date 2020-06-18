@@ -535,9 +535,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         fr.fileName = file.name
         fr.onload = function(e) {
             e.target.result
-            html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
-            html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
-            html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+            html = '<input type="hidden" id="a" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+            html += '<input type="hidden" id="b" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+            html += '<input type="hidden" id="c" name="filename" value="' + e.target.fileName + '" >';
             $("#solodata").empty().append(html);
         }
         fr.readAsDataURL(file);
@@ -553,7 +553,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         {
             
             
-            document.getElementById('form1').submit();
+            //document.getElementById('form1').submit();
+            console.log(document.getElementById('a').value);
+            console.log(document.getElementById('b').value);
+            console.log(document.getElementById('c').value);
         }
         else
         {
