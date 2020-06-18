@@ -3154,3 +3154,9 @@ h3.tittle {
 {
     display: none;
 }
+
+.submit-status
+{
+    border: 1px solid #f44336;
+    border-radius: 10px;
+}
