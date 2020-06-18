@@ -1247,7 +1247,12 @@ li.linkedin a {
 
 li.instagram a {
     color: #fff;
-    background: #e4405f;
+    background: #d6249f;
+}
+
+li.youtube a {
+    color: #fff;
+    background: #ff0000;
 }
 
 ul.social_section_1info a:hover {
@@ -3128,4 +3133,24 @@ h3.tittle {
   display: block;
   padding-top: 7px;
   font-size: 17px;
+}
+
+#designitbody
+{
+    min-height: 400px;
+}
+
+#solo-form, #team-form
+{
+    display: none;
+}
+
+#solo, #team
+{
+    cursor: pointer;
+}
+
+.noshow
+{
+    display: none;
 }

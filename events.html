@@ -177,31 +177,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
         <div class="row">
-      <!--     
-           <div class="col-lg-5 col-md-6">
+
+         <div class="col-lg-5 col-md-6">
 
 
-            
+
             <img src="images/designit.jpeg" alt="news image" class="img-fluid">
-        
-    </div>
-      -->
-    <div class="col-lg-7 col-md-6">
-
-        <p>IEEE SIESGST presents <b>DesignIt</b> - A Poster Presentation Competition.</br>
-            TOPIC:- <b>To Society through Technology</b><br><b>E-Certificates</b> will be provided to participants.<br>The <b>Winner</b> gets an appreciation certificate and his/her poster will be posted on our <a href="https://www.linkedin.com/mwlite/company/ieee-gst">Linkedin</a>, <a href="https://m.facebook.com/ieeesiesgstofficial/">Facebook</a> and <a href="https://www.instagram.com/ieeesiesgst/">Instagram</a> handles!<br>The competition is open to all. <b>No Entry Fee</b>.<br><div class="text-center"><a href="https://chat.whatsapp.com/Fz88i4PnNcY6wM1d2eRAtV" class="btn btn-success">Click to join WhatsApp group!</a></div>
-        </p>
-        <div class="view-buttn mt-lg-4 mt-3">
 
         </div>
-    </div>
+
+        <div class="col-lg-7 col-md-6">
+
+            <p>IEEE SIESGST presents <b>DesignIt</b> - A Digital Poster Presentation Competition.</br>
+                TOPIC:- <b>To Society through Technology</b><br><b>E-Certificates</b> will be provided to participants.<br>The <b>Winner</b> gets an appreciation certificate and his/her poster will be posted on our <a href="https://www.linkedin.com/mwlite/company/ieee-gst">Linkedin</a>, <a href="https://m.facebook.com/ieeesiesgstofficial/">Facebook</a> and <a href="https://www.instagram.com/ieeesiesgst/">Instagram</a> handles!</br>
+                Age Limit:- <b>23 Years</b><br>The competition is open to all. <b>No Entry Fee</b>.<br><div class="text-center"><a href="https://chat.whatsapp.com/Fz88i4PnNcY6wM1d2eRAtV" class="btn btn-success">Click to join WhatsApp group!</a></div>
+            </p>
+            <div class="view-buttn mt-lg-4 mt-3">
+
+            </div>
+        </div>
+
+    <!--
           <div class="col-lg-5 col-md-6 text-center">
 
             <h1>Coming Soon.<br>Stay Tuned!</h1>
 
-          </div> 
+          </div>
+      --> 
 
-</div>
+  </div>
 
 </div>
 </section>
@@ -209,21 +213,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 <div class="container">
-    
-        <div class="row start-end-date">
-            <div class="col-md-6 col-12">
-                <fieldset class="event-fieldset">
-                    <legend class="event-legend">Registration Starts:</legend>
-                    <div class="event-time text-center">19<sup>th</sup> June 2020</div>
-                </fieldset>
-            </div>
-            <div class="col-md-6 col-12">
-                <fieldset class="event-fieldset">
-                    <legend class="event-legend">Submission Deadline:</legend>
-                    <div class="event-time text-center">30<sup>th</sup> June 2020</div>
-                </fieldset>
-            </div>
+
+    <div class="row start-end-date">
+        <div class="col-md-6 col-12">
+            <fieldset class="event-fieldset">
+                <legend class="event-legend">Registration Starts:</legend>
+                <div class="event-time text-center">19<sup>th</sup> June 2020</div>
+            </fieldset>
         </div>
+        <div class="col-md-6 col-12">
+            <fieldset class="event-fieldset">
+                <legend class="event-legend">Submission Deadline:</legend>
+                <div class="event-time text-center">30<sup>th</sup> June 2020</div>
+            </fieldset>
+        </div>
+    </div>
     
 </div>
 
@@ -261,6 +265,529 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<li class="step"><span>Lastly, ping this message in the WhatsApp group "{Your name}, Successfully submitted the article".<br>Once we receive this message we will start the evaluation of your submitted poster.</span></li>
 	</ol>
 </div>
+
+
+
+
+
+
+
+
+<!--event form begins-->
+
+<!-- Event Form -->
+<div id="designitbody">
+    <div class="container py-lg-5 py-md-4 py-sm-4 py-3" style="padding-bottom: 0px !important">
+        <h2 class="tittle mb-lg-5 pb-3" style="margin-bottom: 20px !important; padding-bottom: 0px !important">Competition Entry Form</h2>
+        <label>Participation Type:<span class="form-required"> *</span></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sftf" id="sf" onchange="soloform();">
+                <label class="form-check-label" for="sf" id="solo">
+                Individual Participant
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sftf" id="tf" onchange="teamform();">
+                <label class="form-check-label" for="tf" id="team">
+                Two-Membered Team
+                </label>
+                <small class="form-text text-muted">Select your choice to load the form.</small>
+            </div>
+    </div>
+
+
+
+
+
+    <section class="collection py-lg-4 py-md-3 py-sm-3 py-3" id="solo-form">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3" style="padding-top: 0px !important">
+        <h4 class="tittle mb-lg-5 pb-3" style="margin-bottom: 8px !important; padding-bottom: 0px !important">Individual Entry Form</h4>
+
+            <form class="ev_form" action="https://script.google.com/macros/s/AKfycbwa44BpecifAahPBRnbkJY3Yuir1EdcTYbhkw0IATDB5UmW7e0p/exec" autocomplete="off" id="form1" method="POST" onsubmit="return check_multiple_solo();">
+                <fieldset id="disablesolo">
+                    <div class="form-group">
+                        <div class="form-required-show">
+                            <span class="form-required">* is for required.</span>
+                        </div>
+                        <label for="full_name">Full Name<span class="form-required"> *</span></label>
+                        <input name="name" type="text" id="name" class="form-control" placeholder="Enter Your Full Name" required>
+                        <small class="form-text text-muted">To be printed on certificate</small></br>
+                        <label for="email">Email Address<span class="form-required"> *</span></label>
+                        <input name="email" type="email" id="email" class="form-control" placeholder="Enter Your Email" required>
+                        <small class="form-text text-muted">For E-Certificate</small></br>
+                        <label for="phone">Contact Number<span class="form-required"> *</span></label>
+                        <input name="phone" pattern="[+987][0-9]{9,12}" type="tel" id="phone" class="form-control" placeholder="Enter Your Contact Number" required>
+                        </br>
+                        <label for="clgname">College Name<span class="form-required"> *</span></label>
+                        <input name="clgname" type="text" id="clgname" class="form-control" placeholder="Enter Your College Name" required></br>
+                        
+                         <label for="branch">Enter Your Branch/Degree<span class="form-required"> *</span></label>
+                        <input name="branch" type="text" id="branch" class="form-control" placeholder="Enter Your Branch" required></br>
+
+                        <label>Select Your Academic Year<span class="form-required"> *</span></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year" id="fe" value="First Year" required checked>
+                            <label class="form-check-label" for="fe">
+                            First Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year" id="se" value="Second Year">
+                            <label class="form-check-label" for="se">
+                            Second year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year" id="te" value="Third Year">
+                            <label class="form-check-label" for="te">
+                            Third Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year" id="be" value="Fourth Year">
+                            <label class="form-check-label" for="be">
+                            Fourth Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year" id="others" value="Other">
+                            <label class="form-check-label" for="others">
+                            Other
+                            </label>
+                        </div>
+                        </br>
+                        <div id="solodata"></div><br>
+                        <label for="uploadfile1">Upload Poster<span class="form-required"> *</span></label>
+                        
+                        <input name="file1" class="form-control-file" id="uploadfile1" type="file" accept="image/jpeg,image/jpg,application/pdf" required><br><br>
+
+                        <label class="noshow form-required" id="wrongsolo">Submission on the given email address is already done.<br>Contact the WhatsApp group admins if this was a mistake.</label>
+                        <button class="btn btn-danger ev_btn " type="submit" id="sub_form1" name="sub_form1">Submit</button><br><small id="pleasewait1" class="noshow form-required">Your response is being submitted. This may take upto 10 seconds. Please wait!</small>
+        
+
+                    </div>
+                </fieldset>
+
+            </form>
+
+      </div>
+  </section>
+
+
+
+  
+
+  
+    <section class="collection py-lg-4 py-md-3 py-sm-3 py-3" id="team-form">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3" style="padding-top: 0px !important;">
+        <h4 class="tittle mb-lg-5 pb-3" style="margin-bottom: 8px !important; padding-bottom: 0px !important">Team Entry Form</h4>
+
+            <form class="ev_form" action="https://script.google.com/macros/s/AKfycbzfxHZIUrYNk5mEJD5PSytR43SbMYpVzzPXUTh_lNEBSc-41aTe/exec" autocomplete="off" id="form2" method="POST" onsubmit="return check_multiple_team();">
+                <fieldset id="disableteam">
+                    <div class="form-group">
+                        <div class="form-required-show">
+                            <span class="form-required">* is for required.</span>
+                        </div>
+                        <h5 class="tittle mb-lg-5 pb-3" style="padding-bottom: 0px !important; margin-bottom: 8px !important;">Enter Member 1 details:</h5>
+                        <label for="name1">Full Name<span class="form-required"> *</span></label>
+                        <input name="name1" type="text" id="name1" class="form-control" placeholder="Enter Your Full Name" required>
+                        <small class="form-text text-muted">To be printed on certificate</small></br>
+                        <label for="email1">Email Address<span class="form-required"> *</span></label>
+                        <input name="email1" type="email" id="email1" class="form-control" placeholder="Enter Your Email" required>
+                        <small class="form-text text-muted">For E-Certificate</small></br>
+                        <label for="phone1">Phone Number<span class="form-required"> *</span></label>
+                        <input name="phone1" pattern="[+987][0-9]{9,12}" type="tel" id="phone1" class="form-control" placeholder="Enter Your Contact Number" required>
+                        </br>
+                        <label for="clgname1">College Name<span class="form-required"> *</span></label>
+                        <input name="clgname1" type="text" id="clgname1" class="form-control" placeholder="Enter Your College Name" required></br>
+                        
+                        <label for="branch1">Enter Your Branch/Degree<span class="form-required"> *</span></label>
+                        <input name="branch1" type="text" id="branch1" class="form-control" placeholder="Enter Your Branch" required></br>
+
+                        <label>Select Your Academic Year<span class="form-required"> *</span></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year1" id="fe1" value="First Year" required checked>
+                            <label class="form-check-label" for="fe1">
+                            First Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year1" id="se1" value="Second Year">
+                            <label class="form-check-label" for="se1">
+                            Second year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year1" id="te1" value="Third Year">
+                            <label class="form-check-label" for="te1">
+                            Third Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year1" id="be1" value="Fourth Year">
+                            <label class="form-check-label" for="be1">
+                            Fourth Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year1" id="others1" value="Other">
+                            <label class="form-check-label" for="others1">
+                            Other
+                            </label>
+                        </div>
+                        </br>
+                        <hr>
+                        <h5 class="tittle mb-lg-5 pb-3" style="padding-bottom: 0px !important; margin-bottom: 8px !important;">Enter Member 2 details:</h5>
+                        <label for="name2">Full Name<span class="form-required"> *</span></label>
+                        <input name="name2" type="text" id="name2" class="form-control" placeholder="Enter Your Full Name" required>
+                        <small class="form-text text-muted">To be printed on certificate</small></br>
+                        <label for="email2">Email Address<span class="form-required"> *</span></label>
+                        <input name="email2" type="email" id="email2" class="form-control" placeholder="Enter Your Email" required>
+                        <small class="form-text text-muted">For E-Certificate</small></br>
+                        <label for="phone2">Phone Number<span class="form-required"> *</span></label>
+                        <input name="phone2" pattern="[+987][0-9]{9,12}" type="tel" id="phone2" class="form-control" placeholder="Enter Your Contact Number" required>
+                        </br>
+                        <label for="clgname2">College Name<span class="form-required"> *</span></label>
+                        <input name="clgname2" type="text" id="clgname2" class="form-control" placeholder="Enter Your College Name" required></br>
+
+                        <label for="branch2">Enter Your Branch/Degree<span class="form-required"> *</span></label>
+                        <input name="branch2" type="text" id="branch2" class="form-control" placeholder="Enter Your Branch" required></br>
+
+
+                        <label>Select Your Academic Year<span class="form-required"> *</span></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year2" id="fe2" value="First Year" required checked>
+                            <label class="form-check-label" for="fe2">
+                            First Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year2" id="se2" value="Second Year">
+                            <label class="form-check-label" for="se2">
+                            Second year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year2" id="te2" value="Third Year">
+                            <label class="form-check-label" for="te2">
+                            Third Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year2" id="be2" value="Fourth Year">
+                            <label class="form-check-label" for="be2">
+                            Fourth Year
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="year2" id="others2" value="Other">
+                            <label class="form-check-label" for="others2">
+                            Other
+                            </label>
+                        </div>
+                        </br>
+                        <hr>
+
+                        <label for="teamname">Team Name<span class="form-required"> *</span></label>
+                        <input name="teamname" type="text" id="teamname" class="form-control" placeholder="Enter Your Team Name" required></br>
+
+
+
+                        <div id="teamdata"></div><br>
+                        <label for="uploadfile2">Upload Poster</label>
+                        
+                        <input name="file2" class="form-control-file" id="uploadfile2" type="file" accept="image/jpeg,image/jpg,application/pdf" required><br><br>
+
+                        <label class="noshow form-required" id="wrongteam">Submission on one/both of the given email address(es) is already done or both mail addresses are same.<br>Contact the WhatsApp group admins if this was a mistake.</label>
+                        <button class="btn btn-danger ev_btn " type="submit" id="sub_form2" name="sub_form2">Submit</button><br><small id="pleasewait2" class="noshow form-required">Your response is being submitted. This may take upto 10 seconds. Please wait!</small>
+        
+
+                    </div>
+                </fieldset>
+            </form>
+
+      </div>
+  </section>
+
+<!-- Form Ends Here -->
+
+</div>
+
+
+<div class="container noshow" id="confirm">
+    <h2 class="tittle mb-lg-5 pb-3 text-center" id="one-confirm" style="margin-bottom: 20px !important; padding-bottom: 0px !important">Congratulations!</h2><h5 id="two-confirm" class="tittle mb-lg-5 pb-3 text-center" style="margin-bottom: 20px !important; padding-bottom: 0px !important">You have successfully submitted your Digital Poster.</h5><h6 class="tittle text-center mb-lg-5 pb-3" style="padding-bottom: 0px !important; margin-bottom: 8px !important;" id="three-confirm">Please make sure you have received confirmation mail on your registered mail address.</h6><p id="four-confirm" class="text-center">If you didn't receive email, please contact WhatsApp group admin immediately.</p><p class="text-center"><small id="five-confirm"><a href="https://ieeesiesgst.co.in/events.html?b">Click here</a> if you are seeing this without submitting the form.</small></p>
+</div>
+
+
+<!--//event form ends-->
+
+
+
+
+
+
+<!--event form SCRIPT begins-->
+
+<script>
+    $('#uploadfile1').on("change", function() {
+        var file = this.files[0];
+        var fr = new FileReader();
+        fr.fileName = file.name
+        fr.onload = function(e) {
+            e.target.result
+            html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+            html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+            html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+            $("#solodata").empty().append(html);
+        }
+        fr.readAsDataURL(file);
+        document.getElementById('wrongsolo').style.display = 'none';
+        document.getElementById('wrongsolo').innerHTML = "Submission on the given email address is already done.<br>Contact the WhatsApp group admins if this was a mistake.";
+    });
+
+    
+    function ctrlq1(e) {
+  
+    
+        if(e.flag==1)
+        {
+            
+            
+            document.getElementById('form1').submit();
+        }
+        else
+        {
+            document.getElementById('sub_form1').removeAttribute("disabled");
+            document.getElementById('sf').removeAttribute("disabled");
+            document.getElementById('tf').removeAttribute("disabled");
+
+            document.getElementById('sub_form1').innerHTML="Submit";
+            document.getElementById('pleasewait1').style.display = 'none';
+            document.getElementById('wrongsolo').innerHTML = "Submission on the given email address is already done.<br>Contact the WhatsApp group admins if this was a mistake.";
+            document.getElementById('wrongsolo').style.display = 'block';
+        }
+
+        
+    }
+
+
+    function check_multiple_solo()
+    {
+        
+        
+        document.getElementById('sub_form1').setAttribute("disabled", "");
+        document.getElementById('sf').setAttribute("disabled", "");
+        document.getElementById('tf').setAttribute("disabled", "");
+
+        document.getElementById('sub_form1').innerHTML="Submitting";
+        document.getElementById('pleasewait1').style.display = 'block';
+        document.getElementById('wrongsolo').style.display = 'none';
+        document.getElementById('wrongsolo').innerHTML = "Submission on the given email address is already done.<br>Contact the WhatsApp group admins if this was a mistake.";
+
+        var script_url = "https://script.google.com/macros/s/AKfycbwa44BpecifAahPBRnbkJY3Yuir1EdcTYbhkw0IATDB5UmW7e0p/exec";
+        var check_email = $("#email").val();
+        var check_url = script_url+"?callback=ctrlq1&email="+check_email;
+
+        
+
+        var request = jQuery.ajax({
+            crossDomain: true,
+            url: check_url ,
+            method: "GET",
+            dataType: "jsonp"
+        });
+        
+        return false;
+
+            
+        
+        
+    };
+</script>
+
+
+
+<script>
+    $('#uploadfile2').on("change", function() {
+        var file = this.files[0];
+        var fr = new FileReader();
+        fr.fileName = file.name
+        fr.onload = function(e) {
+            e.target.result
+            html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+            html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+            html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+            $("#teamdata").empty().append(html);
+            document.getElementById('wrongteam').style.display = 'none';
+            document.getElementById('wrongteam').innerHTML = "Submission on one/both of the given email address(es) is already done or both mail addresses are same.<br>Contact the WhatsApp group admins if this was a mistake.";
+        }
+        fr.readAsDataURL(file);
+    });
+
+    
+    function ctrlq2(e) {
+  
+    
+        if(e.flag==1)
+        {
+            
+            document.getElementById('form2').submit();
+        }
+
+        else
+        {
+            document.getElementById('sub_form2').removeAttribute("disabled");
+            document.getElementById('sf').removeAttribute("disabled");
+            document.getElementById('tf').removeAttribute("disabled");
+
+            document.getElementById('sub_form2').innerHTML="Submit";
+            document.getElementById('pleasewait2').style.display = 'none';
+            document.getElementById('wrongteam').innerHTML = "Submission on one/both of the given email address(es) is already done or both mail addresses are same.<br>Contact the WhatsApp group admins if this was a mistake.";
+            document.getElementById('wrongteam').style.display = 'block';
+        }
+
+        
+    }
+
+
+    function check_multiple_team()
+    {
+
+
+        document.getElementById('sub_form2').setAttribute("disabled", "");
+        document.getElementById('sf').setAttribute("disabled", "");
+        document.getElementById('tf').setAttribute("disabled", "");
+
+        document.getElementById('sub_form2').innerHTML="Submitting";
+        document.getElementById('pleasewait2').style.display = 'block';
+        document.getElementById('wrongteam').style.display = 'none';
+        document.getElementById('wrongteam').innerHTML = "Submission on one/both of the given email address(es) is already done or both mail addresses are same.<br>Contact the WhatsApp group admins if this was a mistake.";
+        
+        
+        var script_url = "https://script.google.com/macros/s/AKfycbzfxHZIUrYNk5mEJD5PSytR43SbMYpVzzPXUTh_lNEBSc-41aTe/exec";
+        var check_email1 = $("#email1").val();
+        var check_email2 = $("#email2").val();
+        var check_url = script_url+"?callback=ctrlq2&email1="+check_email1+"&email2="+check_email2;
+
+        
+
+        var request = jQuery.ajax({
+            crossDomain: true,
+            url: check_url ,
+            method: "GET",
+            dataType: "jsonp"
+        });
+        
+        return false;
+
+        
+        
+        
+    };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function soloform()
+    {
+        document.getElementById('solo-form').style.display = 'block';
+        document.getElementById('team-form').style.display = 'none';
+        document.getElementById('wrongsolo').style.display = 'none';
+        document.getElementById('wrongsolo').innerHTML = "Submission on the given email address is already done.<br>Contact the WhatsApp group admins if this was a mistake.";
+    };
+
+    function teamform()
+    {
+        document.getElementById('team-form').style.display = 'block';
+        document.getElementById('solo-form').style.display = 'none';
+        document.getElementById('wrongteam').style.display = 'none';
+        document.getElementById('wrongteam').innerHTML = "Submission on one/both of the given email address(es) is already done or both mail addresses are same.<br>Contact the WhatsApp group admins if this was a mistake.";
+    };
+
+
+
+</script>
+
+<script type="text/javascript">
+    var loc = window.location.href;
+    var arr = loc.split("?");
+    if(arr.length==2)
+    {
+        if(arr[1]=="a")
+        {
+            document.getElementById('designitbody').style.display = 'none';
+            document.getElementById('confirm').style.display = 'block';
+            var ot = document.getElementById('confirm').offsetTop;
+            setTimeout(function(){
+                window.scrollTo(0,ot-50);
+            }, 10);
+        }
+        else if(arr[1]=="b")
+        {
+            var ot = document.getElementById('designitbody').offsetTop;
+            setTimeout(function(){
+                window.scrollTo(0,ot-50);
+            }, 10);
+        }
+        else if(arr[1]=="d")
+        {
+            document.getElementById('designitbody').style.display = 'none';
+            document.getElementById('one-confirm').innerHTML="Sorry!";
+            document.getElementById('two-confirm').innerHTML="Your response could not be submitted due to error.";
+            document.getElementById('three-confirm').innerHTML="Please contact WhatsApp group admin.";
+            document.getElementById('four-confirm').innerHTML="";
+            document.getElementById('five-confirm').innerHTML="";
+            document.getElementById('confirm').style.display = 'block';
+            var ot = document.getElementById('confirm').offsetTop;
+            setTimeout(function(){
+                window.scrollTo(0,ot-50);
+            }, 10);
+        }
+    }
+
+    function ctrlqerr2()
+    {
+        document.getElementById('sub_form2').removeAttribute("disabled");
+        document.getElementById('sf').removeAttribute("disabled");
+        document.getElementById('tf').removeAttribute("disabled");
+
+        document.getElementById('sub_form2').innerHTML="Submit";
+        document.getElementById('pleasewait2').style.display = 'none';
+        document.getElementById('wrongteam').innerHTML = "Server error.<br>Please contact WhatsApp group admin.";
+        document.getElementById('wrongteam').style.display = 'block';
+    }
+    function ctrlqerr1()
+    {
+        document.getElementById('sub_form2').removeAttribute("disabled");
+        document.getElementById('sf').removeAttribute("disabled");
+        document.getElementById('tf').removeAttribute("disabled");
+
+        document.getElementById('sub_form2').innerHTML="Submit";
+        document.getElementById('pleasewait2').style.display = 'none';
+        document.getElementById('wrongsolo').innerHTML = "Server error.<br>Please contact WhatsApp group admin.";
+        document.getElementById('wrongsolo').style.display = 'block';
+    }
+
+</script>
+
+<!--event form SCRIPT begins-->
+
+
+
+
+
 
 
 <!--
@@ -399,15 +926,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <p>Always Open on following Social sites, feel free to check out.</p>
                     <ul class="social_section_1info">
-                        <li class="mb-2 facebook"><a href="https://m.facebook.com/ieeesiesgstofficial/"><span class="fa fa-facebook mr-1"></span>Facebook</a></li>
 
-                        <li class="mb-2 instagram"><a href="https://www.instagram.com/ieeesiesgst/"><span class="fa fa-instagram mr-1"></span>Instagram</a></li>
+                    <li class="mb-2 instagram"><a href="https://www.instagram.com/ieeesiesgst/"><span class="fa fa-instagram mr-1"></span>Instagram</a></li>
 
-                        <li class="mb-2 linkedin"><a href="https://www.linkedin.com/mwlite/company/ieee-gst"><span class="fa fa-linkedin mr-1"></span>LinkedIn</a></li>
+                    <li class="mb-2 youtube"><a href="https://www.youtube.com/channel/UCXAeBcDQQBiuVtzn4ke-Xsw"><span class="fa fa-youtube-play mr-1"></span>YouTube</a></li>
 
-                        <li class="mb-2 github"><a href="https://github.com/ieeesiesgst"><span class="fa fa-github mr-1"></span>GitHub</a></li>
 
-                    </ul>
+                    <li class="mb-2 facebook"><a href="https://m.facebook.com/ieeesiesgstofficial/"><span class="fa fa-facebook mr-1"></span>Facebook</a></li>
+
+                    
+
+                    <li class="mb-2 linkedin"><a href="https://www.linkedin.com/mwlite/company/ieee-gst"><span class="fa fa-linkedin mr-1"></span>LinkedIn</a></li>
+
+                    <li class="mb-2 github"><a href="https://github.com/ieeesiesgst"><span class="fa fa-github mr-1"></span>GitHub</a></li>
+
+                </ul>
                 </div>
                 <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its">
                     <div class="footer-title-w3ls">
