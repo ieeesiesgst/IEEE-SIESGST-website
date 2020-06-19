@@ -3163,3 +3163,11 @@ h3.tittle {
     margin-bottom: 40px;
     margin-top: 40px;
 }
+
+@media(min-height: 980px)
+{
+    .submit-status
+    {
+        min-height: 630px;
+    }
+}
