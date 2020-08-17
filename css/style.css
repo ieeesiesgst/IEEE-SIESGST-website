@@ -2729,7 +2729,7 @@ h3.tittle {
 
 .ev_btn
 {
-    width: 25%;
+    min-width: 25%;
 }
 
 .form-required-show
