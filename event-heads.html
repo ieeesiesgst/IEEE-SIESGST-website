@@ -120,11 +120,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             document.getElementById('submit-form').innerHTML = "Submitting";
             document.getElementById('submit-form').setAttribute('disabled', '');
             document.getElementById('pleasewait').style.display = 'block';
+            document.getElementById('sub-done').style.display = 'none';
             $.ajax({
                 url: "",
                 type: 'POST',
                 data: serialJSON
             });
+        }
+
+        function req_success() {
+            document.getElementById('form').remove();
+            document.getElementById('success').style.display = 'block';
+            window.scroll(0, (document.getElementById('success').getBoundingClientRect().top + window.scrollY - 60));
+        }
+
+        function req_fail() {
+            document.getElementById('submit-form').innerHTML = "Submit";
+            document.getElementById('submit-form').removeAttribute('disabled');
+            document.getElementById('pleasewait').style.display = 'none';
+            document.getElementById('sub-done').style.display = 'block';
+        }
+
+        function req_error() {
+            document.getElementById('submit-form').innerHTML = "Submit";
+            document.getElementById('submit-form').removeAttribute('disabled');
+            document.getElementById('pleasewait').style.display = 'none';
+            alert('There was some server error!\nPlease try again or contact our team.\nSorry for inconvenience :(');
         }
     </script>
     
@@ -222,15 +243,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <br>
                     <label>Academic Year<span class="form-required"> *</span></label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="year" id="fe" value="FE" required>
-                        <label class="form-check-label" for="fe">
-                            First Year
+                        <input class="form-check-input" type="radio" name="year" id="se" value="SE" required>
+                        <label class="form-check-label" for="se">
+                            Second Year
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="year" id="se" value="SE">
-                        <label class="form-check-label" for="se">
-                            Second Year
+                        <input class="form-check-input" type="radio" name="year" id="te" value="TE">
+                        <label class="form-check-label" for="te">
+                            Third Year
                         </label>
                     </div>
                     <br>
@@ -264,7 +285,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </fieldset>
         </form>
 
-        <div class="ev_form noshow">
+        <div class="ev_form noshow" id="success">
             <h4 class="tittle text-center pb-2">Thank You!</h4>
             <p class="text-center">Please check your mail which contains <b>WhatsApp Group link</b> for further discussion.<br>If you haven't received the mail, please send message to our team member or call on <a href="tel:+919757468857">9757468857</a>.<br>Thank You for showing interest in IEEE SIESGST Events.</p>
         </div>
