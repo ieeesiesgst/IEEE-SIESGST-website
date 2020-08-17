@@ -123,9 +123,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             document.getElementById('sub-done').style.display = 'none';
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbwEevQEqz04dNxaO4aEI-qI3dNeG1WKvsFAFJ7A9gpfmUxr_M4/exec",
-                type: 'POST',
-                data: serialJSON,
-                headers: {Access-Control-Allow-Origin: *}
+                type: 'GET',
+                data: serialJSON
             });
         }
 
