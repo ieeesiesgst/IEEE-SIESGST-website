@@ -71,83 +71,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
-    <script type="text/javascript">
-        function checkMail() {
-            var serial = $('#form').serializeArray();
-            var serialJSON = {};
-            var eventsArray = [];
-            for(var i=1; i<serial.length; i++)
-            {
-                if(serial[i].name == "events")
-                {
-                    eventsArray.push(serial[i].value);
-                }
-                else if(serial[i].value != "")
-                {
-                    serialJSON[serial[i].name] = serial[i].value;
-                }
-                else
-                {
-                    alert('Please fill all details!');
-                    return;
-                }
-            }
-            if(document.getElementById('email').getAttribute('type') != 'email')
-            {
-                alert('Page depricated. Reloading!');
-                location.reload();
-                return;
-            }
-            if(document.getElementById('prn').getAttribute('pattern') != '[123][12][567890][A-Za-z][0-9]{4}')
-            {
-                alert('Page depricated. Reloading!');
-                location.reload();
-                return;
-            }
-            if(document.getElementById('phone').getAttribute('pattern') != '[+9087][0-9]{9,12}')
-            {
-                alert('Page depricated. Reloading!');
-                location.reload();
-                return;
-            }
-            if(eventsArray.length==0)
-            {
-                alert('Please select an event!');
-                return;
-            }
-            serialJSON['loc'] = window.top.location.href;
-            serialJSON['events']=eventsArray;
-            document.getElementById('submit-form').innerHTML = "Submitting";
-            document.getElementById('submit-form').setAttribute('disabled', '');
-            document.getElementById('pleasewait').style.display = 'block';
-            document.getElementById('sub-done').style.display = 'none';
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbwEevQEqz04dNxaO4aEI-qI3dNeG1WKvsFAFJ7A9gpfmUxr_M4/exec",
-                type: 'POST',
-                data: serialJSON
-            });
-        }
 
-        function req_success() {
-            document.getElementById('form').remove();
-            document.getElementById('success').style.display = 'block';
-            window.scroll(0, (document.getElementById('success').getBoundingClientRect().top + window.scrollY - 60));
-        }
-
-        function req_fail() {
-            document.getElementById('submit-form').innerHTML = "Submit";
-            document.getElementById('submit-form').removeAttribute('disabled');
-            document.getElementById('pleasewait').style.display = 'none';
-            document.getElementById('sub-done').style.display = 'block';
-        }
-
-        function req_error() {
-            document.getElementById('submit-form').innerHTML = "Submit";
-            document.getElementById('submit-form').removeAttribute('disabled');
-            document.getElementById('pleasewait').style.display = 'none';
-            alert('There was some server error!\nPlease try again or contact our team.\nSorry for inconvenience :(');
-        }
-    </script>
     
 
 
@@ -218,86 +142,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <section class="collection pb-lg-4 py-md-3 py-sm-3 py-3">
     <div class="container">
         <div class="pb-lg-5 py-md-4 py-sm-4 py-3">
-            <h3 class="tittle text-center pb-2">Call for Event-Heads</h3>
+            <h3 class="tittle text-center pb-2">Error 404</h3>
         </div>
 
-        <form class="ev_form" id="form" action="javascript:void(0);" autocomplete="off">
-            <fieldset>
-                <div class="form-group">
-                    <div class="form-required-show">
-                        <span class="form-required">* is for required.</span>
-                    </div>
-                    <label for="name">Full Name<span class="form-required"> *</span></label>
-                    <input name="name" type="text" id="name" class="form-control" placeholder="Enter Your Full Name" required>
-                    <small class="form-text text-muted">To be printed on certificate</small>
-                    </br>
-                    <label for="email">Email Address<span class="form-required"> *</span></label>
-                    <input name="email" type="email" id="email" class="form-control" placeholder="Enter Your Email Address" required>
-                    <small class="form-text text-muted">For initial communication</small>
-                    </br>
-                    <label for="prn">PRN<span class="form-required"> *</span></label>
-                    <input name="prn" pattern="[123][12][567890][A-Za-z][0-9]{4}" type="text" id="prn" class="form-control" placeholder="Enter Your PRN" required>
-                    <br>
-                    <label for="phone">Phone Number (WhatsApp)<span class="form-required"> *</span></label>
-                    <input name="phone" pattern="[+9087][0-9]{9,12}" type="tel" id="phone" class="form-control" placeholder="Enter Your WhatsApp number" required>
-                    <br>
-                    <label>Academic Year<span class="form-required"> *</span></label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="year" id="se" value="SE" required>
-                        <label class="form-check-label" for="se">
-                            Second Year
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="year" id="te" value="TE">
-                        <label class="form-check-label" for="te">
-                            Third Year
-                        </label>
-                    </div>
-                    <br>
-                    <label for="div">Division<span class="form-required"> *</span></label>
-                    <input name="div" pattern="[ABCDEFGabcdefg]{1}" type="text" id="div" class="form-control" placeholder="Enter Your division" required>
-                    <br>
-                    <label>Select Events<span class="form-required"> *</span></label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="squabble" value="Squabble">
-                        <label class="form-check-label" for="squabble">
-                            Squabble
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="inquisitive" value="Inquisitive">
-                        <label class="form-check-label" for="inquisitive">
-                            Inquisitive
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="tech-forage" value="Tech-Forage">
-                        <label class="form-check-label" for="tech-forage">
-                            Tech-Forage
-                        </label>
-                    </div>
-                    <br>
-                    <label class="noshow form-required" id="sub-done">Submission is already done.<br>Contact the WhatsApp group admins if this was a mistake.<br></label>
-                    <button class="btn btn-danger ev_btn" type="submit" id="submit-form">Submit</button><br><small id="pleasewait" class="noshow form-required">Your response is being submitted. This may take upto 10 seconds. Please wait!</small>
-
-                </div>
-            </fieldset>
-        </form>
+        
 
         <div class="ev_form noshow" id="success">
-            <h4 class="tittle text-center pb-2">Thank You!</h4>
-            <p class="text-center">Please check your mail which contains <b>WhatsApp Group link</b> for further discussion.<br>If you haven't received the mail, please send message to our team member or call on <a href="tel:+919757468857">9757468857</a>.<br>Thank You for showing interest in IEEE SIESGST Events.</p>
+            <h4 class="tittle text-center pb-2">Page not Found!</h4>
+            <p class="text-center">Please check the URL or try some other link from navigation menu.</p>
         </div>
     </div>
 </section>
 
-<script type="text/javascript">
-    document.getElementById('form').onsubmit = function() {
-        checkMail();
-        return false;
-    }
-</script>
+
 
 
 <!--footer -->
