@@ -72,6 +72,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
     <script type="text/javascript">
+        var noe = 0;
+
         function checkMail() {
             var serial = $('#form').serializeArray();
             var serialJSON = {};
@@ -116,7 +118,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 return;
             }
             serialJSON['loc'] = window.top.location.href;
-            //serialJSON['events']=eventsArray;
+            serialJSON['events']=eventsArray;
             document.getElementById('submit-form').innerHTML = "Submitting";
             document.getElementById('submit-form').setAttribute('disabled', '');
             document.getElementById('pleasewait').style.display = 'block';
@@ -125,28 +127,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 url: "https://script.google.com/macros/s/AKfycbwEevQEqz04dNxaO4aEI-qI3dNeG1WKvsFAFJ7A9gpfmUxr_M4/exec",
                 type: 'POST',
                 data: serialJSON,
-                success: req_success()
+                success: function(res){if(res == "req_error()"){req_error();}else if(res == "req_success()"){req_success();}else if(res == "req_success()"){req_success();}},
+                error: function(res){console.log(res);}
             });
         }
 
         function req_success() {
-            document.getElementById('form').remove();
-            document.getElementById('success').style.display = 'block';
-            window.scroll(0, (document.getElementById('success').getBoundingClientRect().top + window.scrollY - 60));
+            if(noe == 0)
+            {
+                noe++;
+                document.getElementById('form').remove();
+                document.getElementById('success').style.display = 'block';
+                window.scroll(0, (document.getElementById('success').getBoundingClientRect().top + window.scrollY - 90));
+            }
         }
 
         function req_fail() {
-            document.getElementById('submit-form').innerHTML = "Submit";
-            document.getElementById('submit-form').removeAttribute('disabled');
-            document.getElementById('pleasewait').style.display = 'none';
-            document.getElementById('sub-done').style.display = 'block';
+            if(noe == 0)
+            {
+                noe++;
+                document.getElementById('submit-form').innerHTML = "Submit";
+                document.getElementById('submit-form').removeAttribute('disabled');
+                document.getElementById('pleasewait').style.display = 'none';
+                document.getElementById('sub-done').style.display = 'block';
+            }
         }
 
         function req_error() {
-            document.getElementById('submit-form').innerHTML = "Submit";
-            document.getElementById('submit-form').removeAttribute('disabled');
-            document.getElementById('pleasewait').style.display = 'none';
-            alert('There was some server error!\nPlease try again or contact our team.\nSorry for inconvenience :(');
+            if(noe == 0)
+            {
+                noe++;
+                document.getElementById('submit-form').innerHTML = "Submit";
+                document.getElementById('submit-form').removeAttribute('disabled');
+                document.getElementById('pleasewait').style.display = 'none';
+                alert('There was some server error!\nPlease try again or contact our team.\nSorry for inconvenience :(');
+            }
         }
     </script>
     
