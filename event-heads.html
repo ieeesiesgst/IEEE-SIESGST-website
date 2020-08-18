@@ -77,12 +77,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         function checkMail() {
             var serial = $('#form').serializeArray();
             var serialJSON = {};
-            var eventsArray = [];
+            var eventsArray = "";
             for(var i=0; i<serial.length; i++)
             {
                 if(serial[i].name == "events")
                 {
-                    eventsArray.push(serial[i].value);
+                    eventsArray += serial[i].value + ", ";
                 }
                 else if(serial[i].value != "")
                 {
