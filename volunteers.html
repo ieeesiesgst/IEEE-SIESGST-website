@@ -234,7 +234,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <section class="collection pb-lg-4 py-md-3 py-sm-3 py-3">
     <div class="container">
         <div class="pb-lg-5 py-md-4 py-sm-4 py-3">
-            <h3 class="tittle text-center pb-2">Call for Event-Heads</h3>
+            <h3 class="tittle text-center pb-2">Call for Volunteers</h3>
         </div>
 
         <form class="ev_form" id="form" action="javascript:void(0);" autocomplete="off">
@@ -274,25 +274,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <label for="div">Division<span class="form-required"> *</span></label>
                     <input name="div" pattern="[ABCDEFGabcdefg]{1}" type="text" id="div" class="form-control" placeholder="Enter Your division" required>
                     <br>
-                    <label>Select Events<span class="form-required"> *</span></label>
+                    <label>Select Team you wish to volunteer for<span class="form-required"> *</span></label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="squabble" value="Squabble">
-                        <label class="form-check-label" for="squabble">
-                            Squabble
+                        <input class="form-check-input" type="checkbox" name="events" id="technical" value="Technical">
+                        <label class="form-check-label" for="technical">
+                            Technical Team
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="inquisitive" value="Inquisitive">
-                        <label class="form-check-label" for="inquisitive">
-                            Inquisitive
+                        <input class="form-check-input" type="checkbox" name="events" id="team" value="Design">
+                        <label class="form-check-label" for="team">
+                            Design Team
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="tech-forage" value="Tech-Forage">
-                        <label class="form-check-label" for="tech-forage">
-                            Tech-Forage
+                        <input class="form-check-input" type="checkbox" name="events" id="administrative" value="Administrative">
+                        <label class="form-check-label" for="administrative">
+                            Administrative Team
                         </label>
                     </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="events" id="publicity" value="Publicity">
+                        <label class="form-check-label" for="publicity">
+                            Publicity Team
+                        </label>
+                    </div>
+                    <br>
+                    <label for="exp">What experience do you have as you head into the team?<span class="form-required"> *</span></label>
+                    <textarea rows="3" name="exp" id="exp" class="form-control" required></textarea>
+                    <br>
+                    <label for="plan">For this first virtual Techopedia, what will be your plan of action?<span class="form-required"> *</span></label>
+                    <textarea rows="3" name="plan" id="plan" class="form-control" required></textarea>
                     <br>
                     <label class="noshow form-required" id="sub-done">Submission is already done.<br>Contact the WhatsApp group admins if this was a mistake.<br></label>
                     <button class="btn btn-danger ev_btn" type="submit" id="submit-form">Submit</button><br><small id="pleasewait" class="noshow form-required">Your response is being submitted. This may take upto 10 seconds. Please wait!</small>
