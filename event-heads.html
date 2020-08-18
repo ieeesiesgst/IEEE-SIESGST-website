@@ -127,8 +127,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 url: "https://script.google.com/macros/s/AKfycbwEevQEqz04dNxaO4aEI-qI3dNeG1WKvsFAFJ7A9gpfmUxr_M4/exec",
                 type: 'POST',
                 data: serialJSON,
-                success: function(res){if(res == "req_error()"){req_error();}else if(res == "req_success()"){req_success();}else if(res == "req_success()"){req_success();}},
-                error: function(res){console.log(res);}
+                success: function(res){if(res == "req_error()"){req_error();}else if(res == "req_success()"){req_success();}else if(res == "req_fail()"){req_fail();}},
+                error: function(res){req_error();}
             });
         }
 
