@@ -135,6 +135,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 alert('Please select an event!');
                 return;
             }
+            if(serialJSON['prn1'] == serialJSON['prn2'])
+            {
+                alert('You have entered same PRN for both event heads!');
+                return;
+            }
+            if(serialJSON['email1'] == serialJSON['email2'])
+            {
+                alert('You have entered same email address for both event heads!');
+                return;
+            }
             serialJSON['loc'] = window.top.location.href;
             serialJSON['events']=eventsArray;
             document.getElementById('submit-form').innerHTML = "Submitting";
