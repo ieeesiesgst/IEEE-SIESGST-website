@@ -80,11 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             var eventsArray = "";
             for(var i=0; i<serial.length; i++)
             {
-                if(serial[i].name == "events")
-                {
-                    eventsArray += serial[i].value + ", ";
-                }
-                else if(serial[i].value != "")
+                if(serial[i].value != "")
                 {
                     serialJSON[serial[i].name] = serial[i].value;
                 }
@@ -130,11 +126,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 location.reload();
                 return;
             }
-            if(eventsArray.length==0)
-            {
-                alert('Please select an event!');
-                return;
-            }
             if(serialJSON['prn1'] == serialJSON['prn2'])
             {
                 alert('You have entered same PRN for both event heads!');
@@ -151,6 +142,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             document.getElementById('submit-form').setAttribute('disabled', '');
             document.getElementById('pleasewait').style.display = 'block';
             document.getElementById('sub-done').style.display = 'none';
+
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbwEevQEqz04dNxaO4aEI-qI3dNeG1WKvsFAFJ7A9gpfmUxr_M4/exec",
                 type: 'POST',
@@ -265,9 +257,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <h3 class="tittle text-center pb-2">Call for Event-Heads</h3>
             <h4 class="tittle text-center pb-2">(Only for Second Year students)</h4>
         </div>
-        <h5 class="tittle text-center mb-lg-5 pb-3">The deadline of the form has passed!<br>For further queries, <a href="https://wa.me/918080355395">Click to chat!</a></h5>
-
         <!--
+        <h5 class="tittle text-center mb-lg-5 pb-3">The deadline of the form has passed!<br>For further queries, <a href="https://wa.me/918080355395">Click to chat!</a></h5>
+        -->
+
+        
         <form class="ev_form" id="form" action="javascript:void(0);" autocomplete="off">
             <fieldset>
                 <div class="form-group">
@@ -310,41 +304,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <input name="div2" type="text" id="div2" class="form-control" placeholder="Enter branch and division" required>
                     <br>
                     <hr>
-                    <label>Select Events you wish to apply for<span class="form-required"> *</span></label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="squabble" value="Squabble">
-                        <label class="form-check-label" for="squabble">
-                            Squabble
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="inquisitive" value="Inquisitive">
-                        <label class="form-check-label" for="inquisitive">
-                            Inquisitive
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="events" id="tech-forage" value="Tech-Forage">
-                        <label class="form-check-label" for="tech-forage">
-                            Tech-Forage
-                        </label>
-                    </div>
-                    <br>
-                    <label>Have you participated in any of those events?<span class="form-required"> *</span></label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="participated" id="parti-yes" value="Yes" required>
-                        <label class="form-check-label" for="parti-yes">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="participated" id="parti-no" value="No">
-                        <label class="form-check-label" for="parti-no">
-                            No
-                        </label>
-                    </div>
-                    <br>
-                    <label for="plan">For the above selected event(s), describe your plans of action for all rounds<span class="form-required"> *</span></label>
+                    <label for="plan">Describe your plans of action for the event.<span class="form-required"> *</span></label>
                     <textarea rows="3" name="plan" id="plan" class="form-control" required></textarea>
                     <br>
                     <label for="quality">Describe the qualities you possess to be an event head<span class="form-required"> *</span></label>
@@ -358,7 +318,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 </div>
             </fieldset>
-        </form>-->
+        </form>
 
         <div class="ev_form noshow" id="success">
             <h4 class="tittle text-center pb-2">Thank You!</h4>
