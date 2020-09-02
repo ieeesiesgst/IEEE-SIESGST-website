@@ -3171,3 +3171,43 @@ h3.tittle {
         min-height: 630px;
     }
 }
+
+@media(max-width: 1280px)
+{
+    h3.heading
+    {
+        font-size: 3.5em;
+    }
+}
+
+@media(max-width: 1080px)
+{
+    h3.heading
+    {
+        font-size: 2.8em;
+    }
+}
+
+@media(max-width: 460px)
+{
+    h3.heading
+    {
+        font-size: 2.6em;
+    }
+}
+
+@media(max-width: 378px)
+{
+    h3.heading
+    {
+        font-size: 2.4em;
+    }
+}
+
+@media(max-width: 337px)
+{
+    h3.heading
+    {
+        font-size: 2.2em;
+    }
+}
