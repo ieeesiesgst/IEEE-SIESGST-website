@@ -72,6 +72,93 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
+    <script type="text/javascript">
+        var noe = 0;
+
+        function checkMail()
+        {
+            var serial = $('#form').serializeArray();
+            var serialJSON = {};
+
+            for(var i=0; i<serial.length; i++)
+            {
+                if(serial[i].value != "")
+                {
+                    serialJSON[serial[i].name] = serial[i].value;
+                }
+                else
+                {
+                    alert('Please fill all details!');
+                    return;
+                }
+            }
+
+            if(document.getElementById('email').getAttribute('type') != 'email')
+            {
+                alert('Page depricated. Reloading!');
+                location.reload();
+                return;
+            }
+            if(document.getElementById('phone').getAttribute('pattern') != '[+9087][0-9\\s]{9,14}')
+            {
+                alert('Page depricated. Reloading!');
+                location.reload();
+                return;
+            }
+
+            serialJSON['loc'] = window.top.location.href;
+
+            document.getElementById('submit-form').innerHTML = "Submitting";
+            document.getElementById('submit-form').setAttribute('disabled', '');
+            document.getElementById('pleasewait').style.display = 'block';
+            document.getElementById('sub-done').style.display = 'none';
+
+            noe = 0;
+
+            $.ajax({
+                url: "",
+                type: 'POST',
+                data: serialJSON,
+                success: function(res){if(res == "req_error()"){req_error();}else if(res == "req_success()"){req_success();}else if(res == "req_fail()"){req_fail();}},
+                error: function(res){req_error();}
+            });
+        }
+
+        function req_success() {
+            if(noe == 0)
+            {
+                noe++;
+                document.getElementById('form-container').remove();
+                document.getElementById('success').style.display = 'block';
+                window.scroll(0, (document.getElementById('success').getBoundingClientRect().top + window.scrollY - 90));
+            }
+        }
+
+        function req_fail() {
+            if(noe == 0)
+            {
+                noe++;
+                document.getElementById('submit-form').innerHTML = "Submit";
+                document.getElementById('submit-form').removeAttribute('disabled');
+                document.getElementById('pleasewait').style.display = 'none';
+                document.getElementById('sub-done').style.display = 'block';
+            }
+        }
+
+        function req_error() {
+            if(noe == 0)
+            {
+                noe++;
+                document.getElementById('submit-form').innerHTML = "Submit";
+                document.getElementById('submit-form').removeAttribute('disabled');
+                document.getElementById('pleasewait').style.display = 'none';
+                alert('There was some server error!\nPlease try again or contact our team.\nSorry for inconvenience :(');
+            }
+        }
+
+
+    </script>
+
     
 
 
@@ -148,8 +235,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
+<div class="container" id="form">
+    <div class="py-md-4 py-sm-4 py-3">
+        <h2 class="text-center">Webinar Series</h2>
+    </div>
+    <p class="text-center"><span class="d-inline-block">IEEE SIES GST is bringing a</span> <span class="d-inline-block">webinar series!</span><br>Following is the speakers' information and registration form.</p>
+</div>
 
-<!-- 
+
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators webinar-carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -159,16 +253,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <div class="carousel-inner">
     <div class="carousel-item active">
         <picture class="d-block w-100">
-            <source media="(min-width:650px)" srcset="images/stem_lec.jpg">
-            <source media="(min-width:300px)" srcset="images/banner.jpg">
-            <img src="images/banner.jpg" alt="Flowers" class="d-block w-100">
+            <source media="(min-width:650px)" srcset="images/speaker1.jpg">
+            <source media="(min-width:300px)" srcset="images/speaker1_small.jpg">
+            <img src="images/speaker1_small.jpg" alt="" class="d-block w-100">
         </picture>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/banner.jpg" alt="Second slide">
+      <picture class="d-block w-100">
+            <source media="(min-width:650px)" srcset="images/speaker1.jpg">
+            <source media="(min-width:300px)" srcset="images/speaker1_small.jpg">
+            <img src="images/speaker1_small.jpg" alt="" class="d-block w-100">
+        </picture>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/banner.jpg" alt="Third slide">
+      <picture class="d-block w-100">
+            <source media="(min-width:650px)" srcset="images/speaker1.jpg">
+            <source media="(min-width:300px)" srcset="images/speaker1_small.jpg">
+            <img src="images/speaker1_small.jpg" alt="" class="d-block w-100">
+        </picture>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -180,9 +282,103 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <span class="sr-only">Next</span>
   </a>
 </div>
- -->
 
 
+
+
+
+
+
+<div class="container" id="form-container">
+    <div class="pb-md-4 pb-sm-4 pb-3 pt-sm-5 pt-4">
+        <h2 class="text-center">Register Now!</h2>
+    </div>
+    <form class="ev_form mb-5" action="javascript:void(0);" autocomplete="off" id="form">
+        <fieldset>
+            <div class="form-group">
+                <div class="form-required-show">
+                    <span class="form-required">* is for required.</span>
+                </div>
+                <label for="name">Full Name<span class="form-required"> *</span></label>
+                <input name="name" type="text" id="name" class="form-control" placeholder="Enter Your Full Name" required>
+                </br>
+                <label for="email">Email Address<span class="form-required"> *</span></label>
+                <input name="email" type="email" id="email" class="form-control" placeholder="Enter Your Email Address" required>
+                <small class="form-text text-muted">For initial communication</small>
+                <br>
+                <label for="phone">Phone Number (WhatsApp)<span class="form-required"> *</span></label>
+                <input name="phone" pattern="[+9087][0-9\s]{9,14}" type="tel" id="phone" class="form-control" placeholder="Enter Your WhatsApp number" required>
+                <small class="form-text text-muted">WhatsApp group link will be mailed to you on above entered email address</small>
+                <br>
+                <label for="college">College<span class="form-required"> *</span></label>
+                <input name="college" type="text" id="college" class="form-control" placeholder="Enter Your College Name" required>
+                <br>
+                <label for="branch">Branch of Study<span class="form-required"> *</span></label>
+                <input name="branch" type="text" id="branch" class="form-control" placeholder="Enter Your Branch of Study" required>
+                <br>
+                <label>Academic Year<span class="form-required"> *</span></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="year" id="First-Year" value="First Year" required>
+                    <label class="form-check-label" for="First-Year">
+                        First Year
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="year" id="Second-Year" value="Second Year">
+                    <label class="form-check-label" for="Second-Year">
+                        Second Year
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="year" id="Third-Year" value="Third Year">
+                    <label class="form-check-label" for="Third-Year">
+                        Third Year
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="year" id="Fourth-Year" value="Fourth Year">
+                    <label class="form-check-label" for="Fourth-Year">
+                        Fourth Year
+                    </label>
+                </div>
+                <br>
+                <label>Are you an IEEE member?<span class="form-required"> *</span></label>
+                <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ieee" id="ieee-yes" value="Yes" required>
+                    <label class="form-check-label" for="ieee-yes">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ieee" id="ieee-no" value="No">
+                    <label class="form-check-label" for="ieee-no">
+                        No
+                    </label>
+                </div>
+                <br><br>    
+                <label class="noshow form-required" id="sub-done">Submission is already done.<br>Contact the team or <a href="https://wa.me/919757468857">Click to message us</a> if this was a mistake.<br></label>
+                <button class="btn btn-danger ev_btn" type="submit" id="submit-form">Submit</button><br><small id="pleasewait" class="noshow form-required">Your response is being submitted. This may take upto 10 seconds. Please wait!</small>
+
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<div class="container noshow" id="success">
+    <div class="ev_form mb-5">
+        <h4 class="tittle text-center pb-2">Thank You!</h4>
+        <p class="text-center">Please check your mail which contains <b>WhatsApp Group link</b> for further discussion.<br>If you haven't received the mail, please contact our team member or <a href="https://wa.me/919757468857">Click to message us</a>.<br>Thank You for showing interest in the webinar.</p>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    document.getElementById('form').onsubmit = function() {
+        checkMail();
+        return false;
+    }
+</script>
 
 
 
