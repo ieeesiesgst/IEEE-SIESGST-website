@@ -157,7 +157,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 url: "https://script.google.com/macros/s/AKfycbwEevQEqz04dNxaO4aEI-qI3dNeG1WKvsFAFJ7A9gpfmUxr_M4/exec",
                 type: 'POST',
                 data: serialJSON,
-                success: function(res){if(res == "req_error()"){req_error();}else if(res == "req_success()"){req_success();}else if(res == "req_fail()"){req_fail();}},
+                success: function(res){
+                    if(res == "req_success(1)")
+                    {
+                        req_success();
+                    }
+                    else if(res == "req_success(2)")
+                    {
+                        document.getElementById('whatsapp-link').href = 'https://chat.whatsapp.com/CwNEvIwTEzb02W6o0Ouk59';
+                        document.getElementById('whatsapp-link').innerHTML = '<u>https://chat.whatsapp.com/CwNEvIwTEzb02W6o0Ouk59</u>'
+                        req_success();
+                    }
+                    else if(res == "req_fail()")
+                    {
+                        req_fail();
+                    }
+                    else(res == "req_error()")
+                    {
+                        req_error();
+                    }
+                },
                 error: function(res){req_error();}
             });
         }
@@ -479,7 +498,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="container noshow" id="success">
     <div class="ev_form my-5">
         <h4 class="tittle text-center pb-2">Thank You!</h4>
-        <p class="text-center">You have successfully registered for WEBCON.<br>Please check your mail which contains <b>WhatsApp Group link</b> for further discussion.<br>If you haven't received the mail, please contact our team member or <a href="https://wa.me/919757468857">Click to message us</a>.<br>Thank You for showing interest in the WEBCON.</p>
+        <p class="text-center">You have successfully registered for WEBCON.<br>Please join the WhatsApp group for further discussion with below link.<br><a href="https://chat.whatsapp.com/L1m0t75ypQbLZnGSyBrmQx" id="whatsapp-link"><u>https://chat.whatsapp.com/L1m0t75ypQbLZnGSyBrmQx</u></a><br>Also, make sure you have received a confirmation email. If you haven't received the email, please contact our team member or <a href="https://wa.me/919757468857">Click to message us</a>.<br>Thank You for showing interest in the WEBCON.</p>
     </div>
 </div>
 
