@@ -3165,6 +3165,8 @@ h3.tittle {
     height: 100vh;
     background: rgba(255,255,255,0.8);
     z-index: 1000;
+    top: 0;
+    left: 0;
 }
 
 #loading-text
