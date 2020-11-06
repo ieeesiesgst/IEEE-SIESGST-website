@@ -80,11 +80,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         var name = res.name;
 
+        var username = res.username;
+
         var bid = res.bid;
 
         var stat = [];
 
         var final_name = [];
+
+        var final_username = [];
 
         var final_bid = [];
 
@@ -94,7 +98,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         var j,k,l;
 
-        var allow,allow_add,temp_set,temp_bid,temp_name,temp_ent;
+        var allow,allow_add,temp_set,temp_bid,temp_name,temp_username,temp_ent;
 
         var allow_flag = false;
 
@@ -153,6 +157,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             }
 
             temp_name = [];
+            temp_username = [];
             temp_bid = [];
 
             for(k=0;k<temp_ent.length-1;k++)
@@ -173,11 +178,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 for(k=0;k<temp_ent.length;k++)
                 {
                     temp_name.push(name[temp_ent[k]]);
+                    temp_username.push(username[temp_ent[k]]);
                     temp_bid.push(bid[temp_ent[k]][i]);
                     stat[temp_ent[k]] = 1;
                     bid[temp_ent[k]][i] = 0;
                 }
                 final_name.push(temp_name);
+                final_username.push(temp_username);
                 final_bid.push(temp_bid);
             }
             else
@@ -187,12 +194,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     if(k<allow)
                     {
                         temp_name.push(name[temp_ent[k]]);
+                        temp_username.push(username[temp_ent[k]]);
                         temp_bid.push(bid[temp_ent[k]][i]);
                         stat[temp_ent[k]] = 1;
                     }
                     bid[temp_ent[k]][i] = 0;
                 }
                 final_name.push(temp_name);
+                final_username.push(temp_username);
                 final_bid.push(temp_bid);
             }
 
@@ -224,6 +233,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     if(final_name[ind].length<allow)
                     {
                         final_name[ind].push(name[i]);
+                        final_username[ind].push(username[i])
                         final_bid[ind].push(bid[i][ind]);
                         stat[i] = 1;
                         repeat = false;
@@ -257,6 +267,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     if(final_name[j].length<allow)
                     {
                         final_name[j].push(name[i]);
+                        final_username[j].push(username[i]);
                         final_bid[j].push(100);
 
                         if(allow_flag)
@@ -279,19 +290,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         var text = '';
         for(i=0;i<entity.length;i++)
         {
-            text+='<div class="col-md-6 col-12 pt-3"><p class="mb-0"><b>'+entity[i]+'</b></p><p class="mb-1">';
+            text+='<div class="col-md-6 col-12 pt-2"><p class="mb-1"><b>'+entity[i]+'</b>';
             for(j=0;j<final_name[i].length;j++)
             {
-                text+=final_name[i][j]+' ('+final_bid[i][j]+')';
-                if(stat[name.indexOf(final_name[i][j])]==-1)
+                text+='<p class="mb-2 pt-1" style="line-height: 1.4em;">' + final_name[i][j]+'<sub>(' + final_username[i][j] + ')</sub> ('+final_bid[i][j]+')';
+                if(stat[username.indexOf(final_username[i][j])]==-1)
                 {
-                    text+=' (Equal Bids penalty)';
+                    text+='<br><small class="align-top text-danger mt-4"><b>(Equal Bids penalty)</b></small>';
                 }
-                else if(stat[name.indexOf(final_name[i][j])]==-2)
+                else if(stat[username.indexOf(final_username[i][j])]==-2)
                 {
-                    text+=' (Out of Parameters penalty)';
+                    text+='<br><small class="align-top text-danger mt-4"><b>(Out of Parameters penalty)</b></small>';
                 }
-                text+='<br>';
+                text+='</p>'
             }
             text+='</p></div>'
         }
