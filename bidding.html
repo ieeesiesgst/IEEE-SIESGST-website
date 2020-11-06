@@ -313,7 +313,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             var inp = '';
             for(var q=0;q<res.entity.length;q++)
             {
-                inp += '<div class="col-lg-3 col-md-4 col-6"><label for="inp' + q + '">' + res.entity[q] + '</label><span class="form-required"> *</span><input type="number" id="inp' + q + '" class="form-control bid-input" required></div>'
+                inp += '<div class="col-lg-3 col-md-4 col-6"><label class="mt-lg-0 mt-2" for="inp' + q + '">' + res.entity[q] + '</label><span class="form-required"> *</span><input type="number" id="inp' + q + '" class="form-control bid-input" required></div>'
             }
 
             document.getElementById('form-inp').innerHTML = inp;
@@ -491,6 +491,26 @@ function googleTranslateElementInit() {
 
 <div class="container">
     <form class="pb-4" id="bid-form" style="display: none;" autocomplete="off" action="javascript: void(0)">
+        <p class="text-center"><b>Instructions:</b></p>
+        <p class="text-center">
+            You have 100 points initially. The value of the bid entered by you for your allotted topic will be deducted from your 100 points. You need to enter values out of 100 for each topic.
+            <br>
+            <b class="text-danger">You can change your entered bid any time before bidding stops.</b>
+        </p>
+        <p class="text-center"><b>Constraints of Bidding</b></p>
+        <p class="text-center">
+            No 2 bids can be equal since the values will determine priority order.
+            <br>
+            Bidding for each topic is compulsory and each bid has to be between 40 and 100 (inclusive).
+            <br>
+            <b class="text-danger">Failing to follow these constraints will result into full 100 points penalty.</b>
+        </p>
+        <p class="text-center">
+            <b>Note:</b>
+            <br>
+            <span class="text-danger">The bidding results refresh every 60 seconds.<br>You might want to press the refresh button and view current status before you submit your bid!</span>
+        </p>
+
         <div class="form-row">
             <div class="col-sm-6 col-12">
                 <label for="username">Username</label><span class="form-required"> *</span>
@@ -502,7 +522,7 @@ function googleTranslateElementInit() {
                 <input type="password" id="password" class="form-control" placeholder="Password" required>
                 <small class="form-text text-muted">Enter password provided by event organizers</small>
             </div>
-            <div class="col-12 py-3"><h5>Enter Your Bids below:</h5></div>
+            <div class="col-12 pt-3 pb-1 pb-lg-3"><h5>Enter Your Bids below:</h5></div>
         </div>
         <div class="form-row" id="form-inp">
             
