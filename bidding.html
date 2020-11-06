@@ -490,7 +490,7 @@ function googleTranslateElementInit() {
 
 
 <div class="container">
-    <form class="pb-4" id="bid-form" style="display: none;" autocomplete="off" action="javascript: void(0)">
+    <form class="pb-2" id="bid-form" style="display: none;" autocomplete="off" action="javascript: void(0)">
         <p class="text-center"><b>Instructions:</b></p>
         <p class="text-center">
             You have 100 points initially. The value of the bid entered by you for your allotted topic will be deducted from your 100 points. You need to enter values out of 100 for each topic.
@@ -535,13 +535,14 @@ function googleTranslateElementInit() {
             <input type="submit" id="bid-sub" class="btn btn-danger" value="Submit Bid">
         </div>
     </form>
-    <div id="bid-end" class="text-center pb-4" style="display: none;">
+    <div id="bid-end" class="text-center" style="display: none;">
         <h5 class="text-danger">Bidding has Ended</h5>
     </div>
 </div>
 
+<hr>
 
-<div class="container pb-4">
+<div class="container pb-4 pt-2">
     <h5 class="pb-2">Bidding Status:</h5>
     <button type="button" class="btn-sm btn btn-success" id="refresh" onclick="send_req(1);">Refresh</button>
     <br>
