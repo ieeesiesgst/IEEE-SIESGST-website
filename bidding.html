@@ -313,7 +313,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             var inp = '';
             for(var q=0;q<res.entity.length;q++)
             {
-                inp += '<div class="col-lg-3 col-md-4 col-6"><label class="mt-lg-0 mt-2" for="inp' + q + '">' + res.entity[q] + '</label><span class="form-required"> *</span><input type="number" id="inp' + q + '" class="form-control bid-input" required></div>'
+                inp += '<div class="col-lg-3 col-md-4 col-6"><label class="mt-lg-0 mt-2" for="inp' + q + '">' + res.entity[q] + '</label><span class="form-required"> *</span><input type="number" step="1" id="inp' + q + '" class="form-control bid-input" required></div>'
             }
 
             document.getElementById('form-inp').innerHTML = inp;
