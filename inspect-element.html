@@ -90,7 +90,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     return;
                 }
             }
-            if(document.getElementById('email1').getAttribute('type') != 'email' || document.getElementById('email2').getAttribute('type') != 'email')
+            if(document.getElementById('email1').getAttribute('type') != 'email' || document.getElementById('email2').getAttribute('type') != 'email' || document.getElementById('tn').value.length>15)
             {
                 alert('Page depricated. Reloading!');
                 location.reload();
@@ -300,7 +300,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <span class="form-required">* is for required.</span>
                 </div>
                 <label for="tn">Team Name<span class="form-required"> *</span></label>
-                <input name="tn" type="text" id="tn" class="form-control" placeholder="Enter Team Name" required>
+                <input maxlength="15" name="tn" type="text" id="tn" class="form-control" placeholder="Enter Team Name" required>
                 <small class="form-text text-muted">Required for both, single and team entry.</small>
                 <br>
                 <label for="name1">Full Name<span class="form-required"> *</span></label>
