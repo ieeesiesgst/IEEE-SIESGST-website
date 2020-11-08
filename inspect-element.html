@@ -130,6 +130,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             document.getElementById('pleasewait').style.display = 'block';
             document.getElementById('sub-done').style.display = 'none';
 
+            var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var lower = upper.toLowerCase();
+            var a,b;
+
+            var pw = '';
+
+            for(i=0;i<8;i++)
+            {
+                a = Math.floor(Math.random() * 3);
+
+                if(a==0)
+                {
+                    pw+=upper[Math.floor(Math.random() * 26)];
+                }
+                else if(a==1)
+                {
+                    pw+=lower[Math.floor(Math.random() * 26)];
+                }
+                else
+                {
+                    pw+=Math.floor(Math.random() * 10);
+                }
+            }
+
+            serialJSON['password'] = pw;
+
             $.ajax({
                 url: "",
                 type: 'POST',
