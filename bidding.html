@@ -559,7 +559,7 @@ function googleTranslateElementInit() {
 
 <hr>
 
-<div class="container pb-4 pt-2">
+<div class="container pb-4 pt-2" id="bid-status">
     <h5 class="pb-2">Bidding Status:</h5>
     <button type="button" class="btn-sm btn btn-success" id="refresh" onclick="send_req(1);">Refresh</button>
     <br>
@@ -675,6 +675,7 @@ var x = setInterval(function() {
     document.getElementById('bid-form').style.display = 'none';
     document.getElementById('bid-start').style.display = 'block';
     document.getElementById("start-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    document.getElementById('bid-status').style.display = 'none';
   }
   else if(distance>=0)
   {
@@ -686,6 +687,7 @@ var x = setInterval(function() {
     // Output the result in an element with id="demo"
     document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     document.getElementById('bid-form').style.display = 'block';
+    document.getElementById('bid-status').style.display = 'block';
     document.getElementById('bid-start').style.display = 'none';
   }
   else if (distance < 0) {
