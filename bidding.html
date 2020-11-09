@@ -72,11 +72,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     var inter;
 
-    var onpage = false;
+    const startDate = new Date("Nov 9, 2020 14:48:00").getTime();
 
-    const startDate = new Date("Nov 9, 2020 14:44:00").getTime();
-
-    const countDownDate = new Date("Nov 9, 2020 14:44:30").getTime();
+    const countDownDate = new Date("Nov 9, 2020 14:48:30").getTime();
 
     function boom(res)
     {
@@ -677,12 +675,6 @@ var x = setInterval(function() {
     document.getElementById('bid-form').style.display = 'none';
     document.getElementById('bid-start').style.display = 'block';
     document.getElementById("start-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-    onpage = true;
-  }
-  else if(onpage)
-  {
-    location.reload();
   }
   else if(distance>=0)
   {
@@ -694,6 +686,7 @@ var x = setInterval(function() {
     // Output the result in an element with id="demo"
     document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     document.getElementById('bid-form').style.display = 'block';
+    document.getElementById('bid-start').style.display = 'none';
   }
   else if (distance < 0) {
     clearInterval(x);
