@@ -299,7 +299,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             {
                 if(res.user == final_username[i][j])
                 {
-                    markstart = '<mark style="background-color: yellow; color: black;">';
+                    markstart = '<mark id="' + res.user + '" style="background-color: yellow; color: black;">';
                     markend = '</mark>';
                 }
                 else
@@ -382,6 +382,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         var serialJSON = {}
         serialJSON['mode'] = mode + '';
         serialJSON['loc'] = window.top.location.href;
+
+        var markexist = document.getElementsByTagName('mark');
+        if(markexist.length==1)
+        {
+            serialJSON['user'] = markexist[0].getAttribute('id');
+        }
+        else
+        {
+            serialJSON['user'] = '0';
+        }
 
         if(mode == 0)
         {
