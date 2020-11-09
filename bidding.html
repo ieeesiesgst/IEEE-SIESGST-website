@@ -72,7 +72,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     var inter;
 
-    const countDownDate = new Date("Nov 26, 2020 15:45:00").getTime();
+    var onpage = false;
+
+    const startDate = new Date("Nov 11, 2020 14:42:00").getTime();
+
+    const countDownDate = new Date("Nov 11, 2020 14:42:30").getTime();
 
     function boom(res)
     {
@@ -550,6 +554,9 @@ function googleTranslateElementInit() {
     <div id="bid-end" class="text-center" style="display: none;">
         <h5 class="text-danger">Bidding has Ended</h5>
     </div>
+    <div id="bid-start" class="text-center" style="display: none;">
+        <h5>Bidding starts in:<br><span id="start-timer" class="text-danger"></span></h5>
+    </div>
 </div>
 
 <hr>
@@ -657,19 +664,38 @@ var x = setInterval(function() {
     
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-  document.getElementById('bid-form').style.display = 'block';
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
+
+  if(startDate-now>0)
+  {
+    distance = startDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('bid-form').style.display = 'none';
+    document.getElementById('bid-start').style.display = 'block';
+    document.getElementById("start-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    onpage = true;
+  }
+  else if(onpage)
+  {
+    location.reload();
+  }
+  else if(distance>=0)
+  {
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    document.getElementById('bid-form').style.display = 'block';
+  }
+  else if (distance < 0) {
     clearInterval(x);
     document.getElementById('bid-sub').setAttribute('disabled', '');
     document.getElementById("timer").innerHTML = "Bidding has Ended!";
