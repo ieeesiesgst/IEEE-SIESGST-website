@@ -290,12 +290,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
 
         var text = '';
+        var markstart = '';
+        var markend = '';
         for(i=0;i<entity.length;i++)
         {
             text+='<div class="col-md-6 col-12 pt-2"><p class="mb-1"><b>'+entity[i]+'</b>';
             for(j=0;j<final_name[i].length;j++)
             {
-                text+='<p class="mb-2 pt-1" style="line-height: 1.4em;">' + final_name[i][j]+'<sub>(' + final_username[i][j] + ')</sub> ('+final_bid[i][j]+')';
+                if(res.user == final_username[i][j])
+                {
+                    markstart = '<mark style="background-color: yellow; color: black;">';
+                    markend = '</mark>';
+                }
+                else
+                {
+                    markstart = '';
+                    markend = '';
+                }
+                text+='<p class="mb-2 pt-1" style="line-height: 1.4em;">' + markstart + final_name[i][j]+'<sub>(' + final_username[i][j] + ')</sub> ('+final_bid[i][j]+')';
                 if(stat[username.indexOf(final_username[i][j])]==-1)
                 {
                     text+='<br><small class="align-top text-danger mt-4"><b>(Equal Bids penalty)</b></small>';
@@ -304,7 +316,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 {
                     text+='<br><small class="align-top text-danger mt-4"><b>(Out of Parameters penalty)</b></small>';
                 }
-                text+='</p>'
+                text+= markend + '</p>';
             }
             text+='</p></div>'
         }
