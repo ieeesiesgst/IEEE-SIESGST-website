@@ -350,7 +350,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             }
             else if(res.login == 1)
             {
-                alert('Username not found!\nPlease enter correct username.');
+                alert('User ID not found!\nPlease enter correct User ID.');
             }
             else
             {
@@ -527,9 +527,9 @@ function googleTranslateElementInit() {
 
         <div class="form-row">
             <div class="col-sm-6 col-12">
-                <label for="username">Username</label><span class="form-required"> *</span>
-                <input type="text" id="username" class="form-control" placeholder="Username" required>
-                <small class="form-text text-muted">Enter username provided by event organizers</small>
+                <label for="username">User ID</label><span class="form-required"> *</span>
+                <input type="text" id="username" class="form-control" placeholder="Enter User ID" required>
+                <small class="form-text text-muted">Enter User ID provided by event organizers</small>
             </div>
             <div class="col-sm-6 col-12">
                 <label for="password" class="pt-2 pt-sm-0">Password</label><span class="form-required"> *</span>
@@ -564,7 +564,7 @@ function googleTranslateElementInit() {
     <button type="button" class="btn-sm btn btn-success" id="refresh" onclick="send_req(1);">Refresh</button>
     <br>
     <small class="text-danger">Refreshes every 60 seconds.</small>
-    <p><small><b class="d-inline-block">Display Format:</b> <span class="d-inline-block">Team_name<sub>(Team_username)</sub> (Bidding_value)</span></small></p>
+    <p><small><b class="d-inline-block">Display Format:</b> <span class="d-inline-block">Team_name<sub>(Team_user_id)</sub> (Bidding_value)</span></small></p>
     <div class="position-relative">
 
         <div id="loading-bid" class="position-absolute w-100" style="display: none;"><h3 class="text-center pt-5">Loading...</h3></div>
