@@ -157,6 +157,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 }
             }
 
+            serialJSON['username'] = (new Date().getTime()%1000000000).toString(36);
+
             serialJSON['password'] = pw;
 
             $.ajax({
