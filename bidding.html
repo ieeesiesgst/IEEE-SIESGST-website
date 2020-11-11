@@ -86,6 +86,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         var bid = res.bid;
 
+        var started = res.started;
+
         var stat = [];
 
         var final_name = [];
@@ -106,6 +108,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         for(var z=0;z<name.length;z++)
         {
+            if(started[z] == '0' || started[z] == 0)
+            {
+                stat.push(-3);
+                continue;
+            }
             temp_set = new Set(bid[z]);
             if(temp_set.size!=bid[z].length)
             {
@@ -315,6 +322,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 else if(stat[username.indexOf(final_username[i][j])]==-2)
                 {
                     text+='<br><small class="align-top text-danger mt-4"><b>(Out of Parameters penalty)</b></small>';
+                }
+                else if(stat[username.indexOf(final_username[i][j])]==-3)
+                {
+                    text+='<br><small class="align-top text-danger mt-4"><b>(Not yet started bidding)</b></small>';
                 }
                 text+= markend + '</p>';
             }
