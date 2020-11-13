@@ -131,9 +131,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     }
                     else if(res.status == 3)
                     {
-                        alert('You have 2 members in your team. You have provided only 1 Instagram username');
-                        document.getElementById('team').checked = true;
-                        team_entry(document.getElementById('team'));
+                        if(res.num == '2')
+                        {
+                            alert('You have 2 members in your team. You have provided only 1 Instagram username');
+                            document.getElementById('team').checked = true;
+                            team_entry(document.getElementById('team'));
+                        }
+                        else
+                        {
+                            alert('You have 1 member in your team. You have provided 2 Instagram usernames');
+                            document.getElementById('team').checked = false;
+                            team_entry(document.getElementById('team'));
+                        }
                     }
                     else if(res.status == 4)
                     {
