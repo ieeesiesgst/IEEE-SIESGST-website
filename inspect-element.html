@@ -172,10 +172,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     if(res.status == 1)
                     {
                         req_fail();
+                        var reg_left = 81 - res.lr;
+                        document.getElementById('reg-left').innerHTML = reg_left;
                     }
                     else if(res.status == 2)
                     {
                         req_success();
+                        var reg_left = 81 - res.lr;
+                        document.getElementById('reg-left').innerHTML = reg_left;
                     }
                     else
                     {
@@ -293,7 +297,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <h6 class="tittle text-center">presents</h6>
             <h4 class="tittle text-center pb-2 heading">Inspect Element 1.0</h4>
             <h6 class="tittle mb-0 text-center pb-2">Theme: Sub Nautica</h6>
-            <h6 id="timer-p" class="tittle mb-0 text-center pb-2"><span class="d-inline-block">Registration ends in</span> <span class="text-danger d-inline-block" id="timer"></span></h6>
+            <h6 id="timer-p" class="tittle mb-0 text-center pb-2"><span class="d-inline-block">Registration ends in</span> <span class="text-danger d-inline-block" id="timer">...</span></h6>
+            <h6 id="reg-left-div" class="tittle mb-0 text-center pb-2"><span class="d-inline-block">Registrations Left: </span> <span class="text-danger d-inline-block" id="reg-left">...</span></h6>
             <!-- <h6 class="tittle text-center pb-2">(Only for Second Year students)</h6> -->
         </div>
         <!--
@@ -583,6 +588,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </footer>
 <!-- //footer -->
 <script type="text/javascript">
+
+    var sj = {};
+    sj['loc'] = window.top.location.href;
+
+    $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbwEevQEqz04dNxaO4aEI-qI3dNeG1WKvsFAFJ7A9gpfmUxr_M4/exec",
+        type: 'GET',
+        data: sJ,
+        success: function(res)
+        {
+            if(res.status == 1)
+            {
+                var reg_left = 81 - res.lr;
+                document.getElementById('reg-left').innerHTML = reg_left;
+            }
+            else
+            {
+                document.getElementById('reg-left-div').remove();
+            }
+        },
+        error: function(res)
+        {
+            document.getElementById('reg-left-div').remove();
+        }
+    });
     
 
 var y = setInterval(function() {
