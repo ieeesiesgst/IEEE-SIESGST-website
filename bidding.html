@@ -596,7 +596,7 @@ function googleTranslateElementInit() {
     <h5 class="pb-2"><span id="final"></span>Bidding Status:</h5>
     <button type="button" class="btn-sm btn btn-success" id="refresh" onclick="send_req(1);">Refresh</button>
     <br>
-    <small class="text-danger">Refreshes every 60 seconds.</small>
+    <small class="text-danger" id="r-text">Refreshes every 60 seconds.</small>
     <p><small><b class="d-inline-block">Display Format:</b> <span class="d-inline-block">Team_name<sub>(Team_user_id)</sub> (Bidding_value)</span></small></p>
     <div class="position-relative">
 
@@ -731,6 +731,10 @@ var x = setInterval(function() {
     document.getElementById('bid-form').style.display = 'none';
     document.getElementById('bid-end').style.display = 'block';
     document.getElementById('final').innerHTML = 'Final ';
+    send_req(3);
+    clearInterval(inter);
+    document.getElementById('r-text').style.display = 'none';
+    document.getElementById('refresh').style.display = 'none';
   }
 }, 1000);
 </script>
