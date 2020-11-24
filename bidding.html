@@ -363,7 +363,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             document.getElementById('refresh').removeAttribute('disabled');
             document.getElementById('refresh').setAttribute('value', 'Refresh');
             clearInterval(inter);
-            inter = setInterval(function(){send_req(3);}, 60000);
+            inter = setInterval(function(){send_req(3);}, 30000);
         }
         else if(mode == 2)
         {
@@ -383,7 +383,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             document.getElementById('bid-sub').removeAttribute('disabled');
             document.getElementById('bid-sub').setAttribute('value', 'Submit Bid');
             clearInterval(inter);
-            inter = setInterval(function(){send_req(3);}, 60000);
+            inter = setInterval(function(){send_req(3);}, 30000);
         }
 
     }
@@ -555,7 +555,7 @@ function googleTranslateElementInit() {
         <p class="text-center">
             <b>Note:</b>
             <br>
-            <span class="text-danger">The bidding results refresh every 60 seconds.<br>You might want to press the refresh button and view current status before you submit your bid!</span>
+            <span class="text-danger">The bidding results refresh every 30 seconds.<br>You might want to press the refresh button and view current status before you submit your bid!</span>
         </p>
 
         <div class="form-row">
@@ -596,7 +596,7 @@ function googleTranslateElementInit() {
     <h5 class="pb-2"><span id="final"></span>Bidding Status:</h5>
     <button type="button" class="btn-sm btn btn-success" id="refresh" onclick="send_req(1);">Refresh</button>
     <br>
-    <small class="text-danger" id="r-text">Refreshes every 60 seconds.</small>
+    <small class="text-danger" id="r-text">Refreshes every 30 seconds.</small>
     <p><small><b class="d-inline-block">Display Format:</b> <span class="d-inline-block">Team_name<sub>(Team_user_id)</sub> (Bidding_value)</span></small></p>
     <div class="position-relative">
 
@@ -684,7 +684,7 @@ function googleTranslateElementInit() {
         return false;
     }
 
-    inter = setInterval(function(){send_req(3);}, 60000);
+    inter = setInterval(function(){send_req(3);}, 30000);
 
     send_req(0);
 
