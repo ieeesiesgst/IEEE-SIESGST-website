@@ -74,7 +74,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <script type="text/javascript">
 
-        const countDownDate = new Date("Dec 3, 2020 23:59:00").getTime();
+        var currentOffset = new Date().getTimezoneOffset();
+        var ISTOffset = 330;
+
+        const countDownDate = new Date(new Date("Dec 3, 2020 23:59:00").getTime() + (ISTOffset + currentOffset)*60000).getTime();
 
         function checkMail() {
             var serial = $('#form').serializeArray();
@@ -415,7 +418,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 var y = setInterval(function() {
 
   // Get today's date and time
-  var now = new Date().getTime();
+  var currentTime = new Date();
+  var now = new Date(currentTime.getTime() + (ISTOffset + currentOffset)*60000).getTime();
     
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
