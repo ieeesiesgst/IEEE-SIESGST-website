@@ -629,8 +629,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 var y = setInterval(function() {
 
   // Get today's date and time
-  var currentTime = new Date();
-  var now = new Date(currentTime.getTime() - (ISTOffset + currentOffset)*60000).getTime();
+  var now = new Date().getTime();
     
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
