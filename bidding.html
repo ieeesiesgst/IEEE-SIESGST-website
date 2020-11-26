@@ -280,7 +280,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     {
                         final_name[j].push(name[i]);
                         final_username[j].push(username[i]);
-                        final_bid[j].push(100);
+                        if(stat[i]==-3)
+                        {
+                            final_bid[j].push(120);
+                        }
+                        else
+                        {
+                            final_bid[j].push(100);
+                        }
 
                         if(allow_flag)
                         {
