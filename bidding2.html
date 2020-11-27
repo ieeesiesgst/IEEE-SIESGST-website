@@ -75,9 +75,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     var currentOffset = new Date().getTimezoneOffset();
     var ISTOffset = 330;
 
-    const startDate = new Date(new Date("Nov 26, 2020 00:00:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
+    const startDate = new Date(new Date("Nov 27, 2020 11:46:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
 
-    const countDownDate = new Date(new Date("Nov 26, 2020 21:00:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
+    const countDownDate = new Date(new Date("Nov 27, 2020 11:46:30").getTime() - (ISTOffset + currentOffset)*60000).getTime();
 
     function boom(res)
     {
@@ -92,6 +92,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         var started = res.started;
 
         var stat = [];
+
+        var no_stat=[], no_bid=[], no_name=[], no_username=[];
+
+        var rem = [];
 
         var final_name = [];
 
@@ -113,6 +117,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         {
             if(started[z] == '0' || started[z] == 0)
             {
+                rem.push(z);
                 stat.push(-3);
                 continue;
             }
@@ -142,6 +147,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             {
                 stat_flag = 0;
             }
+        }
+
+        for(z=0;z<rem.length;z++)
+        {
+            no_stat.push(stat.splice(rem[z]-z, 1)[0]);
+            no_username.push(username.splice(rem[z]-z, 1)[0]);
+            no_name.push(name.splice(rem[z]-z, 1)[0]);
+            no_bid.push(bid.splice(rem[z]-z, 1)[0]);
         }
 
         allow = parseInt(name.length/entity.length, 10);
@@ -264,6 +277,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             }
         }
 
+        if(document.getElementById('final').innerHTML == 'Final ')
+        {
+            name = name.concat(no_name);
+            bid = bid.concat(no_bid);
+            stat = stat.concat(no_stat);
+            username = username.concat(no_username);
+
+            allow = parseInt(name.length/entity.length, 10);
+            allow_add = (name.length%entity.length)-1;
+        }
+
         for(i=0;i<name.length;i++)
         {
             if(stat[i]!=1)
@@ -280,7 +304,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     {
                         final_name[j].push(name[i]);
                         final_username[j].push(username[i]);
-                        final_bid[j].push(100);
+                        if(stat[i]==-3)
+                        {
+                            final_bid[j].push(120);
+                        }
+                        else
+                        {
+                            final_bid[j].push(100);
+                        }
 
                         if(allow_flag)
                         {
@@ -317,7 +348,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     markstart = '';
                     markend = '';
                 }
-                text+='<p class="mb-2 pt-1" style="line-height: 1.4em;">' + markstart + final_name[i][j]+'<sub>(' + final_username[i][j] + ')</sub> ('+final_bid[i][j]+')';
+                text+='<p class="mb-2 pt-1" style="line-height: 1.4em;">' + markstart + final_name[i][j]+'<sub> (' + final_username[i][j] + ')</sub> ('+final_bid[i][j]+')';
                 if(stat[username.indexOf(final_username[i][j])]==-1)
                 {
                     text+='<br><small class="align-top text-danger mt-4"><b>(Equal Bids penalty)</b></small>';
@@ -328,7 +359,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 }
                 else if(stat[username.indexOf(final_username[i][j])]==-3)
                 {
-                    text+='<br><small class="align-top text-danger mt-4"><b>(Not started bidding)</b></small>';
+                    text+='<br><small class="align-top text-danger mt-4"><b>(Did not participate - Extra 20 points penalty)</b></small>';
                 }
                 text+= markend + '</p>';
             }
@@ -342,7 +373,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     {
         if(res.status == 0)
         {
-            alert('Connection Error!\nPlease refresh the page or contact event organizers. Sorry for inconvenience.');
+            alert('There was some server error!\nPlease try again or contact our team.\nPlease disable any Antivirus Protection Extension/Plugin that may block requests.\nSorry for inconvenience :(');
             return;
         }
 
@@ -366,7 +397,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             document.getElementById('refresh').removeAttribute('disabled');
             document.getElementById('refresh').setAttribute('value', 'Refresh');
             clearInterval(inter);
-            inter = setInterval(function(){send_req(3);}, 60000);
+            inter = setInterval(function(){send_req(3);}, 30000);
         }
         else if(mode == 2)
         {
@@ -386,7 +417,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             document.getElementById('bid-sub').removeAttribute('disabled');
             document.getElementById('bid-sub').setAttribute('value', 'Submit Bid');
             clearInterval(inter);
-            inter = setInterval(function(){send_req(3);}, 60000);
+            inter = setInterval(function(){send_req(3);}, 30000);
         }
 
     }
@@ -449,7 +480,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 calc(res,mode);
             },
             error: function(res){
-                alert('Connection Error!\nPlease refresh the page or contact event organizers. Sorry for inconvenience.');
+                alert('There was some server error!\nPlease try again or contact our team.\nPlease disable any Antivirus Protection Extension/Plugin that may block requests.\nSorry for inconvenience :(');
             }
         });
 
@@ -543,7 +574,7 @@ function googleTranslateElementInit() {
     <form class="pb-2" id="bid-form" style="display: none;" autocomplete="off" action="javascript: void(0)">
         <p class="text-center"><b>Instructions:</b></p>
         <p class="text-center">
-            You have 100 points initially. The value of the bid entered by you for your allotted topic will be deducted from your 100 points. You need to enter values out of 100 for each topic.
+            You have 100 points initially. The value of the bid entered by you for your allotted entity will be deducted from your 100 points and rest will be added to your total at the end. You need to enter values <b>out of 100 for each entity</b>.
             <br>
             <b class="text-danger">You can change your entered bid any time before bidding stops.</b>
         </p>
@@ -558,7 +589,7 @@ function googleTranslateElementInit() {
         <p class="text-center">
             <b>Note:</b>
             <br>
-            <span class="text-danger">The bidding results refresh every 60 seconds.<br>You might want to press the refresh button and view current status before you submit your bid!</span>
+            <span class="text-danger">The bidding results refresh every 30 seconds.<br>You might want to press the refresh button and view current status before you submit your bid!</span>
         </p>
 
         <div class="form-row">
@@ -599,7 +630,7 @@ function googleTranslateElementInit() {
     <h5 class="pb-2"><span id="final"></span>Bidding Status:</h5>
     <button type="button" class="btn-sm btn btn-success" id="refresh" onclick="send_req(1);">Refresh</button>
     <br>
-    <small class="text-danger">Refreshes every 60 seconds.</small>
+    <small class="text-danger" id="r-text">Refreshes every 30 seconds.</small>
     <p><small><b class="d-inline-block">Display Format:</b> <span class="d-inline-block">Team_name<sub>(Team_user_id)</sub> (Bidding_value)</span></small></p>
     <div class="position-relative">
 
@@ -687,7 +718,7 @@ function googleTranslateElementInit() {
         return false;
     }
 
-    inter = setInterval(function(){send_req(3);}, 60000);
+    inter = setInterval(function(){send_req(3);}, 30000);
 
     send_req(0);
 
@@ -734,6 +765,10 @@ var x = setInterval(function() {
     document.getElementById('bid-form').style.display = 'none';
     document.getElementById('bid-end').style.display = 'block';
     document.getElementById('final').innerHTML = 'Final ';
+    send_req(3);
+    clearInterval(inter);
+    document.getElementById('r-text').style.display = 'none';
+    document.getElementById('refresh').style.display = 'none';
   }
 }, 1000);
 </script>
