@@ -93,10 +93,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         var stat = [];
 
-        var no_stat=[], no_bid=[], no_name=[], no_username=[];
-
-        var rem = [];
-
         var final_name = [];
 
         var final_username = [];
@@ -117,7 +113,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         {
             if(started[z] == '0' || started[z] == 0)
             {
-                rem.push(z);
                 stat.push(-3);
                 continue;
             }
@@ -147,14 +142,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             {
                 stat_flag = 0;
             }
-        }
-
-        for(z=0;z<rem.length;z++)
-        {
-            no_stat.push(stat.splice(rem[z]-z, 1)[0]);
-            no_username.push(username.splice(rem[z]-z, 1)[0]);
-            no_name.push(name.splice(rem[z]-z, 1)[0]);
-            no_bid.push(bid.splice(rem[z]-z, 1)[0]);
         }
 
         allow = parseInt(name.length/entity.length, 10);
@@ -275,17 +262,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     }
                 }
             }
-        }
-
-        if(document.getElementById('final').innerHTML == 'Final ')
-        {
-            name = name.concat(no_name);
-            bid = bid.concat(no_bid);
-            stat = stat.concat(no_stat);
-            username = username.concat(no_username);
-
-            allow = parseInt(name.length/entity.length, 10);
-            allow_add = (name.length%entity.length)-1;
         }
 
         for(i=0;i<name.length;i++)
