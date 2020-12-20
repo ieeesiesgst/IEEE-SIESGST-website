@@ -93,6 +93,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         var stat = [];
 
+        var no_stat=[], no_bid=[], no_name=[], no_username=[];
+
+        var rem = [];
+
         var final_name = [];
 
         var final_username = [];
@@ -113,6 +117,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         {
             if(started[z] == '0' || started[z] == 0)
             {
+                rem.push(z);
                 stat.push(-3);
                 continue;
             }
@@ -142,6 +147,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             {
                 stat_flag = 0;
             }
+        }
+
+        for(z=0;z<rem.length;z++)
+        {
+            no_stat.push(stat.splice(rem[z]-z, 1)[0]);
+            no_username.push(username.splice(rem[z]-z, 1)[0]);
+            no_name.push(name.splice(rem[z]-z, 1)[0]);
+            no_bid.push(bid.splice(rem[z]-z, 1)[0]);
         }
 
         allow = parseInt(name.length/entity.length, 10);
@@ -280,14 +293,53 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     {
                         final_name[j].push(name[i]);
                         final_username[j].push(username[i]);
-                        if(stat[i]==-3)
+
+                        final_bid[j].push(100);
+
+                        if(allow_flag)
                         {
-                            final_bid[j].push(120);
+                            allow_flag = false;
+                            allow--;
                         }
-                        else
-                        {
-                            final_bid[j].push(100);
-                        }
+                        break;
+                    }
+
+                    if(allow_flag)
+                    {
+                        allow_flag = false;
+                        allow--;
+                    }
+                }
+            }
+        }
+
+        if(document.getElementById('final').innerHTML == 'Final ')
+        {
+            var st_index = name.length;
+            name = name.concat(no_name);
+            bid = bid.concat(no_bid);
+            stat = stat.concat(no_stat);
+            username = username.concat(no_username);
+
+            allow = parseInt(name.length/entity.length, 10);
+            allow_add = (name.length%entity.length)-1;
+
+            for(i=st_index;i<name.length;i++)
+            {
+                for(j=0;j<entity.length;j++)
+                {
+                    if(j%entity.length<=allow_add)
+                    {
+                        allow++;
+                        allow_flag = true;
+                    }
+
+                    if(final_name[j].length<allow)
+                    {
+                        final_name[j].push(name[i]);
+                        final_username[j].push(username[i]);
+
+                        final_bid[j].push(100);
 
                         if(allow_flag)
                         {
@@ -473,7 +525,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 
 
-        
+    <script type="text/javascript">
+        location.replace('https://ieeesiesgst.co.in/events');
+    </script>
 
 
 
