@@ -295,6 +295,14 @@ body {
 	width: 11%;
 }
 
+.tech-dates
+{
+	bottom: 5%;
+	text-shadow: 2px 4px #000;
+	font-size: 35px;
+	font-family: 'Roboto-Condensed';
+}
+
 
 /*#heading {
 	
@@ -584,6 +592,12 @@ body {
 		width: 90%;
 		top: 50%;
 		left: 5%;
+	}
+
+	.tech-dates
+	{
+		bottom: 4px;
+		font-size: 20px;
 	}
 }
 
