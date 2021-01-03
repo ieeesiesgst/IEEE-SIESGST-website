@@ -402,6 +402,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         if(res.status == 0)
         {
             alert('There was some server error!\nPlease try again or contact our team.\nPlease disable any Antivirus Protection Extension/Plugin that may block requests.\nSorry for inconvenience :(');
+
+            location.reload()
             return;
         }
 
@@ -509,6 +511,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             },
             error: function(res){
                 alert('There was some server error!\nPlease try again or contact our team.\nPlease disable any Antivirus Protection Extension/Plugin that may block requests.\nSorry for inconvenience :(');
+                location.reload();
             }
         });
 
