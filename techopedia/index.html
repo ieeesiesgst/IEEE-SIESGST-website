@@ -54,31 +54,33 @@
     <script type="text/javascript">
         
         function menu(){
-            
-            let x = document.getElementById("navbar");
-            
-            if(x.style.maxHeight == '60px' || x.style.maxHeight == '' || x.style.height == '60px'){
-                x.style.maxHeight = " 1000px";
-                document.getElementById('bar1').style.transform = 'rotate(-45deg) translate(-3px,7px)';
-                document.getElementById('bar3').style.transform = 'rotate(45deg) translate(-3px,-7px)';
-                document.getElementById('bar2').style.opacity = '0';
-                document.getElementById('notnav').style.display = 'block';
-                setTimeout(function() {
-                    x.style.transition = '';
-                    x.style.transition = '0.5s cubic-bezier(0, 1, 0, 1)';
-                }, 500);
-            }
-            else
+            if(window.innerWidth <= 850)
             {
-                x.style.maxHeight = "60px";
-                document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
-                document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
-                document.getElementById('bar2').style.opacity = '1';
-                document.getElementById('notnav').style.display = 'none';
-                setTimeout(function() {
-                    x.style.transition = '';
-                    x.style.transition = '1s ease-in;';
-                }, 500);
+                let x = document.getElementById("navbar");
+                
+                if(x.style.maxHeight == '60px' || x.style.maxHeight == '' || x.style.height == '60px'){
+                    x.style.maxHeight = " 1000px";
+                    document.getElementById('bar1').style.transform = 'rotate(-45deg) translate(-3px,7px)';
+                    document.getElementById('bar3').style.transform = 'rotate(45deg) translate(-3px,-7px)';
+                    document.getElementById('bar2').style.opacity = '0';
+                    document.getElementById('notnav').style.display = 'block';
+                    setTimeout(function() {
+                        x.style.transition = '';
+                        x.style.transition = '0.5s cubic-bezier(0, 1, 0, 1)';
+                    }, 500);
+                }
+                else
+                {
+                    x.style.maxHeight = "60px";
+                    document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
+                    document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
+                    document.getElementById('bar2').style.opacity = '1';
+                    document.getElementById('notnav').style.display = 'none';
+                    setTimeout(function() {
+                        x.style.transition = '';
+                        x.style.transition = '1s ease-in;';
+                    }, 500);
+                }
             }
         }
         
