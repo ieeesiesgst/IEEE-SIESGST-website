@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en-US">
 
 <head>
-    <title>Live Bidding | IEEE SIESGST & EDC SIESGST</title>
+    <title>Live Bidding | IEEE SIESGST & CSI SIESGST</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
@@ -19,9 +19,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
     <!--whatsapp and fb-->
-    <meta property="og:title" content="Live Bidding | IEEE SIESGST & EDC SIESGST" />
+    <meta property="og:title" content="Live Bidding | IEEE SIESGST & CSI SIESGST" />
     <meta property="og:description" content="Live Bidding for Events" />
-    <meta property="og:url" content="https://ieeesiesgst.co.in/bidding2" />
+    <meta property="og:url" content="https://ieeesiesgst.co.in/bidding" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://ieeesiesgst.co.in/images/ieeeicon.png" />
     <meta property="og:image:type" content="image/png" />
@@ -31,7 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <!--twitter-->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Live Bidding | IEEE SIESGST & EDC SIESGST" />
+    <meta property="twitter:title" content="Live Bidding | IEEE SIESGST & CSI SIESGST" />
     <meta property="twitter:description" content="Live Bidding for Events" />
     <meta property="twitter:image" content="https://ieeesiesgst.co.in/images/ieeeicon.png" />
 
@@ -75,9 +75,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     var currentOffset = new Date().getTimezoneOffset();
     var ISTOffset = 330;
 
-    const startDate = new Date(new Date("Jan 03, 2021 22:15:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
+    const startDate = new Date(new Date("Nov 26, 2020 00:00:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
 
-    const countDownDate = new Date(new Date("Jan 03, 2021 22:35:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
+    const countDownDate = new Date(new Date("Nov 26, 2020 21:00:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
 
     function boom(res)
     {
@@ -501,7 +501,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
 
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbwu6PudNa4Ina1G23cdjUqkhV0X4N2wzU0fx_1471--grtwmlk/exec',
+            url: 'https://script.google.com/macros/s/AKfycbyHBzkcP8usu4AcMZ_hLs0545Se33DquiENXAonQqbTl1nZtbuJ/exec',
             data: serialJSON,
             type: 'POST',
             success: function(res){
@@ -525,7 +525,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 
 
-        
+    <script type="text/javascript">
+        location.replace('https://ieeesiesgst.co.in/events');
+    </script>
 
 
 
@@ -602,35 +604,15 @@ function googleTranslateElementInit() {
     <form class="pb-2" id="bid-form" style="display: none;" autocomplete="off" action="javascript: void(0)">
         <p class="text-center"><b>Instructions:</b></p>
         <p class="text-center">
-            The purpose of bidding is to divide the entities among each team based on their priority order and <b>at the cost of your POINTS</b>. The value you enter for the entity that gets alloted to you will be deducted from your final competition score! 
+            You have 100 points initially. The value of the bid entered by you for your allotted entity will be deducted from your 100 points and rest will be added to your total at the end. You need to enter values <b>out of 100 for each entity</b>.
             <br>
-            <b>Step 1:</b>
-            <br>
-            Create your priority order among the entities.
-            <br>
-            <b>Step 2:</b>
-            <br>
-            Enter your username and password and fill up values for each entity as per your priority order. (Values must be between 40 and 100 inclusive)
-            <br>
-            <b class="text-danger">The value that you enter for entity that you will be assigned at the end of bidding will be deducted from your total score!</b>
-            <br>
-            <b>Step 3:</b>
-            <br>
-            See if your team-name is seen under your desired entity.
-            <br>
-            (It will be highlighted)
-            <br>
-            If you did not get your top priority, look for your team-name under your 2<sup>nd</sup> priority entity and so on.
-            <br>
-            <b class="text-danger">You can change your entered bid any time to get your desired entity <u>before bidding stops</u>.</b>
+            <b class="text-danger">You can change your entered bid any time before bidding stops.</b>
         </p>
         <p class="text-center"><b>Constraints of Bidding</b></p>
         <p class="text-center">
             No 2 bids can be equal since the values will determine priority order.
             <br>
             Bidding for each entity is compulsory and each bid has to be between 40 and 100 (inclusive).
-            <br>
-            You need to submit at least 1 valid bid to avoid any kind of penalty!
             <br>
             <b class="text-danger">Failing to follow these constraints will result into full 100 points penalty.</b>
         </p>
