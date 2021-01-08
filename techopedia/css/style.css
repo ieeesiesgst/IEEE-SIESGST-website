@@ -1304,13 +1304,36 @@ h3.tittle {
 }
 
 .IEEEBombay{
-	width: 250px;
+	width: 227px;
 }
 
 .netcredential{
-	width:550px;
+	width:404px;
 }
 
 .textforpartners{
 	color: white;
+}
+
+@media (min-width: 300px ) and (max-width:736px){
+	
+	.netcredential{
+		width:290px;
+	}
+	.IEEEBombay{
+		width: 193px;
+	}
+	.textforpartners{
+		text-align: center;
+	}
+}
+
+@media (min-width: 736px ) and (max-width:1023px){
+
+	.netcredential{
+		width:260px;
+		}
+		.IEEEBombay{
+			width: 154px;
+		}
 }
