@@ -72,7 +72,7 @@ function successful(mode) {
     document.getElementById('loading').style.display = 'block';
 
     $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbw6AnSa1r5eMlVI4Ab8dTW0LSE3x3PNpmpAgldBVvV-RYzXBIGO94xEzA/exec",
+        url: "https://script.google.com/macros/s/AKfycbxfjs2h9lN-haSWSIc6MQAT_e-kir_Tt5xX7ujWCwTSGcd6WxFuB9NpAQ/exec",
         type: 'POST',
         data: serialJSON,
 
@@ -108,7 +108,7 @@ function successful(mode) {
                         document.getElementById('submitbtn').style.display = 'inline';
                         document.getElementById('page2_view').style.display = 'block';
 
-                        document.getElementById('hangman_pic').src = `../Tech_Forage-Hangman/Images/man_${res.Attempts}.png`;
+                        document.getElementById('hangman_pic').src = `../tech-forage/Images/man_${res.Attempts}.png`;
 
                         if (res.SkipStatus == 1) {
                             document.getElementById('skipbtn').style.display = 'none';
@@ -152,7 +152,7 @@ function successful(mode) {
                         //pic update.
                         else {
                             alert('Wrong answer! Lost an attempt.');
-                            document.getElementById('hangman_pic').src = `../Tech_Forage-Hangman/Images/man_${res.Attempts}.png`;
+                            document.getElementById('hangman_pic').src = `../tech-forage/Images/man_${res.Attempts}.png`;
                             document.getElementById('Ans').value = '';
                             document.getElementById('attemptsInstruction').innerHTML = `${res.Attempts} attempts used out of 5.`;
                         }
@@ -170,7 +170,7 @@ function successful(mode) {
                     }
                     else if (res.SkipStatus == 1 || res.Attempts == 5) {
                         alert('Answer skipped! Lost an attempt.');
-                        document.getElementById('hangman_pic').src = `../Tech_Forage-Hangman/Images/man_${res.Attempts}.png`;
+                        document.getElementById('hangman_pic').src = `../tech-forage/Images/man_${res.Attempts}.png`;
                         document.getElementById('attemptsInstruction').innerHTML = `${res.Attempts} attempts used out of 5.`;
                         document.getElementById('skipbtn').style.display = 'none';
                         if (res.Attempts == 5) {
