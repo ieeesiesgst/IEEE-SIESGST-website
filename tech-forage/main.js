@@ -87,6 +87,7 @@ function successful(mode) {
         success: function (res) {
 
             console.log(res.grpNo);
+
             //Wrong username and password.
             if (res.ReturnedStatus == 0) {
                 document.getElementById('loginInstruction').innerHTML = 'wrong credentials';
