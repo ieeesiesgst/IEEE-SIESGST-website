@@ -109,6 +109,7 @@ function successful(mode) {
                     }
                     //to start/continue playing. 
                     else {
+
                         if (res.grpNo == 1) {
                             document.getElementById('Que').innerHTML = questions1[res.current_question];
                         }
@@ -124,7 +125,6 @@ function successful(mode) {
                         else if (res.grpNo == 5) {
                             document.getElementById('Que').innerHTML = questions5[res.current_question];
                         }
-
 
                         document.getElementById('attemptsInstruction').innerHTML = `${res.Attempts} attempts used out of 5.`;
 
@@ -162,6 +162,7 @@ function successful(mode) {
                         }
                         else {
                             alert('Congrats! Correct Answer.')
+
                             if (res.grpNo == 1) {
                                 document.getElementById('Que').innerHTML = questions1[res.current_question];
                             }
@@ -216,20 +217,22 @@ function successful(mode) {
                             window.location.replace('Final-pg2.html');
                             //FAIL PAGE......
                         }
-                        if (res.grpNo == 1) {
-                            document.getElementById('Que').innerHTML = questions1[res.current_question];
-                        }
-                        else if (res.grpNo == 2) {
-                            document.getElementById('Que').innerHTML = questions2[res.current_question];
-                        }
-                        else if (res.grpNo == 3) {
-                            document.getElementById('Que').innerHTML = questions3[res.current_question];
-                        }
-                        else if (res.grpNo == 4) {
-                            document.getElementById('Que').innerHTML = questions4[res.current_question];
-                        }
-                        else if (res.grpNo == 5) {
-                            document.getElementById('Que').innerHTML = questions5[res.current_question];
+                        else {
+                            if (res.grpNo == 1) {
+                                document.getElementById('Que').innerHTML = questions1[res.current_question];
+                            }
+                            else if (res.grpNo == 2) {
+                                document.getElementById('Que').innerHTML = questions2[res.current_question];
+                            }
+                            else if (res.grpNo == 3) {
+                                document.getElementById('Que').innerHTML = questions3[res.current_question];
+                            }
+                            else if (res.grpNo == 4) {
+                                document.getElementById('Que').innerHTML = questions4[res.current_question];
+                            }
+                            else if (res.grpNo == 5) {
+                                document.getElementById('Que').innerHTML = questions5[res.current_question];
+                            }
                         }
                     }
 
