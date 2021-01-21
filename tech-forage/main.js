@@ -2,11 +2,19 @@ document.getElementById('skipbtn').style.display = 'none';
 document.getElementById('submitbtn').style.display = 'none';
 document.getElementById('page2_view').style.display = 'none';
 
-var questions = ['1) I have a 9 letter word, 123456789. All 9 letters can be complaint 345 is very very relevant, if you\'re 6789, you must be intelligent. What is the word ?', '2) I can\'t go left, I can\'t go right. But I do move. I\'m forever stuck in one axis. What am I?', '3) I\'ve face but I\'m not a human, I\'ve hands but i don\'t have finger, I blow air but I don\'t have mouth.', '4) Can you find the smallest positive number that is divisible by 15 that consists ONLY of ones and zeroes (e.g. 10, 11, 100, etc.)?', '5) What only runs and never walks, what has a mouth and never eats, and has a bed but never sleeps?'];
+var questions1 = ['1) I have a 9 letter word, 123456789. All 9 letters can be complaint 345 is very very relevant, if you\'re 6789, you must be intelligent. What is the word ?', '2) I can\'t go left, I can\'t go right. But I do move. I\'m forever stuck in one axis. What am I?', '3) I\'ve face but I\'m not a human, I\'ve hands but i don\'t have finger, I blow air but I don\'t have mouth.', '4) Can you find the smallest positive number that is divisible by 15 that consists ONLY of ones and zeroes (e.g. 10, 11, 100, etc.)?', '5) What only runs and never walks, what has a mouth and never eats, and has a bed but never sleeps?'];
+
+var questions2 = ['1) I have a 9 letter word, 123456789.', '2)What is your favorite thing about your career?', '3) view wej ebw ijdsvwe', '4) djvdvewh dv v?', '5) What oewi vjwe divbe?']
+
+var questions3 = ['1) If you could live anywhere, where would it be?', '2) abrakadabra', '3) expectro patronus', '4) fjwkedsvbe wegje', '5) new owen uvwe?']
+
+var questions4 = ['1)What is your biggest fear?', '2) What would you change about yourself if you could?', '3)ascca scw', '4) djvdvewh dv v?', '5) What oewi vjwe divbe?']
+
+var questions5 = ['1) What really makes you angry?', '2) What am I?', '3) view wej ebw ijdsvwe', '4) djvdvewh dv v?', '5) What oewi vjwe divbe?']
 
 //Checking if input string is empty or not for mode 0.
 document.getElementById('loginbtn').onclick = function () {
-    var Name = document.getElementById('userName').value.toLowerCase().trim();
+    var Name = document.getElementById('userName').value.trim();
     var Password = document.getElementById('password').value.toLowerCase().trim();
 
     if (Name == '' || Password == '') {
@@ -24,7 +32,7 @@ document.getElementById('loginbtn').onclick = function () {
 
 //checking input of answers for mode 1.
 document.getElementById('submitbtn').onclick = function () {
-    var Name = document.getElementById('userName').value.toLowerCase().trim();
+    var Name = document.getElementById('userName').value.trim();
     var Password = document.getElementById('password').value.toLowerCase().trim();
     var Answer = document.getElementById('Ans').value.toLowerCase().trim();
 
@@ -45,7 +53,7 @@ document.getElementById('submitbtn').onclick = function () {
 
 //for mode 3.
 document.getElementById('skipbtn').onclick = function () {
-    var Name = document.getElementById('userName').value.toLowerCase().trim();
+    var Name = document.getElementById('userName').value.trim();
     var Password = document.getElementById('password').value.toLowerCase().trim();
 
     if (Name == '' || Password == '') {
@@ -78,6 +86,7 @@ function successful(mode) {
 
         success: function (res) {
 
+            console.log(res.grpNo);
             //Wrong username and password.
             if (res.ReturnedStatus == 0) {
                 document.getElementById('loginInstruction').innerHTML = 'wrong credentials';
@@ -99,7 +108,22 @@ function successful(mode) {
                     }
                     //to start/continue playing. 
                     else {
-                        document.getElementById('Que').innerHTML = questions[res.current_question];
+                        if (res.grpNo == 1) {
+                            document.getElementById('Que').innerHTML = questions1[res.current_question];
+                        }
+                        else if (res.grpNo == 2) {
+                            document.getElementById('Que').innerHTML = questions2[res.current_question];
+                        }
+                        else if (res.grpNo == 3) {
+                            document.getElementById('Que').innerHTML = questions3[res.current_question];
+                        }
+                        else if (res.grpNo == 4) {
+                            document.getElementById('Que').innerHTML = questions4[res.current_question];
+                        }
+                        else if (res.grpNo == 5) {
+                            document.getElementById('Que').innerHTML = questions5[res.current_question];
+                        }
+
 
                         document.getElementById('attemptsInstruction').innerHTML = `${res.Attempts} attempts used out of 5.`;
 
@@ -137,7 +161,21 @@ function successful(mode) {
                         }
                         else {
                             alert('Congrats! Correct Answer.')
-                            document.getElementById('Que').innerHTML = questions[res.current_question];
+                            if (res.grpNo == 1) {
+                                document.getElementById('Que').innerHTML = questions1[res.current_question];
+                            }
+                            else if (res.grpNo == 2) {
+                                document.getElementById('Que').innerHTML = questions2[res.current_question];
+                            }
+                            else if (res.grpNo == 3) {
+                                document.getElementById('Que').innerHTML = questions3[res.current_question];
+                            }
+                            else if (res.grpNo == 4) {
+                                document.getElementById('Que').innerHTML = questions4[res.current_question];
+                            }
+                            else if (res.grpNo == 5) {
+                                document.getElementById('Que').innerHTML = questions5[res.current_question];
+                            }
                             document.getElementById('Ans').value = '';
                             document.getElementById('attemptsInstruction').innerHTML = `${res.Attempts} attempts used out of 5.`;
 
@@ -177,7 +215,21 @@ function successful(mode) {
                             window.location.replace('Final-pg2.html');
                             //FAIL PAGE......
                         }
-                        else { document.getElementById('Que').innerHTML = questions[res.current_question]; }
+                        if (res.grpNo == 1) {
+                            document.getElementById('Que').innerHTML = questions1[res.current_question];
+                        }
+                        else if (res.grpNo == 2) {
+                            document.getElementById('Que').innerHTML = questions2[res.current_question];
+                        }
+                        else if (res.grpNo == 3) {
+                            document.getElementById('Que').innerHTML = questions3[res.current_question];
+                        }
+                        else if (res.grpNo == 4) {
+                            document.getElementById('Que').innerHTML = questions4[res.current_question];
+                        }
+                        else if (res.grpNo == 5) {
+                            document.getElementById('Que').innerHTML = questions5[res.current_question];
+                        }
                     }
 
                     else if (res.SkipStatus >= 1) {
