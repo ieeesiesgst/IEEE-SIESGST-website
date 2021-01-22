@@ -2,15 +2,15 @@ document.getElementById('skipbtn').style.display = 'none';
 document.getElementById('submitbtn').style.display = 'none';
 document.getElementById('page2_view').style.display = 'none';
 
-var questions1 = ['1) I have a 9 letter word, 123456789. All 9 letters can be complaint 345 is very very relevant, if you\'re 6789, you must be intelligent. What is the word ?', '2) I can\'t go left, I can\'t go right. But I do move. I\'m forever stuck in one axis. What am I?', '3) I\'ve face but I\'m not a human, I\'ve hands but i don\'t have finger, I blow air but I don\'t have mouth.', '4) Can you find the smallest positive number that is divisible by 15 that consists ONLY of ones and zeroes (e.g. 10, 11, 100, etc.)?', '5) What only runs and never walks, what has a mouth and never eats, and has a bed but never sleeps?'];
+var questions1 = ['1) I have ears, mouth and nose but I am not a human. Who am I?', '2) Can you find the smallest positive number that is divisible by 15 that consists ONLY of ones and zeroes (e.g. 10, 11, 100, etc.)? Note that you don’t need a calculator to solve the problem.', '3) I have a 9 letter word, 123456789. All 9 letters can be complaint 345 is very very relevant, if you\'re 6789, you must be intelligent. What is the word?', '4) Where does Fourth always come before Third?', '5) Complete the series. 2  8  23  58  135  ???'];
 
-var questions2 = ['1) I have a 9 letter word, 123456789.', '2)What is your favorite thing about your career?', '3) view wej ebw ijdsvwe', '4) djvdvewh dv v?', '5) What oewi vjwe divbe?']
+var questions2 = ['1) What can answer in any language? What can speak without a mouth? What can sing without an ear?', '2) What letter is next in the series? T   F   S   E   T   T   ??', '3) If you feed me, I live. If you give me a drink, I die. What am I? ', '4) I have a 10 letter word, 0123456789. All 10 letters - make something easier to notice. If you have 2345, you can buy things, if you 789 those things, hunger is in the past and planes and trains are expected to follow their 987. What is the word?', '5) I Can be used to charge a phone but I do not covert AC to DC. What am I?']
 
-var questions3 = ['1) If you could live anywhere, where would it be?', '2) abrakadabra', '3) expectro patronus', '4) fjwkedsvbe wegje', '5) new owen uvwe?']
+var questions3 = ['1) Mr Singh was killed on Sunday afternoon. The wife said she was reading a book. The butler said He was taking a shower. The chef said he was making breakfast. The maid said she was folding clothes, and the gardener said he was planting tomatoes. Who did it?', '2) I can\'t go left, I can\'t go right. But I do move. I\'m forever stuck in one axis. What am I?', '3) Complete the series: 1   1   2   3   7   16   31   95   ???', '4) Where does Fourth always come before Third?', '5) Rose, Hema, and Robin race each other in a 100 meters race. All of them run at a constant speed throughout the race. Rose beats Hema by 20 meters. Hema beats Robin 20 meters. How many meters does Rose beat Robin by ?']
 
-var questions4 = ['1)What is your biggest fear?', '2) What would you change about yourself if you could?', '3)ascca scw', '4) djvdvewh dv v?', '5) What oewi vjwe divbe?']
+var questions4 = ['1) There are 7 girls in a bus. Each girl has 7 backpacks. In each backpack, there are 7 cats. For every cat, there are 7 kittens. How many legs are there in the bus? (Assume there is no bus driver)', '2) I Can be used to charge a phone but I do not covert AC to DC. What am I?', '3) Complete the series. 51  55  71  107  171  ??', '4) I have a 9 letter word, 123456789. All 9 letters can be complaint 345 is very very relevant, if you\'re 6789, you must be intelligent. What is the word?', '5) I\'ve face but I\'m not a human I\'ve hands but i don\'t have finger I blow air but I don\'t have mouth.']
 
-var questions5 = ['1) What really makes you angry?', '2) What am I?', '3) view wej ebw ijdsvwe', '4) djvdvewh dv v?', '5) What oewi vjwe divbe?']
+var questions5 = ['1) Can you find the smallest positive number that is divisible by 15 that consists ONLY of ones and zeroes (e.g. 10, 11, 100, etc.)? Note that you don’t need a calculator to solve the problem.', '2) I can\'t go left, I can\'t go right. But I do move. I\'m forever stuck in one axis. What am I?', '3) I have a 10 letter word, 0123456789. All 10 letters - make something easier to notice If you have 2345, you can buy things, If you 789 those things,hunger is in the past and planes and trains are expected to follow their 987. What is the word?', '4) Complete the series: 31 30 34 7 71 ??', '5) Where does Fourth always come before Third?']
 
 //Checking if input string is empty or not for mode 0.
 document.getElementById('loginbtn').onclick = function () {
@@ -110,6 +110,7 @@ function successful(mode) {
                     //to start/continue playing. 
                     else {
 
+                        //Checking the group number.
                         if (res.grpNo == 1) {
                             document.getElementById('Que').innerHTML = questions1[res.current_question];
                         }
@@ -163,6 +164,7 @@ function successful(mode) {
                         else {
                             alert('Congrats! Correct Answer.')
 
+                            //Checking the group number.
                             if (res.grpNo == 1) {
                                 document.getElementById('Que').innerHTML = questions1[res.current_question];
                             }
@@ -218,6 +220,7 @@ function successful(mode) {
                             //FAIL PAGE......
                         }
                         else {
+                            //Checking the group number.
                             if (res.grpNo == 1) {
                                 document.getElementById('Que').innerHTML = questions1[res.current_question];
                             }
