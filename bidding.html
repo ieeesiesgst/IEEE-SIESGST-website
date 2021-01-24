@@ -270,26 +270,70 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 				var repeat, max, ind;
 
-				for (i = 0; i < name.length; i++) {
-					if (stat[i] == 0) {
-						repeat = true;
-						while (repeat) {
-							max = Math.max(...bid[i]);
-							ind = bid[i].indexOf(max);
-
-							if (ind % entity.length <= allow_add) {
+				for (x = 0; x < name.length; x++) {
+					while (stat[x] == 0) {
+						for (var i = 0; i < entity.length; i++) {
+							if (i % entity.length <= allow_add) {
 								allow++;
 								allow_flag = true;
 							}
 
-							if (final_name[ind].length < allow) {
-								final_name[ind].push(name[i]);
-								final_username[ind].push(username[i]);
-								final_bid[ind].push(bid[i][ind]);
-								stat[i] = 1;
-								repeat = false;
+							temp_ent = [];
+							for (j = 0; j < name.length; j++) {
+								if (stat[j] != 0) {
+									continue;
+								}
+								if (Math.max(...bid[j]) == bid[j][i]) {
+									temp_ent.push(j);
+								}
+							}
+
+							temp_name = [];
+							temp_username = [];
+							temp_bid = [];
+
+							for (k = 0; k < temp_ent.length - 1; k++) {
+								for (l = k + 1; l < temp_ent.length; l++) {
+									if (
+										bid[temp_ent[k]][i] <
+										bid[temp_ent[l]][i]
+									) {
+										swap = temp_ent[k];
+										temp_ent[k] = temp_ent[l];
+										temp_ent[l] = swap;
+									}
+								}
+							}
+
+							if (
+								temp_ent.length + final_bid[i].length <=
+								allow
+							) {
+								for (k = 0; k < temp_ent.length; k++) {
+									temp_name.push(name[temp_ent[k]]);
+									temp_username.push(username[temp_ent[k]]);
+									temp_bid.push(bid[temp_ent[k]][i]);
+									stat[temp_ent[k]] = 1;
+									bid[temp_ent[k]][i] = 0;
+								}
+								final_name[i].push(...temp_name);
+								final_username[i].push(...temp_username);
+								final_bid[i].push(...temp_bid);
 							} else {
-								bid[i][ind] = 0;
+								for (k = 0; k < temp_ent.length; k++) {
+									if (k < allow - final_bid[i].length) {
+										temp_name.push(name[temp_ent[k]]);
+										temp_username.push(
+											username[temp_ent[k]]
+										);
+										temp_bid.push(bid[temp_ent[k]][i]);
+										stat[temp_ent[k]] = 1;
+									}
+									bid[temp_ent[k]][i] = 0;
+								}
+								final_name[i].push(...temp_name);
+								final_username[i].push(...temp_username);
+								final_bid[i].push(...temp_bid);
 							}
 
 							if (allow_flag) {
