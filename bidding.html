@@ -300,6 +300,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					}
 				}
 
+				for (i = 0; i < final_bid.length; i++) {
+					for (j = 0; j < final_bid[i].length - 1; j++) {
+						for (k = j + 1; k < final_bid[i].length; k++) {
+							if (final_bid[i][j] < final_bid[i][k]) {
+								var swap = final_bid[i][j];
+								final_bid[i][j] = final_bid[i][k];
+								final_bid[i][k] = swap;
+
+								swap = final_name[i][j];
+								final_name[i][j] = final_name[i][k];
+								final_name[i][k] = swap;
+
+								swap = final_username[i][j];
+								final_username[i][j] = final_username[i][k];
+								final_username[i][k] = swap;
+							}
+						}
+					}
+				}
+
 				for (i = 0; i < name.length; i++) {
 					if (stat[i] != 1) {
 						for (j = 0; j < entity.length; j++) {
@@ -629,23 +649,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</li>
 							<li><a href="team.html">Our Team</a></li>
 							<li><a href="contact.html">Contact</a></li>
-							<li>
-								<div id="google_translate_element"></div>
-
-								<script type="text/javascript">
-									function googleTranslateElementInit() {
-										new google.translate.TranslateElement(
-											{ pageLanguage: 'en' },
-											'google_translate_element'
-										);
-									}
-								</script>
-
-								<script
-									type="text/javascript"
-									src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-								></script>
-							</li>
 						</ul>
 					</nav>
 					<!-- //nav -->
