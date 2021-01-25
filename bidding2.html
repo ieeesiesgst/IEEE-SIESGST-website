@@ -122,7 +122,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			).getTime();
 
 			const countDownDate = new Date(
-				new Date('Jan 25, 2021 11:56:00').getTime() -
+				new Date('Jan 25, 2021 12:10:00').getTime() -
 					(ISTOffset + currentOffset) * 60000
 			).getTime();
 
@@ -1126,6 +1126,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					clearInterval(inter);
 					document.getElementById('r-text').style.display = 'none';
 					document.getElementById('refresh').style.display = 'none';
+
+					document.getElementById('bid-end').scrollIntoView(true);
 				}
 			}, 1000);
 		</script>
