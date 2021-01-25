@@ -7,806 +7,1110 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!DOCTYPE html>
 <html lang="en-US">
+	<head>
+		<title>Live Bidding | IEEE SIESGST & EDC SIESGST</title>
+		<!-- Meta tag Keywords -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="Live Bidding for events!" />
+		<meta
+			name="keywords"
+			content="IEEE, ieee, sies, gst, siesgst, official, student, website, about, more, information"
+		/>
+		<meta name="author" content="IEEE SIES GST Student Chapter" />
+
+		<!--whatsapp and fb-->
+		<meta
+			property="og:title"
+			content="Live Bidding | IEEE SIESGST & EDC SIESGST"
+		/>
+		<meta property="og:description" content="Live Bidding for Events" />
+		<meta property="og:url" content="https://ieeesiesgst.co.in/bidding2" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:image"
+			content="https://ieeesiesgst.co.in/images/ieeeicon.png"
+		/>
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="512" />
+		<meta property="og:image:height" content="512" />
+		<meta property="og:image:alt" content="IEEE SIES GST" />
+
+		<!--twitter-->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta
+			property="twitter:title"
+			content="Live Bidding | IEEE SIESGST & EDC SIESGST"
+		/>
+		<meta
+			property="twitter:description"
+			content="Live Bidding for Events"
+		/>
+		<meta
+			property="twitter:image"
+			content="https://ieeesiesgst.co.in/images/ieeeicon.png"
+		/>
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#000" />
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+
+		<!-- //Meta tag Keywords -->
+
+		<!-- Custom-Files -->
+		<!-- CSS only -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+
+		<!-- JS, Popper.js, and jQuery -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"
+		></script>
+		<!-- Bootstrap-Core-CSS -->
+		<link
+			rel="stylesheet"
+			href="css/style.css"
+			type="text/css"
+			media="all"
+		/>
+		<!-- Style-CSS -->
+		<!-- font-awesome-icons -->
+		<link href="css/font-awesome.css" rel="stylesheet" />
+		<!-- //font-awesome-icons -->
+		<!-- /Fonts -->
+		<link
+			href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900"
+			rel="stylesheet"
+		/>
+		<link
+			href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
+			rel="stylesheet"
+		/>
+		<!-- //Fonts -->
+
+		<link rel="shortcut icon" href="images/favicon.png" />
+		<link rel="icon" href="images/favicon.png" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
-<head>
-    <title>Live Bidding | IEEE SIESGST & CSI SIESGST</title>
-    <!-- Meta tag Keywords -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8" />
-    <meta name="description" content="Live Bidding for events!">
-    <meta name="keywords" content="IEEE, ieee, sies, gst, siesgst, official, student, website, about, more, information">
-    <meta name="author" content="IEEE SIES GST Student Chapter">
+		<script type="text/javascript">
+			var inter;
 
+			var currentOffset = new Date().getTimezoneOffset();
+			var ISTOffset = 330;
 
-    <!--whatsapp and fb-->
-    <meta property="og:title" content="Live Bidding | IEEE SIESGST & CSI SIESGST" />
-    <meta property="og:description" content="Live Bidding for Events" />
-    <meta property="og:url" content="https://ieeesiesgst.co.in/bidding" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://ieeesiesgst.co.in/images/ieeeicon.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image:alt" content="IEEE SIES GST" />
-
-    <!--twitter-->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Live Bidding | IEEE SIESGST & CSI SIESGST" />
-    <meta property="twitter:description" content="Live Bidding for Events" />
-    <meta property="twitter:image" content="https://ieeesiesgst.co.in/images/ieeeicon.png" />
-
-
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#000">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#000">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-
-    <!-- //Meta tag Keywords -->
-
-    <!-- Custom-Files -->
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <!-- Style-CSS -->
-    <!-- font-awesome-icons -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- //font-awesome-icons -->
-    <!-- /Fonts -->
-    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
-    <!-- //Fonts -->
-
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="icon" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-<script type="text/javascript">
-
-    var inter;
-
-    var currentOffset = new Date().getTimezoneOffset();
-    var ISTOffset = 330;
-
-    const startDate = new Date(new Date("Nov 26, 2020 00:00:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
-
-    const countDownDate = new Date(new Date("Nov 26, 2020 21:00:00").getTime() - (ISTOffset + currentOffset)*60000).getTime();
-
-    function boom(res)
-    {
-        var entity = res.entity;
-
-        var name = res.name;
-
-        var username = res.username;
-
-        var bid = res.bid;
-
-        var started = res.started;
-
-        var stat = [];
-
-        var no_stat=[], no_bid=[], no_name=[], no_username=[];
-
-        var rem = [];
-
-        var final_name = [];
-
-        var final_username = [];
-
-        var final_bid = [];
-
-        var swap;
-
-        var stat_flag=0;
-
-        var j,k,l;
-
-        var allow,allow_add,temp_set,temp_bid,temp_name,temp_username,temp_ent;
-
-        var allow_flag = false;
-
-        for(var z=0;z<name.length;z++)
-        {
-            if(started[z] == '0' || started[z] == 0)
-            {
-                rem.push(z);
-                stat.push(-3);
-                continue;
-            }
-            temp_set = new Set(bid[z]);
-            if(temp_set.size!=bid[z].length)
-            {
-                stat.push(-1);
-                continue;
-            }
-
-            for(var x=0;x<entity.length;x++)
-            {
-                bid[z][x] = parseInt(bid[z][x],10);
-                if(bid[z][x]<40 || bid[z][x]>100)
-                {
-                    stat.push(-2);
-                    stat_flag = 1;
-                    break;
-                }
-            }
-
-            if(stat_flag==0)
-            {
-                stat.push(0);
-            }
-            else
-            {
-                stat_flag = 0;
-            }
-        }
-
-        for(z=0;z<rem.length;z++)
-        {
-            no_stat.push(stat.splice(rem[z]-z, 1)[0]);
-            no_username.push(username.splice(rem[z]-z, 1)[0]);
-            no_name.push(name.splice(rem[z]-z, 1)[0]);
-            no_bid.push(bid.splice(rem[z]-z, 1)[0]);
-        }
-
-        allow = parseInt(name.length/entity.length, 10);
-
-        allow_add = (name.length%entity.length)-1;
-
-        for(var i=0;i<entity.length;i++)
-        {
-            if(i%entity.length<=allow_add)
-            {
-                allow++;
-                allow_flag = true;
-            }
-            temp_ent=[];
-            for(j=0;j<name.length;j++)
-            {
-                if(stat[j]!=0)
-                {
-                    continue;
-                }
-                if(Math.max(...bid[j])==bid[j][i])
-                {
-                    temp_ent.push(j);
-                }
-            }
-
-            temp_name = [];
-            temp_username = [];
-            temp_bid = [];
-
-            for(k=0;k<temp_ent.length-1;k++)
-            {
-                for(l=k+1;l<temp_ent.length;l++)
-                {
-                    if (bid[temp_ent[k]][i] < bid[temp_ent[l]][i])
-                    {
-                        swap = temp_ent[k];
-                        temp_ent[k] = temp_ent[l];
-                        temp_ent[l] = swap;
-                    } 
-                }
-            }
-
-            if(temp_ent.length<=allow)
-            {
-                for(k=0;k<temp_ent.length;k++)
-                {
-                    temp_name.push(name[temp_ent[k]]);
-                    temp_username.push(username[temp_ent[k]]);
-                    temp_bid.push(bid[temp_ent[k]][i]);
-                    stat[temp_ent[k]] = 1;
-                    bid[temp_ent[k]][i] = 0;
-                }
-                final_name.push(temp_name);
-                final_username.push(temp_username);
-                final_bid.push(temp_bid);
-            }
-            else
-            {
-                for(k=0;k<temp_ent.length;k++)
-                {
-                    if(k<allow)
-                    {
-                        temp_name.push(name[temp_ent[k]]);
-                        temp_username.push(username[temp_ent[k]]);
-                        temp_bid.push(bid[temp_ent[k]][i]);
-                        stat[temp_ent[k]] = 1;
-                    }
-                    bid[temp_ent[k]][i] = 0;
-                }
-                final_name.push(temp_name);
-                final_username.push(temp_username);
-                final_bid.push(temp_bid);
-            }
-
-            if(allow_flag)
-            {
-                allow_flag = false;
-                allow--;
-            }
-        }
-
-        var repeat,max,ind;
-
-        for(i=0;i<name.length;i++)
-        {
-            if(stat[i]==0)
-            {
-                repeat = true;
-                while(repeat)
-                {
-                    max = Math.max(...bid[i]);
-                    ind = bid[i].indexOf(max);
-
-                    if(ind%entity.length<=allow_add)
-                    {
-                        allow++;
-                        allow_flag = true;
-                    }
-
-                    if(final_name[ind].length<allow)
-                    {
-                        final_name[ind].push(name[i]);
-                        final_username[ind].push(username[i])
-                        final_bid[ind].push(bid[i][ind]);
-                        stat[i] = 1;
-                        repeat = false;
-                    }
-                    else
-                    {
-                        bid[i][ind] = 0;
-                    }
-
-                    if(allow_flag)
-                    {
-                        allow_flag = false;
-                        allow--;
-                    }
-                }
-            }
-        }
-
-        for(i=0;i<name.length;i++)
-        {
-            if(stat[i]!=1)
-            {
-                for(j=0;j<entity.length;j++)
-                {
-                    if(j%entity.length<=allow_add)
-                    {
-                        allow++;
-                        allow_flag = true;
-                    }
-
-                    if(final_name[j].length<allow)
-                    {
-                        final_name[j].push(name[i]);
-                        final_username[j].push(username[i]);
-
-                        final_bid[j].push(100);
-
-                        if(allow_flag)
-                        {
-                            allow_flag = false;
-                            allow--;
-                        }
-                        break;
-                    }
-
-                    if(allow_flag)
-                    {
-                        allow_flag = false;
-                        allow--;
-                    }
-                }
-            }
-        }
-
-        if(document.getElementById('final').innerHTML == 'Final ')
-        {
-            var st_index = name.length;
-            name = name.concat(no_name);
-            bid = bid.concat(no_bid);
-            stat = stat.concat(no_stat);
-            username = username.concat(no_username);
-
-            allow = parseInt(name.length/entity.length, 10);
-            allow_add = (name.length%entity.length)-1;
-
-            for(i=st_index;i<name.length;i++)
-            {
-                for(j=0;j<entity.length;j++)
-                {
-                    if(j%entity.length<=allow_add)
-                    {
-                        allow++;
-                        allow_flag = true;
-                    }
-
-                    if(final_name[j].length<allow)
-                    {
-                        final_name[j].push(name[i]);
-                        final_username[j].push(username[i]);
-
-                        final_bid[j].push(100);
-
-                        if(allow_flag)
-                        {
-                            allow_flag = false;
-                            allow--;
-                        }
-                        break;
-                    }
-
-                    if(allow_flag)
-                    {
-                        allow_flag = false;
-                        allow--;
-                    }
-                }
-            }
-        }
-
-        var text = '';
-        var markstart = '';
-        var markend = '';
-        for(i=0;i<entity.length;i++)
-        {
-            text+='<div class="col-md-6 col-12 pt-2"><p class="mb-1"><b>'+entity[i]+'</b>';
-            for(j=0;j<final_name[i].length;j++)
-            {
-                if(res.user == final_username[i][j])
-                {
-                    markstart = '<mark id="' + res.user + '" style="background-color: yellow; color: black;">';
-                    markend = '</mark>';
-                }
-                else
-                {
-                    markstart = '';
-                    markend = '';
-                }
-                text+='<p class="mb-2 pt-1" style="line-height: 1.4em;">' + markstart + final_name[i][j]+'<sub> (' + final_username[i][j] + ')</sub> ('+final_bid[i][j]+')';
-                if(stat[username.indexOf(final_username[i][j])]==-1)
-                {
-                    text+='<br><small class="align-top text-danger mt-4"><b>(Equal Bids penalty)</b></small>';
-                }
-                else if(stat[username.indexOf(final_username[i][j])]==-2)
-                {
-                    text+='<br><small class="align-top text-danger mt-4"><b>(Out of Parameters penalty)</b></small>';
-                }
-                else if(stat[username.indexOf(final_username[i][j])]==-3)
-                {
-                    text+='<br><small class="align-top text-danger mt-4"><b>(Did not participate - Extra 20 points penalty)</b></small>';
-                }
-                text+= markend + '</p>';
-            }
-            text+='</p></div>'
-        }
-        document.getElementById('data').innerHTML = text;
-
-    }
-    
-    function calc(res,mode)
-    {
-        if(res.status == 0)
-        {
-            alert('There was some server error!\nPlease try again or contact our team.\nPlease disable any Antivirus Protection Extension/Plugin that may block requests.\nSorry for inconvenience :(');
-
-            location.reload()
-            return;
-        }
-
-        boom(res);
-
-        if(mode == 0)
-        {
-            var inp = '';
-            for(var q=0;q<res.entity.length;q++)
-            {
-                inp += '<div class="col-lg-3 col-md-4 col-6"><label class="mt-lg-0 mt-2" for="inp' + q + '">' + res.entity[q] + '</label><span class="form-required"> *</span><input type="number" step="1" id="inp' + q + '" class="form-control bid-input" required></div>'
-            }
-
-            document.getElementById('form-inp').innerHTML = inp;
-
-            document.getElementById('loading-screen').style.display = 'none';
-        }
-        else if(mode == 1)
-        {
-            document.getElementById('loading-bid').style.display = 'none';
-            document.getElementById('refresh').removeAttribute('disabled');
-            document.getElementById('refresh').setAttribute('value', 'Refresh');
-            clearInterval(inter);
-            inter = setInterval(function(){send_req(3);}, 30000);
-        }
-        else if(mode == 2)
-        {
-            if(res.login == 0)
-            {
-                alert('Bid Updated!');
-            }
-            else if(res.login == 1)
-            {
-                alert('User ID not found!\nPlease enter correct User ID.');
-            }
-            else
-            {
-                alert('Incorrect Password!\nPlease enter password provided by organizers.');
-            }
-
-            document.getElementById('bid-sub').removeAttribute('disabled');
-            document.getElementById('bid-sub').setAttribute('value', 'Submit Bid');
-            clearInterval(inter);
-            inter = setInterval(function(){send_req(3);}, 30000);
-        }
-
-    }
-
-    function send_req(mode)
-    {
-        var serialJSON = {}
-        serialJSON['mode'] = mode + '';
-        serialJSON['loc'] = window.top.location.href;
-
-        var markexist = document.getElementsByTagName('mark');
-        if(markexist.length==1)
-        {
-            serialJSON['user'] = markexist[0].getAttribute('id');
-        }
-        else
-        {
-            serialJSON['user'] = '0';
-        }
-
-        if(mode == 0)
-        {
-            document.getElementById('loading-screen').style.display = 'block';
-        }
-        else if(mode == 1)
-        {
-            document.getElementById('loading-bid').style.display = 'block';
-            document.getElementById('refresh').setAttribute('disabled', '');
-            document.getElementById('refresh').setAttribute('value', 'Refreshing');
-        }
-        else if(mode == 2)
-        {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            if(distance<0)
-            {
-                alert('Bidding Time is over!');
-                return;
-            }
-            document.getElementById('bid-sub').setAttribute('disabled', '');
-            document.getElementById('bid-sub').setAttribute('value', 'Submitting');
-            serialJSON['username'] = document.getElementById('username').value;
-            serialJSON['password'] = document.getElementById('password').value;
-
-            var bids = document.getElementsByClassName('bid-input');
-
-            serialJSON['bid-len'] = bids.length + '';
-
-            for(var i=0;i<bids.length;i++)
-            {
-                serialJSON['inp'+i] = bids[i].value;
-            }
-        }
-
-        $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbyHBzkcP8usu4AcMZ_hLs0545Se33DquiENXAonQqbTl1nZtbuJ/exec',
-            data: serialJSON,
-            type: 'POST',
-            success: function(res){
-                calc(res,mode);
-            },
-            error: function(res){
-                alert('There was some server error!\nPlease try again or contact our team.\nPlease disable any Antivirus Protection Extension/Plugin that may block requests.\nSorry for inconvenience :(');
-                location.reload();
-            }
-        });
-
-    }
-
-</script>
-
-    
-
-
-
-</head>
-
-<body>
-
-
-    <script type="text/javascript">
-        location.replace('https://ieeesiesgst.co.in/events');
-    </script>
-
-
-
-    <!-- mian-content -->
-    <div class="main-banner inner" id="home">
-        <!-- header -->
-        <header class="header">
-            <div class="container-fluid px-lg-5">
-                <!-- nav -->
-                <nav class="py-4">
-                    <div id="logo">
-                        <h1> <a href="https://ieeesiesgst.co.in"><img id="ielogo" src="images/ieeesiesblack.png"></a></h1>
-                    </div>
-
-                    <label for="drop" class="toggle">Menu</label>
-                    <input type="checkbox" id="drop" />
-                    <ul class="menu mt-2">
-                        <li><a href="https://ieeesiesgst.co.in">Home</a></li>
-                        <li><a href="about.html" style="text-shadow: 0px 0px 4px #000 !important;">About</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        
-                        
-                        <li>
-                            <!-- First Tier Drop Down -->
-                            <label for="drop-2" class="toggle">Explore <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                            <a href="#">Explore <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                            <input type="checkbox" id="drop-2" />
-                            <ul>
-
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="achievements.html">Achievements</a></li>
-                                <li><a href="wie.html">WIE</a></li>
-                                <li><a href="mtts.html">MTT-S</a></li>
-                                <li><a href="techopedia/index.html">Techopedia 9.0</a></li>
-                                
-                            </ul>
-                        </li>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><div id="google_translate_element"></div>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
-
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
-                    </ul>
-                </nav>
-                <!-- //nav -->
-            </div>
-        </header>
-        <!-- //header -->
-
-    </div>
-
-
-
-
-
-<div id="loading-screen" class="position-fixed w-100" style="display: none;"><h3 id="loading-text" class="position-fixed">Loading...</h3></div>
-
-
-<div class="container">
-    <div class="pt-sm-4 pt-3 pb-3 pb-sm-4">
-        <h1 class="text-center d-none d-sm-block">Live Bidding</h1>
-        <h3 class="text-center d-block d-sm-none">Live Bidding</h3>
-    </div>
-</div>
-
-
-<div class="container">
-    <form class="pb-2" id="bid-form" style="display: none;" autocomplete="off" action="javascript: void(0)">
-        <p class="text-center"><b>Instructions:</b></p>
-        <p class="text-center">
-            You have 100 points initially. The value of the bid entered by you for your allotted entity will be deducted from your 100 points and rest will be added to your total at the end. You need to enter values <b>out of 100 for each entity</b>.
-            <br>
-            <b class="text-danger">You can change your entered bid any time before bidding stops.</b>
-        </p>
-        <p class="text-center"><b>Constraints of Bidding</b></p>
-        <p class="text-center">
-            No 2 bids can be equal since the values will determine priority order.
-            <br>
-            Bidding for each entity is compulsory and each bid has to be between 40 and 100 (inclusive).
-            <br>
-            <b class="text-danger">Failing to follow these constraints will result into full 100 points penalty.</b>
-        </p>
-        <p class="text-center">
-            <b>Note:</b>
-            <br>
-            <span class="text-danger">The bidding results refresh every 30 seconds.<br>You might want to press the refresh button and view current status before you submit your bid!</span>
-        </p>
-
-        <div class="form-row">
-            <div class="col-sm-6 col-12">
-                <label for="username">User ID</label><span class="form-required"> *</span>
-                <input type="text" id="username" class="form-control" placeholder="Enter User ID" required>
-                <small class="form-text text-muted">Enter User ID provided by event organizers</small>
-            </div>
-            <div class="col-sm-6 col-12">
-                <label for="password" class="pt-2 pt-sm-0">Password</label><span class="form-required"> *</span>
-                <input type="password" id="password" class="form-control" placeholder="Password" required>
-                <small class="form-text text-muted">Enter password provided by event organizers</small>
-            </div>
-            <div class="col-12 pt-3 pb-1 pb-lg-3"><h5>Enter Your Bids below:</h5></div>
-        </div>
-        <div class="form-row" id="form-inp">
-            
-            
-        </div>
-        <div class="mt-3 text-center">
-            <div>
-                <p class="text-danger mb-0">Bidding Closes in: <span id="timer"></span></p>
-            </div>
-            <input type="submit" id="bid-sub" class="btn btn-danger" value="Submit Bid">
-        </div>
-    </form>
-    <div id="bid-end" class="text-center" style="display: none;">
-        <h5 class="text-danger">Bidding has Ended</h5>
-    </div>
-    <div id="bid-start" class="text-center" style="display: none;">
-        <h5>Bidding starts in:<br><span id="start-timer" class="text-danger"></span></h5>
-    </div>
-</div>
-
-<hr>
-
-<div class="container pb-4 pt-2" id="bid-status">
-    <h5 class="pb-2"><span id="final"></span>Bidding Status:</h5>
-    <button type="button" class="btn-sm btn btn-success" id="refresh" onclick="send_req(1);">Refresh</button>
-    <br>
-    <small class="text-danger" id="r-text">Refreshes every 30 seconds.</small>
-    <p><small><b class="d-inline-block">Display Format:</b> <span class="d-inline-block">Team_name<sub>(Team_user_id)</sub> (Bidding_value)</span></small></p>
-    <div class="position-relative">
-
-        <div id="loading-bid" class="position-absolute w-100" style="display: none;"><h3 class="text-center pt-5">Loading...</h3></div>
-
-        <div class="row" id="data">
-            
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-<!--footer -->
-<footer>
-    <section class="footer footer_1its py-5">
-        <div class="container py-md-4">
-            <div class="row footer-top mb-md-5 mb-4">
-                <div class="col-lg-4 col-md-6 footer-grid_section_1its">
-                    <div class="footer-title-w3ls">
-                        <h3>Reach Out to Us</h3>
-                    </div>
-                    <div class="footer-text">
-                        <p><b>Address</b> : SIES Graduate School of Technology, Plot 1-C D & E, Sector-V, Navi Mumbai, 
-                     Maharashtra 400706</p>
-                     <p><b>Phone</b> : +91 9167923446</p>
-                     <p><b>Email</b> : <a href="mailto:ieee@siesgst.ac.in">ieee@siesgst.ac.in</a></p>
-                 </div>
-             </div>
-             <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its">
-                <div class="footer-title-w3ls">
-                    <h3>Catch On</h3>
-                </div>
-                <p>Always Open on following Social sites, feel free to check out.</p>
-                <ul class="social_section_1info">
-
-                    <li class="mb-2 instagram"><a href="https://www.instagram.com/ieeesiesgst/"><span class="fa fa-instagram mr-1"></span>Instagram</a></li>
-
-                    <li class="mb-2 youtube"><a href="https://www.youtube.com/channel/UCXAeBcDQQBiuVtzn4ke-Xsw"><span class="fa fa-youtube-play mr-1"></span>YouTube</a></li>
-
-
-                    <li class="mb-2 facebook"><a href="https://m.facebook.com/ieeesiesgstofficial/"><span class="fa fa-facebook mr-1"></span>Facebook</a></li>
-
-                    
-
-                    <li class="mb-2 linkedin"><a href="https://www.linkedin.com/mwlite/company/ieee-gst"><span class="fa fa-linkedin mr-1"></span>LinkedIn</a></li>
-
-                    <li class="mb-2 github"><a href="https://github.com/ieeesiesgst"><span class="fa fa-github mr-1"></span>GitHub</a></li>
-
-                </ul>
-            </div>
-            <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its">
-                <div class="footer-title-w3ls">
-                    <h3>Newsletter</h3>
-                </div>
-                <div class="footer-text">
-                    <p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
-                    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfRha9CA1euCfDGVMFK6Z7V0MzWCQV5p6KAOFcHi7L4lj_LMA/formResponse" target="_self" method="POST">
-                        <input type="email" name="entry.1307177627" placeholder="Enter your email..." required="">
-                        <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
-                        <div class="clearfix"> </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="move-top-w3layouts text-center mt-3">
-            <a href="#home" class="move-top"> <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span></a>
-        </div>
-
-    </div>
-</section>
-</footer>
-<!-- //footer -->
-
-
-
-<script>
-
-    document.getElementById('bid-form').onsubmit = function() {
-        send_req(2);
-        return false;
-    }
-
-    inter = setInterval(function(){send_req(3);}, 30000);
-
-    send_req(0);
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  if(startDate-now>0)
-  {
-    distance = startDate - now;
-
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById('bid-form').style.display = 'none';
-    document.getElementById('bid-start').style.display = 'block';
-    document.getElementById("start-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    document.getElementById('bid-status').style.display = 'none';
-  }
-  else if(distance>=0)
-  {
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-    // Output the result in an element with id="demo"
-    document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    document.getElementById('bid-form').style.display = 'block';
-    document.getElementById('bid-status').style.display = 'block';
-    document.getElementById('bid-start').style.display = 'none';
-  }
-  else if (distance < 0) {
-    clearInterval(x);
-    document.getElementById('bid-sub').setAttribute('disabled', '');
-    document.getElementById("timer").innerHTML = "Bidding has Ended!";
-    document.getElementById('bid-form').style.display = 'none';
-    document.getElementById('bid-end').style.display = 'block';
-    document.getElementById('final').innerHTML = 'Final ';
-    send_req(3);
-    clearInterval(inter);
-    document.getElementById('r-text').style.display = 'none';
-    document.getElementById('refresh').style.display = 'none';
-  }
-}, 1000);
-</script>
-
-
-</body>
-
+			const startDate = new Date(
+				new Date('Jan 24, 2021 12:00:00').getTime() -
+					(ISTOffset + currentOffset) * 60000
+			).getTime();
+
+			const countDownDate = new Date(
+				new Date('Jan 25, 2021 12:00:00').getTime() -
+					(ISTOffset + currentOffset) * 60000
+			).getTime();
+
+			function boom(res) {
+				var entity = res.entity;
+
+				var name = res.name;
+
+				var username = res.username;
+
+				var bid = res.bid;
+
+				var started = res.started;
+
+				var stat = [];
+
+				var no_stat = [],
+					no_bid = [],
+					no_name = [],
+					no_username = [];
+
+				var rem = [];
+
+				var final_name = [];
+
+				var final_username = [];
+
+				var final_bid = [];
+
+				var swap;
+
+				var stat_flag = 0;
+
+				var j, k, l;
+
+				var allow,
+					allow_add,
+					temp_set,
+					temp_bid,
+					temp_name,
+					temp_username,
+					temp_ent;
+
+				var allow_flag = false;
+
+				for (var z = 0; z < name.length; z++) {
+					if (started[z] == '0' || started[z] == 0) {
+						rem.push(z);
+						stat.push(-3);
+						continue;
+					}
+					temp_set = new Set(bid[z]);
+					if (temp_set.size != bid[z].length) {
+						stat.push(-1);
+						continue;
+					}
+
+					for (var x = 0; x < entity.length; x++) {
+						bid[z][x] = parseInt(bid[z][x], 10);
+						if (bid[z][x] < 40 || bid[z][x] > 100) {
+							stat.push(-2);
+							stat_flag = 1;
+							break;
+						}
+					}
+
+					if (stat_flag == 0) {
+						stat.push(0);
+					} else {
+						stat_flag = 0;
+					}
+				}
+
+				for (z = 0; z < rem.length; z++) {
+					no_stat.push(stat.splice(rem[z] - z, 1)[0]);
+					no_username.push(username.splice(rem[z] - z, 1)[0]);
+					no_name.push(name.splice(rem[z] - z, 1)[0]);
+					no_bid.push(bid.splice(rem[z] - z, 1)[0]);
+				}
+
+				allow = parseInt(name.length / entity.length, 10);
+
+				allow_add = (name.length % entity.length) - 1;
+
+				for (var i = 0; i < entity.length; i++) {
+					if (i % entity.length <= allow_add) {
+						allow++;
+						allow_flag = true;
+					}
+					temp_ent = [];
+					for (j = 0; j < name.length; j++) {
+						if (stat[j] != 0) {
+							continue;
+						}
+						if (Math.max(...bid[j]) == bid[j][i]) {
+							temp_ent.push(j);
+						}
+					}
+
+					temp_name = [];
+					temp_username = [];
+					temp_bid = [];
+
+					for (k = 0; k < temp_ent.length - 1; k++) {
+						for (l = k + 1; l < temp_ent.length; l++) {
+							if (bid[temp_ent[k]][i] < bid[temp_ent[l]][i]) {
+								swap = temp_ent[k];
+								temp_ent[k] = temp_ent[l];
+								temp_ent[l] = swap;
+							}
+						}
+					}
+
+					if (temp_ent.length <= allow) {
+						for (k = 0; k < temp_ent.length; k++) {
+							temp_name.push(name[temp_ent[k]]);
+							temp_username.push(username[temp_ent[k]]);
+							temp_bid.push(bid[temp_ent[k]][i]);
+							stat[temp_ent[k]] = 1;
+							bid[temp_ent[k]][i] = 0;
+						}
+						final_name.push(temp_name);
+						final_username.push(temp_username);
+						final_bid.push(temp_bid);
+					} else {
+						for (k = 0; k < temp_ent.length; k++) {
+							if (k < allow) {
+								temp_name.push(name[temp_ent[k]]);
+								temp_username.push(username[temp_ent[k]]);
+								temp_bid.push(bid[temp_ent[k]][i]);
+								stat[temp_ent[k]] = 1;
+							}
+							bid[temp_ent[k]][i] = 0;
+						}
+						final_name.push(temp_name);
+						final_username.push(temp_username);
+						final_bid.push(temp_bid);
+					}
+
+					if (allow_flag) {
+						allow_flag = false;
+						allow--;
+					}
+				}
+
+				var repeat, max, ind;
+
+				for (x = 0; x < name.length; x++) {
+					while (stat[x] == 0) {
+						for (var i = 0; i < entity.length; i++) {
+							if (i % entity.length <= allow_add) {
+								allow++;
+								allow_flag = true;
+							}
+
+							temp_ent = [];
+							for (j = 0; j < name.length; j++) {
+								if (stat[j] != 0) {
+									continue;
+								}
+								if (Math.max(...bid[j]) == bid[j][i]) {
+									temp_ent.push(j);
+								}
+							}
+
+							temp_name = [];
+							temp_username = [];
+							temp_bid = [];
+
+							for (k = 0; k < temp_ent.length - 1; k++) {
+								for (l = k + 1; l < temp_ent.length; l++) {
+									if (
+										bid[temp_ent[k]][i] <
+										bid[temp_ent[l]][i]
+									) {
+										swap = temp_ent[k];
+										temp_ent[k] = temp_ent[l];
+										temp_ent[l] = swap;
+									}
+								}
+							}
+
+							if (
+								temp_ent.length + final_bid[i].length <=
+								allow
+							) {
+								for (k = 0; k < temp_ent.length; k++) {
+									temp_name.push(name[temp_ent[k]]);
+									temp_username.push(username[temp_ent[k]]);
+									temp_bid.push(bid[temp_ent[k]][i]);
+									stat[temp_ent[k]] = 1;
+									bid[temp_ent[k]][i] = 0;
+								}
+								final_name[i].push(...temp_name);
+								final_username[i].push(...temp_username);
+								final_bid[i].push(...temp_bid);
+							} else {
+								for (k = 0; k < temp_ent.length; k++) {
+									if (k < allow - final_bid[i].length) {
+										temp_name.push(name[temp_ent[k]]);
+										temp_username.push(
+											username[temp_ent[k]]
+										);
+										temp_bid.push(bid[temp_ent[k]][i]);
+										stat[temp_ent[k]] = 1;
+									}
+									bid[temp_ent[k]][i] = 0;
+								}
+								final_name[i].push(...temp_name);
+								final_username[i].push(...temp_username);
+								final_bid[i].push(...temp_bid);
+							}
+
+							if (allow_flag) {
+								allow_flag = false;
+								allow--;
+							}
+						}
+					}
+				}
+
+				for (i = 0; i < final_bid.length; i++) {
+					for (j = 0; j < final_bid[i].length - 1; j++) {
+						for (k = j + 1; k < final_bid[i].length; k++) {
+							if (final_bid[i][j] < final_bid[i][k]) {
+								var swap = final_bid[i][j];
+								final_bid[i][j] = final_bid[i][k];
+								final_bid[i][k] = swap;
+
+								swap = final_name[i][j];
+								final_name[i][j] = final_name[i][k];
+								final_name[i][k] = swap;
+
+								swap = final_username[i][j];
+								final_username[i][j] = final_username[i][k];
+								final_username[i][k] = swap;
+							}
+						}
+					}
+				}
+
+				for (i = 0; i < name.length; i++) {
+					if (stat[i] != 1) {
+						for (j = 0; j < entity.length; j++) {
+							if (j % entity.length <= allow_add) {
+								allow++;
+								allow_flag = true;
+							}
+
+							if (final_name[j].length < allow) {
+								final_name[j].push(name[i]);
+								final_username[j].push(username[i]);
+
+								final_bid[j].push(100);
+
+								if (allow_flag) {
+									allow_flag = false;
+									allow--;
+								}
+								break;
+							}
+
+							if (allow_flag) {
+								allow_flag = false;
+								allow--;
+							}
+						}
+					}
+				}
+
+				if (document.getElementById('final').innerHTML == 'Final ') {
+					var st_index = name.length;
+					name = name.concat(no_name);
+					bid = bid.concat(no_bid);
+					stat = stat.concat(no_stat);
+					username = username.concat(no_username);
+
+					allow = parseInt(name.length / entity.length, 10);
+					allow_add = (name.length % entity.length) - 1;
+
+					for (i = st_index; i < name.length; i++) {
+						for (j = 0; j < entity.length; j++) {
+							if (j % entity.length <= allow_add) {
+								allow++;
+								allow_flag = true;
+							}
+
+							if (final_name[j].length < allow) {
+								final_name[j].push(name[i]);
+								final_username[j].push(username[i]);
+
+								final_bid[j].push(120);
+
+								if (allow_flag) {
+									allow_flag = false;
+									allow--;
+								}
+								break;
+							}
+
+							if (allow_flag) {
+								allow_flag = false;
+								allow--;
+							}
+						}
+					}
+				}
+
+				var text = '';
+				var markstart = '';
+				var markend = '';
+				for (i = 0; i < entity.length; i++) {
+					text +=
+						'<div class="col-md-6 col-12 pt-2"><p class="mb-1"><b>' +
+						entity[i] +
+						'</b>';
+					for (j = 0; j < final_name[i].length; j++) {
+						if (res.user == final_username[i][j]) {
+							markstart =
+								'<mark id="' +
+								res.user +
+								'" style="background-color: yellow; color: black;">';
+							markend = '</mark>';
+						} else {
+							markstart = '';
+							markend = '';
+						}
+						text +=
+							'<p class="mb-2 pt-1" style="line-height: 1.4em;">' +
+							markstart +
+							final_name[i][j] +
+							'<sub> (' +
+							final_username[i][j] +
+							')</sub> (' +
+							final_bid[i][j] +
+							')';
+						if (
+							stat[username.indexOf(final_username[i][j])] == -1
+						) {
+							text +=
+								'<br><small class="align-top text-danger mt-4"><b>(Equal Bids penalty)</b></small>';
+						} else if (
+							stat[username.indexOf(final_username[i][j])] == -2
+						) {
+							text +=
+								'<br><small class="align-top text-danger mt-4"><b>(Out of Parameters penalty)</b></small>';
+						} else if (
+							stat[username.indexOf(final_username[i][j])] == -3
+						) {
+							text +=
+								'<br><small class="align-top text-danger mt-4"><b>(Did not participate - 120 points penalty)</b></small>';
+						}
+						text += markend + '</p>';
+					}
+					text += '</p></div>';
+				}
+				document.getElementById('data').innerHTML = text;
+			}
+
+			function calc(res, mode) {
+				if (res.status == 0) {
+					alert(
+						'There was some server error!\nPlease try again or contact our team.\nPlease disable any Antivirus Protection Extension/Plugin that may block requests.\nSorry for inconvenience :('
+					);
+
+					location.reload();
+					return;
+				}
+
+				boom(res);
+
+				if (mode == 0) {
+					var inp = '';
+					for (var q = 0; q < res.entity.length; q++) {
+						inp +=
+							'<div class="col-lg-3 col-md-4 col-6"><label class="mt-lg-0 mt-2" for="inp' +
+							q +
+							'">' +
+							res.entity[q] +
+							'</label><span class="form-required"> *</span><input type="number" step="1" id="inp' +
+							q +
+							'" class="form-control bid-input" required></div>';
+					}
+
+					document.getElementById('form-inp').innerHTML = inp;
+
+					document.getElementById('loading-screen').style.display =
+						'none';
+				} else if (mode == 1) {
+					document.getElementById('loading-bid').style.display =
+						'none';
+					document
+						.getElementById('refresh')
+						.removeAttribute('disabled');
+					document
+						.getElementById('refresh')
+						.setAttribute('value', 'Refresh');
+					clearInterval(inter);
+					inter = setInterval(function () {
+						send_req(3);
+					}, 30000);
+				} else if (mode == 2) {
+					if (res.login == 0) {
+						alert('Bid Updated!');
+					} else if (res.login == 1) {
+						alert(
+							'User ID not found!\nPlease enter correct User ID.'
+						);
+					} else {
+						alert(
+							'Incorrect Password!\nPlease enter password provided by organizers.'
+						);
+					}
+
+					document
+						.getElementById('bid-sub')
+						.removeAttribute('disabled');
+					document
+						.getElementById('bid-sub')
+						.setAttribute('value', 'Submit Bid');
+					clearInterval(inter);
+					inter = setInterval(function () {
+						send_req(3);
+					}, 30000);
+				}
+			}
+
+			function send_req(mode) {
+				var serialJSON = {};
+				serialJSON['mode'] = mode + '';
+				serialJSON['loc'] = window.top.location.href;
+
+				var markexist = document.getElementsByTagName('mark');
+				if (markexist.length == 1) {
+					serialJSON['user'] = markexist[0].getAttribute('id');
+				} else {
+					serialJSON['user'] = '0';
+				}
+
+				if (mode == 0) {
+					document.getElementById('loading-screen').style.display =
+						'block';
+				} else if (mode == 1) {
+					document.getElementById('loading-bid').style.display =
+						'block';
+					document
+						.getElementById('refresh')
+						.setAttribute('disabled', '');
+					document
+						.getElementById('refresh')
+						.setAttribute('value', 'Refreshing');
+				} else if (mode == 2) {
+					var now = new Date().getTime();
+					var distance = countDownDate - now;
+					if (distance < 0) {
+						alert('Bidding Time is over!');
+						return;
+					}
+					document
+						.getElementById('bid-sub')
+						.setAttribute('disabled', '');
+					document
+						.getElementById('bid-sub')
+						.setAttribute('value', 'Submitting');
+					serialJSON['username'] = document.getElementById(
+						'username'
+					).value;
+					serialJSON['password'] = document.getElementById(
+						'password'
+					).value;
+
+					var bids = document.getElementsByClassName('bid-input');
+
+					serialJSON['bid-len'] = bids.length + '';
+
+					for (var i = 0; i < bids.length; i++) {
+						serialJSON['inp' + i] = bids[i].value;
+					}
+				}
+
+				$.ajax({
+					url:
+						'https://script.google.com/macros/s/AKfycbw5r9McRTLQXuh61sL1Gh_cEVMlThiLA2x2jbeUTzfqicXr1R7KZUEI/exec',
+					data: serialJSON,
+					type: 'POST',
+					success: function (res) {
+						calc(res, mode);
+					},
+					error: function (res) {
+						alert(
+							'There was some server error!\nPlease try again or contact our team.\nPlease disable any Antivirus Protection Extension/Plugin that may block requests.\nSorry for inconvenience :('
+						);
+
+						location.reload();
+					}
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- mian-content -->
+		<div class="main-banner inner" id="home">
+			<!-- header -->
+			<header class="header">
+				<div class="container-fluid px-lg-5">
+					<!-- nav -->
+					<nav class="py-4">
+						<div id="logo">
+							<h1>
+								<a href="https://ieeesiesgst.co.in"
+									><img
+										id="ielogo"
+										src="images/ieeesiesblack.png"
+								/></a>
+							</h1>
+						</div>
+
+						<label for="drop" class="toggle">Menu</label>
+						<input type="checkbox" id="drop" />
+						<ul class="menu mt-2">
+							<li>
+								<a href="https://ieeesiesgst.co.in">Home</a>
+							</li>
+							<li>
+								<a
+									href="about.html"
+									style="
+										text-shadow: 0px 0px 4px #000 !important;
+									"
+									>About</a
+								>
+							</li>
+							<li><a href="events.html">Events</a></li>
+
+							<li>
+								<!-- First Tier Drop Down -->
+								<label for="drop-2" class="toggle"
+									>Explore
+									<span
+										class="fa fa-angle-down"
+										aria-hidden="true"
+									></span>
+								</label>
+								<a href="#"
+									>Explore
+									<span
+										class="fa fa-angle-down"
+										aria-hidden="true"
+									></span
+								></a>
+								<input type="checkbox" id="drop-2" />
+								<ul>
+									<li><a href="gallery.html">Gallery</a></li>
+									<li>
+										<a href="achievements.html"
+											>Achievements</a
+										>
+									</li>
+									<li><a href="wie.html">WIE</a></li>
+									<li><a href="mtts.html">MTT-S</a></li>
+									<li>
+										<a href="techopedia/index.html"
+											>Techopedia 9.0</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li><a href="team.html">Our Team</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+					<!-- //nav -->
+				</div>
+			</header>
+			<!-- //header -->
+		</div>
+
+		<div
+			id="loading-screen"
+			class="position-fixed w-100"
+			style="display: none"
+		>
+			<h3 id="loading-text" class="position-fixed">Loading...</h3>
+		</div>
+
+		<div class="container">
+			<div class="pt-sm-4 pt-3 pb-3 pb-sm-4">
+				<h1 class="text-center d-none d-sm-block">Live Bidding</h1>
+				<h3 class="text-center d-block d-sm-none">Live Bidding</h3>
+			</div>
+		</div>
+
+		<div class="container">
+			<form
+				class="pb-2"
+				id="bid-form"
+				style="display: none"
+				autocomplete="off"
+				action="javascript: void(0)"
+			>
+				<p class="text-center"><b>Instructions:</b></p>
+				<p class="text-center">
+					The purpose of bidding is to divide the entities among each
+					team based on their priority order and
+					<b>at the cost of your POINTS</b>. The value you enter for
+					the entity that gets alloted to you will be deducted from
+					your final competition score!
+					<br />
+					<b>Step 1:</b>
+					<br />
+					Create your priority order among the entities.
+					<br />
+					<b>Step 2:</b>
+					<br />
+					Enter your username and password and fill up values for each
+					entity as per your priority order. (Values must be between
+					40 and 100 inclusive)
+					<br />
+					<b class="text-danger"
+						>The value that you enter for entity that you will be
+						assigned at the end of bidding will be deducted from
+						your total score at the end of event!</b
+					>
+					<br />
+					<b>Step 3:</b>
+					<br />
+					See if your team-name is seen under your desired entity.
+					<br />
+					(It will be highlighted)
+					<br />
+					If you did not get your top priority, look for your
+					team-name under your 2<sup>nd</sup> priority entity and so
+					on.
+					<br />
+					<b class="text-danger"
+						>You can change your entered bid any time to get your
+						desired entity <u>before bidding stops</u>.</b
+					>
+				</p>
+				<p class="text-center"><b>Constraints of Bidding</b></p>
+				<p class="text-center">
+					No 2 bids can be equal since the values will determine
+					priority order.
+					<br />
+					Bidding for each entity is compulsory and each bid has to be
+					between 40 and 100 (inclusive).
+					<br />
+					You need to submit at least 1 valid bid to avoid any kind of
+					penalty!
+					<br />
+					<b class="text-danger"
+						>Failing to follow these constraints will result into
+						full 100 points penalty.</b
+					>
+				</p>
+				<p class="text-center">
+					<b>Note:</b>
+					<br />
+					<span class="text-danger">
+						The status of allotment can change anytime according to
+						the data entered by other participants. So make sure you
+						keep a watch till bidding ends.
+					</span>
+					<br />
+					<span class="text-danger">
+						The bidding results refresh every 30 seconds.<br />You
+						might want to press the refresh button and view current
+						status before you submit your bid!
+					</span>
+				</p>
+
+				<div class="form-row">
+					<div class="col-sm-6 col-12">
+						<label for="username">User ID</label
+						><span class="form-required"> *</span>
+						<input
+							type="text"
+							id="username"
+							class="form-control"
+							placeholder="Enter User ID"
+							required
+						/>
+						<small class="form-text text-muted"
+							>Enter User ID provided by event organizers</small
+						>
+					</div>
+					<div class="col-sm-6 col-12">
+						<label for="password" class="pt-2 pt-sm-0"
+							>Password</label
+						><span class="form-required"> *</span>
+						<input
+							type="password"
+							id="password"
+							class="form-control"
+							placeholder="Password"
+							required
+						/>
+						<small class="form-text text-muted"
+							>Enter password provided by event organizers</small
+						>
+					</div>
+					<div class="col-12 pt-3 pb-1 pb-lg-3">
+						<h5>Enter Your Bids below:</h5>
+					</div>
+				</div>
+				<div class="form-row" id="form-inp"></div>
+				<div class="mt-3 text-center">
+					<div>
+						<p class="text-danger mb-0">
+							Bidding Closes in: <span id="timer"></span>
+						</p>
+					</div>
+					<input
+						type="submit"
+						id="bid-sub"
+						class="btn btn-danger"
+						value="Submit Bid"
+					/>
+				</div>
+			</form>
+			<div id="bid-end" class="text-center" style="display: none">
+				<h5 class="text-danger">Bidding has Ended</h5>
+			</div>
+			<div id="bid-start" class="text-center" style="display: none">
+				<h5>
+					Bidding starts in:<br /><span
+						id="start-timer"
+						class="text-danger"
+					></span>
+				</h5>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="container pb-4 pt-2" id="bid-status">
+			<h5 class="pb-2"><span id="final"></span>Bidding Status:</h5>
+			<button
+				type="button"
+				class="btn-sm btn btn-success"
+				id="refresh"
+				onclick="send_req(1);"
+			>
+				Refresh
+			</button>
+			<br />
+			<small class="text-danger" id="r-text"
+				>Refreshes every 30 seconds.</small
+			>
+			<p>
+				<small
+					><b class="d-inline-block">Display Format:</b>
+					<span class="d-inline-block"
+						>Team_name<sub>(Team_user_id)</sub>
+						(Bidding_value)</span
+					></small
+				>
+			</p>
+			<div class="position-relative">
+				<div
+					id="loading-bid"
+					class="position-absolute w-100"
+					style="display: none"
+				>
+					<h3 class="text-center pt-5">Loading...</h3>
+				</div>
+
+				<div class="row" id="data"></div>
+			</div>
+		</div>
+
+		<!--footer -->
+		<footer>
+			<section class="footer footer_1its py-5">
+				<div class="container py-md-4">
+					<div class="row footer-top mb-md-5 mb-4">
+						<div class="col-lg-4 col-md-6 footer-grid_section_1its">
+							<div class="footer-title-w3ls">
+								<h3>Reach Out to Us</h3>
+							</div>
+							<div class="footer-text">
+								<p>
+									<b>Address</b> : SIES Graduate School of
+									Technology, Plot 1-C D & E, Sector-V, Navi
+									Mumbai, Maharashtra 400706
+								</p>
+								<p><b>Phone</b> : +91 9167923446</p>
+								<p>
+									<b>Email</b> :
+									<a href="mailto:ieee@siesgst.ac.in"
+										>ieee@siesgst.ac.in</a
+									>
+								</p>
+							</div>
+						</div>
+						<div
+							class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its"
+						>
+							<div class="footer-title-w3ls">
+								<h3>Catch On</h3>
+							</div>
+							<p>
+								Always Open on following Social sites, feel free
+								to check out.
+							</p>
+							<ul class="social_section_1info">
+								<li class="mb-2 instagram">
+									<a
+										href="https://www.instagram.com/ieeesiesgst/"
+										><span
+											class="fa fa-instagram mr-1"
+										></span
+										>Instagram</a
+									>
+								</li>
+
+								<li class="mb-2 youtube">
+									<a
+										href="https://www.youtube.com/channel/UCXAeBcDQQBiuVtzn4ke-Xsw"
+										><span
+											class="fa fa-youtube-play mr-1"
+										></span
+										>YouTube</a
+									>
+								</li>
+
+								<li class="mb-2 facebook">
+									<a
+										href="https://m.facebook.com/ieeesiesgstofficial/"
+										><span
+											class="fa fa-facebook mr-1"
+										></span
+										>Facebook</a
+									>
+								</li>
+
+								<li class="mb-2 linkedin">
+									<a
+										href="https://www.linkedin.com/mwlite/company/ieee-gst"
+										><span
+											class="fa fa-linkedin mr-1"
+										></span
+										>LinkedIn</a
+									>
+								</li>
+
+								<li class="mb-2 github">
+									<a href="https://github.com/ieeesiesgst"
+										><span class="fa fa-github mr-1"></span
+										>GitHub</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div
+							class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its"
+						>
+							<div class="footer-title-w3ls">
+								<h3>Newsletter</h3>
+							</div>
+							<div class="footer-text">
+								<p>
+									By subscribing to our mailing list you will
+									always get latest news and updates from us.
+								</p>
+								<form
+									action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfRha9CA1euCfDGVMFK6Z7V0MzWCQV5p6KAOFcHi7L4lj_LMA/formResponse"
+									target="_self"
+									method="POST"
+								>
+									<input
+										type="email"
+										name="entry.1307177627"
+										placeholder="Enter your email..."
+										required=""
+									/>
+									<button class="btn1 btn">
+										<span
+											class="fa fa-paper-plane-o"
+											aria-hidden="true"
+										></span>
+									</button>
+									<div class="clearfix"></div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="move-top-w3layouts text-center mt-3">
+						<a href="#home" class="move-top">
+							<span
+								class="fa fa-angle-up mb-3"
+								aria-hidden="true"
+							></span
+						></a>
+					</div>
+				</div>
+			</section>
+		</footer>
+		<!-- //footer -->
+
+		<script>
+			document.getElementById('bid-form').onsubmit = function () {
+				send_req(2);
+				return false;
+			};
+
+			inter = setInterval(function () {
+				send_req(3);
+			}, 30000);
+
+			send_req(0);
+
+			// Update the count down every 1 second
+			var x = setInterval(function () {
+				// Get today's date and time
+				var now = new Date().getTime();
+
+				// Find the distance between now and the count down date
+				var distance = countDownDate - now;
+
+				if (startDate - now > 0) {
+					distance = startDate - now;
+
+					var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					var hours = Math.floor(
+						(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+					);
+					var minutes = Math.floor(
+						(distance % (1000 * 60 * 60)) / (1000 * 60)
+					);
+					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+					document.getElementById('bid-form').style.display = 'none';
+					document.getElementById('bid-start').style.display =
+						'block';
+					document.getElementById('start-timer').innerHTML =
+						days +
+						'd ' +
+						hours +
+						'h ' +
+						minutes +
+						'm ' +
+						seconds +
+						's ';
+					document.getElementById('bid-status').style.display =
+						'none';
+				} else if (distance >= 0) {
+					var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					var hours = Math.floor(
+						(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+					);
+					var minutes = Math.floor(
+						(distance % (1000 * 60 * 60)) / (1000 * 60)
+					);
+					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+					// Output the result in an element with id="demo"
+					document.getElementById('timer').innerHTML =
+						days +
+						'd ' +
+						hours +
+						'h ' +
+						minutes +
+						'm ' +
+						seconds +
+						's ';
+					document.getElementById('bid-form').style.display = 'block';
+					document.getElementById('bid-status').style.display =
+						'block';
+					document.getElementById('bid-start').style.display = 'none';
+				} else if (distance < 0) {
+					clearInterval(x);
+					document
+						.getElementById('bid-sub')
+						.setAttribute('disabled', '');
+					document.getElementById('timer').innerHTML =
+						'Bidding has Ended!';
+					document.getElementById('bid-form').style.display = 'none';
+					document.getElementById('bid-end').style.display = 'block';
+					document.getElementById('final').innerHTML = 'Final ';
+					send_req(3);
+					clearInterval(inter);
+					document.getElementById('r-text').style.display = 'none';
+					document.getElementById('refresh').style.display = 'none';
+				}
+			}, 1000);
+		</script>
+	</body>
 </html>
