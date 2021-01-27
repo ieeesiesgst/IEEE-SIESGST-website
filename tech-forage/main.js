@@ -14,6 +14,7 @@ var questions5 = ['1) Can you find the smallest positive number that is divisibl
 
 //Checking if input string is empty or not for mode 0.
 document.getElementById('loginbtn').onclick = function () {
+
     var Name = document.getElementById('userName').value.trim();
     var Password = document.getElementById('password').value.toLowerCase().trim();
 
@@ -24,7 +25,17 @@ document.getElementById('loginbtn').onclick = function () {
         mode = 0;
         serialJSON['name'] = Name;
         serialJSON['password'] = Password;
-
+        if (document.getElementById('page2_view').style.display == 'block') {
+            var Answer = document.getElementById('Ans').value.toLowerCase().trim();
+            if (Answer == '') {
+                alert('Fill in the answer!');
+                return false;
+            }
+            else {
+                serialJSON['Answer'] = Answer;
+                mode = 1;
+            }
+        }
         successful(mode, serialJSON);
     }
     return false;
@@ -37,7 +48,7 @@ document.getElementById('submitbtn').onclick = function () {
     var Answer = document.getElementById('Ans').value.toLowerCase().trim();
 
     if (Name == '' || Password == '' || Answer == '') {
-        document.getElementById('attemptsInstruction').innerHTML = 'Please fill in the details.';
+        alert('Please fill in all the details!');
     }
     else {
         document.getElementById('attemptsInstruction').innerHTML = '';
@@ -85,8 +96,6 @@ function successful(mode) {
         data: serialJSON,
 
         success: function (res) {
-
-            console.log(res.grpNo);
 
             //Wrong username and password.
             if (res.ReturnedStatus == 0) {
