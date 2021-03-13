@@ -2112,6 +2112,16 @@ section .section-title {
   transition: 1s;
 }
 
+.card4 .bio {
+  position: absolute;
+  top: 260px;
+  color: #104410;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  line-height: 28px;
+}
+
 @media (max-width: 500px) {
   .card .pic {
     transform: scale(0.5, 0.34) translateY(-600px);
@@ -2137,6 +2147,17 @@ section .section-title {
 
 .main-banner-mtts {
   background: url(../images/mtts_banner.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+  position: relative;
+  min-height: 50em;
+}
+
+.main-banner-cs {
+  background: url(../images/2021updates/cs_banner.png) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
