@@ -195,7 +195,7 @@ img {
 .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
-  margin-top: 0.5em;
+  margin-top: 1.5em;
 }
 
 .nav__link {
