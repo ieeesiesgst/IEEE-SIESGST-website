@@ -124,6 +124,7 @@ img {
 .section-title,
 .section-subtitle {
   text-align: center;
+  font-size: 25px;
 }
 
 .section-title {
@@ -196,7 +197,7 @@ img {
   color: var(--title-color);
   font-weight: var(--font-medium);
   margin-top: 2.7em;
-  margin-bottom: 2.0em;
+  margin-bottom: 2em;
 }
 
 .nav__link {
@@ -220,6 +221,9 @@ img {
 }
 .nav5:hover {
   color: var(--first-color);
+}
+.nav6:hover {
+  color: var(--second-color);
 }
 
 .nav__toggle {
