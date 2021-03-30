@@ -108,7 +108,7 @@ sr.reveal(`.home__data, .home__img,
 
 /*==================== TIMER ====================*/
 // Set the date we're counting down to
-var countDownDate = new Date("Apr 2, 2021 18:18:00").getTime();
+var countDownDate = new Date("Apr 2, 2021 10:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
