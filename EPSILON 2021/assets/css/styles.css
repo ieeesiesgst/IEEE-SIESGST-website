@@ -361,6 +361,31 @@ img {
   height: 350px;
   justify-self: center;
 }
+.button1{
+  place-content: center;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 20rem;
+  transition: 0.3s;
+  
+
+}
+.registerBtn {
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: 0.9em;
+  border-radius: 20px;
+  padding: 0.75em 1.5em;
+  
+  font-weight: 500; 
+  place-items: center;
+}
+.button2{
+  
+  display: flex;
+   padding-left: 75px;
+}
 
 /*========== SERVICES ==========*/
 .services__container {
