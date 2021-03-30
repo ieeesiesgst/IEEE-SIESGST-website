@@ -225,6 +225,9 @@ img {
 .nav6:hover {
   color: var(--second-color);
 }
+.nav7:hover {
+  color: var(--third-color);
+}
 
 .nav__toggle {
   font-size: 1.3rem;
@@ -361,30 +364,22 @@ img {
   height: 350px;
   justify-self: center;
 }
-.button1{
-  place-content: center;
-  background-color: var(--first-color);
-  color: #fff;
-  padding: 10px 40px;
-  border-radius: 20rem;
-  transition: 0.3s;
-  
 
+.linkColor {
+  color: var(--third-color);
 }
-.registerBtn {
+
+.knowMoreBtn {
   background-color: var(--first-color);
-  color: #fff;
-  font-size: 0.9em;
+  color: white;
   border-radius: 20px;
   padding: 0.75em 1.5em;
-  
-  font-weight: 500; 
-  place-items: center;
+  font-weight: 500;
 }
-.button2{
-  
-  display: flex;
-   padding-left: 75px;
+
+.knowMoreBtn:hover {
+  background-color: var(--first-color-alt);
+  transition: 0.3s;
 }
 
 /*========== SERVICES ==========*/
@@ -412,7 +407,7 @@ img {
 }
 
 .services__description {
-  padding: 0 1.5rem;
+  padding: 0 0;
 }
 
 /*========== MENU ==========*/
