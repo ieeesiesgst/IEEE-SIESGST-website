@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <meta charset="UTF-8" />
-    <meta name="description"
-        content="Tech-Forage Hangman game of Techopedia 9.0 IEEE student chapter of SIES GST, Navi Mumbai.">
-    <meta name="keywords"
-        content="IEEE, ieee, sies, gst, siesgst, official, student, hangman,tech forage,Tech-Forage, techopedia, techopedia 9.0, fest, 2021">
-    <meta name="author" content="IEEE SIES GST Student Chapter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Tech-Forage Hangman game of Techopedia 9.0 IEEE student chapter of SIES GST, Navi Mumbai."
+    />
+    <meta
+      name="keywords"
+      content="IEEE, ieee, sies, gst, siesgst, official, student, hangman,tech forage,Tech-Forage, techopedia, techopedia 9.0, fest, 2021"
+    />
+    <meta name="author" content="IEEE SIES GST Student Chapter" />
 
     <!--whatsapp and fb-->
     <meta property="og:title" content="IEEE SIES GST" />
-    <meta property="og:description"
-        content="Tech-Forage Hangman game of Techopedia 9.0 IEEE student chapter of SIES GST, Navi Mumbai." />
-    <meta property="og:url" content="https://ieeesiesgst.co.in/tech-forage/" />
+    <meta
+      property="og:description"
+      content="Tech-Forage Hangman game of Techopedia 9.0 IEEE student chapter of SIES GST, Navi Mumbai."
+    />
+    <meta property="og:url" content="https://ieeesiesgst.in/tech-forage/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://ieeesiesgst.co.in/images/ieeeicon.png" />
+    <meta
+      property="og:image"
+      content="https://ieeesiesgst.in/images/ieeeicon.png"
+    />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
@@ -26,88 +34,136 @@
     <!--twitter-->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="IEEE SIES GST" />
-    <meta property="twitter:description"
-        content="Tech-Forage Hangman game of Techopedia 9.0 IEEE student chapter of SIES GST, Navi Mumbai." />
-    <meta property="twitter:image" content="https://ieeesiesgst.co.in/images/ieeeicon.png" />
+    <meta
+      property="twitter:description"
+      content="Tech-Forage Hangman game of Techopedia 9.0 IEEE student chapter of SIES GST, Navi Mumbai."
+    />
+    <meta
+      property="twitter:image"
+      content="https://ieeesiesgst.in/images/ieeeicon.png"
+    />
 
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#000">
+    <meta name="theme-color" content="#000" />
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000" />
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
 
-    <link rel="shortcut icon" href="../images/favicon.png">
-    <link rel="icon" href="../images/favicon.png">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="icon" href="../images/favicon.png" />
 
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <title>Hangman</title>
-</head>
+  </head>
 
-<body>
-
-    <div id="loading" style="display: none;">
-        <span id="loadingText" class="text-white">
-            Loading...
-        </span>
+  <body>
+    <div id="loading" style="display: none">
+      <span id="loadingText" class="text-white"> Loading... </span>
     </div>
     <div class="text-center">
-        <form method="POST" id="givenForm" autocomplete="off">
-            <div class="container ">
-                <div class="login-box">
-                    <h1>TechForage Hangman</h1>
-                    <br>
-                    <br>
-                    <p>User ID:</p>
-                    <input class="text-center" type="text" required id="userName" name="text"
-                        placeholder="Enter User Id">
-                    <br>
-                    <p>Password:</p>
-                    <input class="text-center" type="password" required id="password" name="otp"
-                        placeholder="Enter Password">
-                    <br>
-                    <br>
-                    <h6 class="instructions" id="loginInstruction"></h6><br>
-                    <input class="one loginBtn" type="submit" id="loginbtn" name="submit" value="Login">
-                    <div id="page2_view">
-                        <div class="row">
-                            <!-- <div class="col-sm-3"></div> -->
-                            <div class="col-md-6 text-center"><img class="img-fluid" id="hangman_pic"
-                                    src="../Tech_Forage-Hangman/Images/man_0.png"></div>
-                            <div class="col-md-6 text-center">
-                                <div id="Que" class="pt-md-0 pt-3"></div>
-                                <br>
-                                <p class="ans">Answer:</p>
-                                <input class="text-center" type="text" id="Ans" id="text" name="text"
-                                    placeholder="Your Answer.. ">
-                                <br>
-                                <br>
-                                <!--No.of attempts instrction-->
-                                <h6 class="instructions" id="attemptsInstruction"></h6>
-                                <br>
-                                <div class="buttons">
-                                    <input type="submit" id="submitbtn" name="submit" value="Submit">
-                                    <input type="submit" id="skipbtn" name="submit" value="Skip">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <form method="POST" id="givenForm" autocomplete="off">
+        <div class="container">
+          <div class="login-box">
+            <h1>TechForage Hangman</h1>
+            <br />
+            <br />
+            <p>User ID:</p>
+            <input
+              class="text-center"
+              type="text"
+              required
+              id="userName"
+              name="text"
+              placeholder="Enter User Id"
+            />
+            <br />
+            <p>Password:</p>
+            <input
+              class="text-center"
+              type="password"
+              required
+              id="password"
+              name="otp"
+              placeholder="Enter Password"
+            />
+            <br />
+            <br />
+            <h6 class="instructions" id="loginInstruction"></h6>
+            <br />
+            <input
+              class="one loginBtn"
+              type="submit"
+              id="loginbtn"
+              name="submit"
+              value="Login"
+            />
+            <div id="page2_view">
+              <div class="row">
+                <!-- <div class="col-sm-3"></div> -->
+                <div class="col-md-6 text-center">
+                  <img
+                    class="img-fluid"
+                    id="hangman_pic"
+                    src="../Tech_Forage-Hangman/Images/man_0.png"
+                  />
                 </div>
+                <div class="col-md-6 text-center">
+                  <div id="Que" class="pt-md-0 pt-3"></div>
+                  <br />
+                  <p class="ans">Answer:</p>
+                  <input
+                    class="text-center"
+                    type="text"
+                    id="Ans"
+                    id="text"
+                    name="text"
+                    placeholder="Your Answer.. "
+                  />
+                  <br />
+                  <br />
+                  <!--No.of attempts instrction-->
+                  <h6 class="instructions" id="attemptsInstruction"></h6>
+                  <br />
+                  <div class="buttons">
+                    <input
+                      type="submit"
+                      id="submitbtn"
+                      name="submit"
+                      value="Submit"
+                    />
+                    <input
+                      type="submit"
+                      id="skipbtn"
+                      name="submit"
+                      value="Skip"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-        </form>
+          </div>
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 
-<script src="main.js"> </script>
-
+  <script src="main.js"></script>
 </html>
